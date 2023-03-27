@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
-import ProductCard from "../../components/ProductCard/ProductCard";
+import ProductList from "../../components/ProductList/ProductList";
 import "./Products.scss";
 
 const Products = () => {
@@ -9,8 +9,8 @@ const Products = () => {
     <>
       <Navbar />
       <Header title="PRODUCTS" />
-      <div class="products">
-        <div class="left">
+      <div className="products">
+        <div className="left">
           <div className="filterItem">
             <span className="heading">CATEGORIES</span>
             <div className="inputItem">
@@ -46,8 +46,8 @@ const Products = () => {
             </div>
           </div>
         </div>
-        <div class="right">
-          <ProductCard />
+        <div className="right">
+          <ProductList />
         </div>
       </div>
     </>

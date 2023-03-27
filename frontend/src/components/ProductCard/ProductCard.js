@@ -1,12 +1,13 @@
 import React from "react";
 import "./ProductCard.scss";
+import { NavLink } from "react-router-dom";
 
-const ProductCard = ({ image, name, price }) => {
+const ProductCard = ({ item }) => {
   return (
     <div className="productCard">
-      <img src={image} alt={name} className="img" />
-      <h2 className="name">{name}</h2>
-      <p className="price">{price}</p>
+      <img src={item.image} alt={item.name} className="img" />
+      <h2 className="name">{item.name}</h2>
+      <p className="price">{item.price}</p>
     </div>
   );
 };
