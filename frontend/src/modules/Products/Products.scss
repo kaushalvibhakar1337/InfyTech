@@ -3,6 +3,16 @@
 
   .left {
     width: 20%;
+
+    .heading {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      padding: 20px 0;
+      font-weight: 500;
+      color: #1c1b1b;
+      margin-bottom: 16px;
+    }
   }
 
   .right {

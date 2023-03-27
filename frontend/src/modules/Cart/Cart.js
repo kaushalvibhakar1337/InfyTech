@@ -1,11 +1,12 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
+import "./Cart.scss";
 
 const Cart = () => {
   return (
     <>
       <Navbar />
-      <div style={{ marginTop: "15px" }}>My Cart Page</div>
+      <div className="cart">My Cart Page</div>
     </>
   );
 };

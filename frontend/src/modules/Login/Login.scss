@@ -5,6 +5,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 
   .heading {
     font-size: 20px;
@@ -53,7 +54,6 @@
     border-color: #e5b14a;
     background-color: #e5b14a;
     letter-spacing: 0.2em;
-    text-align: center;
     font-weight: 500;
     transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86),
       border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
