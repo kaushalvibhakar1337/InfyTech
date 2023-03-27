@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
-import CategorySlider from "../../components/ProductSlider/CategorySlider";
 import "./Products.scss";
 
 const Products = () => {
@@ -9,7 +8,10 @@ const Products = () => {
     <>
       <Navbar />
       <Header title="PRODUCTS" />
-      <CategorySlider />
+      <div class="products">
+        <div class="left">Hello</div>
+        <div class="right">World!</div>
+      </div>
     </>
   );
 };

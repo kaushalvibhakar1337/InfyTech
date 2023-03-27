@@ -18,17 +18,3 @@
     font-weight: bold;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .productCard {
-    width: 48%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .productCard {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 2%;
-  }
-}
