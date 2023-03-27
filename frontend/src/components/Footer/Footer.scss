@@ -1,0 +1,46 @@
+.footer {
+  letter-spacing: 1px;
+  width: 100%;
+  padding: 20px 0 100px 0;
+
+  .top {
+    display: flex;
+    gap: 50px;
+
+    .item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 11px;
+      align-items: center;
+
+      h1 {
+        font-size: 14px;
+        font-weight: 500;
+        color: black;
+      }
+
+      span {
+        color: rgba(0, 0, 0, 0.7);
+      }
+
+      .sub {
+        margin-top: 30px;
+        padding: 14px 28px;
+        border: 1px solid transparent;
+        border-color: #e5b14a;
+        background-color: #e5b14a;
+        letter-spacing: 0.2em;
+        text-align: center;
+        font-weight: 500;
+
+        &:hover {
+          background-color: white;
+          color: #e5b14a;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
