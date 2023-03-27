@@ -1,8 +1,10 @@
 .products {
   display: flex;
+  height: 2000px;
 
   .left {
     width: 20%;
+    position: sticky;
 
     .heading {
       display: block;
