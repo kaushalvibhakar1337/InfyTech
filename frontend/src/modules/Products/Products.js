@@ -25,8 +25,25 @@ const Products = () => {
               <input type="checkbox" id="3" value={3} />
               <label htmlFor="3">HEADPHONES</label>
             </div>
-            <div className="inputItem"></div>
-            <div className="inputItem"></div>
+            <div className="filterItem">
+              <span className="heading">PRICE</span>
+              <div className="inputItem">
+                <span>0</span>
+                <input type="range" min={0} max={1000} />
+                <span>1000</span>
+              </div>
+            </div>
+            <div className="filterItem">
+              <span className="heading">SORT</span>
+              <div className="inputItem">
+                <input type="radio" id="asc" name="sortBy" />
+                <label htmlFor="asc">PRICE, LOW TO HIGH</label>
+              </div>
+              <div className="inputItem">
+                <input type="radio" id="desc" name="sortBy" />
+                <label htmlFor="desc">PRICE, HIGH TO LOW</label>
+              </div>
+            </div>
           </div>
         </div>
         <div class="right">
