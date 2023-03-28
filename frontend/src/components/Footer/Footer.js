@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer">
       <div className="top">
         <div className="item">
-          <h1>MENU</h1>
+          <h1>INFYTECH | ONESTOP SHOP FOR ALL YOUR GAMING NEEDS</h1>
           <span>CONTACT US</span>
           <span>ABOUT US</span>
           <span>PRIVACY POLICY</span>
@@ -27,7 +27,11 @@ const Footer = () => {
             Subscribe to receive updates, access to exclusive deals, and more.
           </span>
           <span>
-            <input type={Text} placeholder="Enter your email address" />
+            <input
+              className="inputField"
+              type="text"
+              placeholder="Enter your email address"
+            />
           </span>
           <span>
             <button type="button" className="sub">

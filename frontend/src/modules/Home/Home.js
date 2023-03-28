@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div style={{ height: "1000px", width: "100%" }}></div>
+      <div className="home"></div>
       <Footer />
     </>
   );
