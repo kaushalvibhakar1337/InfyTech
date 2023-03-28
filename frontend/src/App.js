@@ -5,7 +5,7 @@ import Products from "./modules/Products/Products";
 import ProductDetails from "./modules/ProductDetails/ProductDetails";
 import Login from "./modules/Login/Login";
 import Register from "./modules/Register/Register";
-import Cart from "./modules/Cart/Cart";
+// import Cart from "./modules/Cart/Cart";
 import About from "./modules/About/About";
 import Contact from "./modules/Contact/Contact";
 import Error from "./modules/Error/Error";
@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/cart" element={<Cart />} />
+        {/* <Route path="/cart" element={<Cart />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Error />} />
