@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -7,19 +8,28 @@ const Footer = () => {
       <div className="top">
         <div className="item">
           <h1>INFYTECH | ONESTOP SHOP FOR ALL YOUR GAMING NEEDS</h1>
-          <span>CONTACT US</span>
-          <span>ABOUT US</span>
-          <span>PRIVACY POLICY</span>
-          <span>REFUND POLICY</span>
-          <span>TERMS OF SERVICE</span>
+          <span>
+            <span className="innerSpan">Our Address : </span>Ganpat Vidyanagar
+            Mehsana-Gozaria, Highway, Kherva, Gujarat 384012
+          </span>
+          <span>
+            <span className="innerSpan">Contact No : </span>7567261003
+          </span>
         </div>
         <div className="item">
           <h1>MENU</h1>
-          <span>CONTACT US</span>
-          <span>ABOUT US</span>
-          <span>PRIVACY POLICY</span>
-          <span>REFUND POLICY</span>
-          <span>TERMS OF SERVICE</span>
+          <NavLink to="/contact">
+            <span>CONTACT US</span>
+          </NavLink>
+          <NavLink to="/about">
+            <span>ABOUT US</span>
+          </NavLink>
+          <NavLink to="/privacy">
+            <span>PRIVACY POLICY</span>
+          </NavLink>
+          <NavLink to="/termsofservice">
+            <span>TERMS OF SERVICE</span>
+          </NavLink>
         </div>
         <div className="item">
           <h1>NEWSLETTER</h1>

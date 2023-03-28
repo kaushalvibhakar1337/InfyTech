@@ -23,8 +23,22 @@
         margin-bottom: 10px;
       }
 
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+
+        &:hover {
+          color: #6a6a6a;
+        }
+      }
+
       span {
         color: black;
+
+        .innerSpan {
+          font-weight: 600;
+        }
       }
 
       .inputField {
