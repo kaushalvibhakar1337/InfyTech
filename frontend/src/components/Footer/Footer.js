@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="footer">
       <div className="top">
         <div className="item">
-          <h1>INFYTECH | ONESTOP SHOP FOR ALL YOUR GAMING NEEDS</h1>
+          <h1>INFYTECH | YOUR GO-TO-DESTINATION FOR ALL YOUR COMPUTER NEEDS</h1>
           <span>
             <span className="innerSpan">Our Address : </span>Ganpat Vidyanagar
             Mehsana-Gozaria, Highway, Kherva, Gujarat 384012
