@@ -2,13 +2,13 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 
-const Contact = () => {
+const RefundPolicy = () => {
   return (
     <>
       <Navbar />
-      <Header title="CONTACT US" />
+      <Header title="REFUND POLICY" />
     </>
   );
 };
 
-export default Contact;
+export default RefundPolicy;
