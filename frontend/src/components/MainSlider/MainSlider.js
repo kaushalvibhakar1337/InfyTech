@@ -13,11 +13,11 @@ function MainSlider({ images, interval = 3000 }) {
   }, [images.length, interval]);
 
   return (
-    <div className="image-carousel">
+    <div className="mainSlider">
       {images.map((image, i) => (
         <img
           key={i}
-          className={`image-carousel-item ${i === index ? "active" : ""}`}
+          className={`slide ${i === index ? "active" : ""}`}
           src={require(`../../assets/${image}`).default}
           alt=""
         />
