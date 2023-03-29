@@ -1,21 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./MainSlider.scss";
 
-const MainSlider = () => {
+function MainSlider({ images, interval = 3000 }) {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndex((index) => (index + 1) % images.length);
+    }, interval);
+
+    return () => clearInterval(intervalId);
+  }, [images.length, interval]);
+
   return (
-    <div className="mainSlider">
-      <div className="container">
-        <img src={require("../../assets/mainSliderImg1.jpg")} alt="" />
-        <img src={require("../../assets/mainSliderImg2.jpg")} alt="" />
-        <img src={require("../../assets/mainSliderImg3.jpg")} alt="" />
-        <img src={require("../../assets/mainSliderImg4.jpg")} alt="" />
-      </div>
-      <div className="icons">
-        <div className="icon"></div>
-        <div className="icon"></div>
-      </div>
+    <div className="image-carousel">
+      {images.map((image, i) => (
+        <img
+          key={i}
+          className={`image-carousel-item ${i === index ? "active" : ""}`}
+          src={require(`../../assets/${image}`).default}
+          alt=""
+        />
+      ))}
     </div>
   );
-};
+}
 
 export default MainSlider;
