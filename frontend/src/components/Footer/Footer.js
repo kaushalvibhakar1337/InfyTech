@@ -13,7 +13,7 @@ const Footer = () => {
             Mehsana-Gozaria, Highway, Kherva, Gujarat 384012
           </span>
           <span>
-            <span className="innerSpan">Contact No : </span>7567261003
+            <span className="innerSpan">Contact No : </span>+91 7567261003
           </span>
         </div>
         <div className="item">
