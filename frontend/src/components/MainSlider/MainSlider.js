@@ -18,8 +18,8 @@ function MainSlider({ images, interval = 3000 }) {
         <img
           key={i}
           className={`slide ${i === index ? "active" : ""}`}
-          src={require(`../../assets/${image}`).default}
-          alt=""
+          src={require(`../../assets/${image}`)}
+          alt="Hello"
         />
       ))}
     </div>
