@@ -9,7 +9,6 @@ const Home = () => {
     "mainSliderImg1.jpg",
     "mainSliderImg2.jpg",
     "mainSliderImg3.jpg",
-    "mainSliderImg1.jpg",
   ];
 
   return (
@@ -17,6 +16,7 @@ const Home = () => {
       <Navbar />
       <div className="home">
         <MainSlider images={images} />
+        <div className="section">YOUR FAVOURITE PC PARTS IN ONE PLACE</div>
       </div>
       <Footer />
     </>

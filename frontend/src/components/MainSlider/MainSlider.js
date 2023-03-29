@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import "./MainSlider.scss";
 
 function MainSlider({ images, interval = 3000 }) {
@@ -23,9 +24,11 @@ function MainSlider({ images, interval = 3000 }) {
             alt="Hello"
           />
         ))}
-        <button type="button" className="btn">
-          SHOP NOW
-        </button>
+        <NavLink to="/products">
+          <button type="button" className="btn">
+            SHOP NOW
+          </button>
+        </NavLink>
       </div>
     </div>
   );
