@@ -1,12 +1,13 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
+import "./ProductDetails.scss";
 
 const ProductDetails = () => {
   return (
     <>
       <Navbar />
-      <div style={{ marginTop: "15px" }}>Product Details Page</div>
+      <div className="productDetails">Product Details Page</div>
       <Footer />
     </>
   );
