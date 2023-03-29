@@ -20,8 +20,8 @@ function MainSlider({ images, interval = 3000 }) {
           <img
             key={i}
             className={`slide ${i === index ? "active" : ""}`}
-            src={require(`../../assets/home/mainslider/${image}`)}
-            alt="Hello"
+            src={require(`../../assets/Home/${image}`)}
+            alt=""
           />
         ))}
         <NavLink to="/products">
