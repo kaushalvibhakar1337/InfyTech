@@ -14,14 +14,19 @@ function MainSlider({ images, interval = 3000 }) {
 
   return (
     <div className="mainSlider">
-      {images.map((image, i) => (
-        <img
-          key={i}
-          className={`slide ${i === index ? "active" : ""}`}
-          src={require(`../../assets/${image}`)}
-          alt="Hello"
-        />
-      ))}
+      <div className="imgSlider">
+        {images.map((image, i) => (
+          <img
+            key={i}
+            className={`slide ${i === index ? "active" : ""}`}
+            src={require(`../../assets/${image}`)}
+            alt="Hello"
+          />
+        ))}
+        <button type="button" className="btn">
+          SHOP NOW
+        </button>
+      </div>
     </div>
   );
 }
