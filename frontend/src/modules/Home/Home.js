@@ -9,6 +9,7 @@ const Home = () => {
     "mainSliderImg1.jpg",
     "mainSliderImg2.jpg",
     "mainSliderImg3.jpg",
+    "1.png",
   ];
 
   return (
