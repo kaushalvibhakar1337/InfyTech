@@ -4,9 +4,13 @@ import "./ProductCard.scss";
 const ProductCard = ({ item }) => {
   return (
     <div className="productCard">
-      <img src={item.image} alt={item.name} className="img" />
-      <h2 className="name">{item.name}</h2>
-      <p className="price">{item.price}</p>
+      <img
+        src={require(`../../assets/home/${item.img1}`)}
+        alt={item.id}
+        className="img"
+      />
+      <span className="name">{item.name}</span>
+      <span className="price">{item.price}</span>
     </div>
   );
 };

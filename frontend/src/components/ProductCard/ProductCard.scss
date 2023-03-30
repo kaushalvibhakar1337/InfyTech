@@ -1,19 +1,24 @@
 .productCard {
   display: inline-block;
   margin-right: 20px;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  font-weight: 600;
 
   img {
     height: 340px;
     width: 340px;
   }
-}
 
-.name {
-  margin: 0;
-  font-size: 1.2rem;
-}
+  .name {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    color: rgba($color: black, $alpha: 0.9);
+  }
 
-.price {
-  margin: 0;
-  font-weight: bold;
+  .price {
+    display: block;
+    color: rgba($color: black, $alpha: 0.7);
+  }
 }
