@@ -10,14 +10,25 @@
     top: 150px;
     padding: 0 30px;
 
-    .heading {
-      display: block;
-      font-size: 12px;
-      letter-spacing: 0.2em;
-      padding: 20px 0;
-      font-weight: 500;
-      color: #1c1b1b;
-      margin-bottom: 16px;
+    .filterItem {
+      margin-bottom: 20px;
+
+      .heading {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        padding: 20px 0;
+        font-weight: 500;
+        color: #1c1b1b;
+      }
+
+      .inputItem {
+        margin-bottom: 10px;
+
+        label {
+          margin-left: 10px;
+        }
+      }
     }
   }
 
