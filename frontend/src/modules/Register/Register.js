@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Register.scss";
 
 const Register = () => {
   return (
-    <>
+    <div className="register">
       <Navbar />
       <div className="registerForm" style={{ marginTop: "15px" }}>
         <p className="heading">REGISTER</p>
@@ -25,7 +26,8 @@ const Register = () => {
           Already have an account? <NavLink to="/login">LOG IN</NavLink>
         </p>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

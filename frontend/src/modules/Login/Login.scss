@@ -1,84 +1,89 @@
-.loginForm {
-  margin: 0;
-  position: absolute;
-  width: 25%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+.login {
+  .loginForm {
+    margin: 0;
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 
-  .heading {
-    font-size: 20px;
-    letter-spacing: 0.2em;
-    font-weight: 600;
-    color: #1c1b1b;
-  }
-
-  .legend {
-    margin-top: 24px;
-    color: #1c1b1b;
-  }
-
-  .inputField {
-    display: block;
-    padding: 12px 14px;
-    width: 100%;
-    border: 1px solid #dddddd;
-    margin-top: 20px;
-    transition: border-color 0.1s ease-in-out;
-    border-radius: 0px;
-  }
-
-  .forgotPass {
-    margin-top: 10px;
-    text-align: right;
-    font-weight: 500;
-    font-size: 12px;
-
-    a {
-      text-decoration: none;
-      color: black;
-
-      &:hover {
-        color: #6a6a6a;
-      }
+    .heading {
+      font-size: 20px;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      color: #1c1b1b;
     }
-  }
 
-  .submit {
-    color: #241414;
-    font-size: 12px;
-    width: 100%;
-    margin-top: 20px;
-    padding: 14px 28px;
-    border: 1px solid transparent;
-    border-color: #e5b14a;
-    background-color: #e5b14a;
-    letter-spacing: 0.2em;
-    font-weight: 500;
-    transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86),
-      border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-
-    &:hover {
-      background-color: white;
-      color: #e5b14a;
-      cursor: pointer;
+    .legend {
+      margin-top: 24px;
+      color: #1c1b1b;
     }
-  }
 
-  .hint {
-    margin-top: 24px;
-    color: #6a6a6a;
-    line-height: 1.65;
+    .inputField {
+      display: block;
+      padding: 12px 14px;
+      width: 100%;
+      border: 1px solid #dddddd;
+      margin-top: 20px;
+      transition: border-color 0.1s ease-in-out;
+      border-radius: 0px;
+    }
 
-    a {
-      text-decoration: none;
-      color: black;
+    .forgotPass {
+      margin-top: 10px;
+      text-align: right;
       font-weight: 500;
+      font-size: 12px;
 
-      &:hover {
-        color: #6a6a6a;
+      a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          color: #6a6a6a;
+        }
       }
     }
+
+    .submit {
+      color: #241414;
+      font-size: 12px;
+      width: 100%;
+      margin-top: 20px;
+      padding: 14px 28px;
+      border: 1px solid transparent;
+      border-color: #e5b14a;
+      background-color: #e5b14a;
+      letter-spacing: 0.2em;
+      font-weight: 500;
+      transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86),
+        border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+      &:hover {
+        background-color: white;
+        color: #e5b14a;
+        cursor: pointer;
+      }
+    }
+
+    .hint {
+      margin-top: 24px;
+      color: #6a6a6a;
+      line-height: 1.65;
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+
+        &:hover {
+          color: #6a6a6a;
+        }
+      }
+    }
+  }
+  .footer {
+    margin-top: 100vh;
   }
 }
