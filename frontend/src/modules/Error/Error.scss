@@ -19,17 +19,22 @@
   }
 
   .bottom {
-    margin-top: 30px;
+    color: #241414;
+    font-size: 12px;
+    width: 100%;
+    margin-top: 20px;
     padding: 14px 28px;
     border: 1px solid transparent;
     border-color: #e5b14a;
-    background-color: #e5b14a;
+    background: linear-gradient(to right, #e5b14a 50%, white 50%);
+    background-size: 200%;
+    background-position: 0 50%;
     letter-spacing: 0.2em;
-    font-size: 12px;
     font-weight: 500;
+    transition: background-position 0.6s ease;
 
     &:hover {
-      background-color: white;
+      background-position: -100% 50%;
       color: #e5b14a;
       cursor: pointer;
     }
