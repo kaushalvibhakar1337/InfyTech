@@ -7,8 +7,8 @@ import ProductList from "../../components/ProductList/ProductList";
 import "./Products.scss";
 
 const Products = () => {
-  const param = useParams();
-  console.log(param);
+  const categoryId = parseInt(useParams().id);
+  console.log(categoryId);
   return (
     <>
       <Navbar />
