@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
@@ -6,6 +7,8 @@ import ProductList from "../../components/ProductList/ProductList";
 import "./Products.scss";
 
 const Products = () => {
+  const param = useParams();
+  console.log(param);
   return (
     <>
       <Navbar />
@@ -16,23 +19,25 @@ const Products = () => {
             <span className="heading">CATEGORIES</span>
             <div className="inputItem">
               <input type="checkbox" id="1" value={1} />
-              <label htmlFor="1">KEYBOARDS</label>
+              <label htmlFor="1">WIRED</label>
             </div>
             <div className="inputItem">
               <input type="checkbox" id="2" value={2} />
-              <label htmlFor="2">MOUSE</label>
-            </div>
-            <div className="inputItem">
-              <input type="checkbox" id="3" value={3} />
-              <label htmlFor="3">HEADPHONES</label>
+              <label htmlFor="2">WIRELESS</label>
             </div>
           </div>
           <div className="filterItem">
             <span className="heading">PRICE</span>
             <div className="inputItem">
-              <span>0</span>
-              <input type="range" min={0} max={1000} />
-              <span>1000</span>
+              <span>R 0</span>
+              <input
+                className="range"
+                type="range"
+                min={0}
+                max={100000}
+                step="5000"
+              />
+              <span>R 100000</span>
             </div>
           </div>
           <div className="filterItem">
