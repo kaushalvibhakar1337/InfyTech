@@ -39,15 +39,15 @@ function Navbar() {
       </NavLink>
       <ul className="items">
         <li className="item dropdown">
-          <NavLink to="/login">
-            ACCOUNT <span>+</span>
-          </NavLink>
+          <NavLink to="/login">ACCOUNT</NavLink>
         </li>
         <li className="item">
           <NavLink to="/search">SEARCH</NavLink>
         </li>
         <li className="item cart">
-          <NavLink to="/cart">CART (0)</NavLink>
+          <NavLink to="/cart">
+            CART (<span className="cartItems">0</span>)
+          </NavLink>
         </li>
       </ul>
     </div>
