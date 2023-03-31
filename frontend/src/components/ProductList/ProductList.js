@@ -7,7 +7,7 @@ const ProductList = () => {
     {
       id: 1,
       img1: "mainSliderImg1.jpg",
-      img2: "mainSliderImg4.png",
+      img2: "mainSliderImg4.jpg",
       name: "KEYBOARD",
       price: "R 199.99",
     },
@@ -27,7 +27,7 @@ const ProductList = () => {
     },
     {
       id: 4,
-      img1: "mainSliderImg4.png",
+      img1: "mainSliderImg4.jpg",
       img2: "mainSliderImg2.jpg",
       name: "HEADPHONES",
       price: "R 99.99",
@@ -35,7 +35,7 @@ const ProductList = () => {
     {
       id: 5,
       img1: "mainSliderImg1.jpg",
-      img2: "mainSliderImg4.png",
+      img2: "mainSliderImg4.jpg",
       name: "KEYBOARD",
       price: "R 199.99",
     },
@@ -55,7 +55,7 @@ const ProductList = () => {
     },
     {
       id: 8,
-      img1: "mainSliderImg4.png",
+      img1: "mainSliderImg4.jpg",
       img2: "mainSliderImg2.jpg",
       name: "HEADPHONES",
       price: "R 99.99",
@@ -63,7 +63,7 @@ const ProductList = () => {
     {
       id: 9,
       img1: "mainSliderImg1.jpg",
-      img2: "mainSliderImg4.png",
+      img2: "mainSliderImg4.jpg",
       name: "KEYBOARD",
       price: "R 199.99",
     },
@@ -83,7 +83,7 @@ const ProductList = () => {
     },
     {
       id: 12,
-      img1: "mainSliderImg4.png",
+      img1: "mainSliderImg4.jpg",
       img2: "mainSliderImg2.jpg",
       name: "HEADPHONES",
       price: "R 99.99",
@@ -91,7 +91,7 @@ const ProductList = () => {
     {
       id: 13,
       img1: "mainSliderImg1.jpg",
-      img2: "mainSliderImg4.png",
+      img2: "mainSliderImg4.jpg",
       name: "KEYBOARD",
       price: "R 199.99",
     },
@@ -111,7 +111,7 @@ const ProductList = () => {
     },
     {
       id: 16,
-      img1: "mainSliderImg4.png",
+      img1: "mainSliderImg4.jpg",
       img2: "mainSliderImg2.jpg",
       name: "HEADPHONES",
       price: "R 99.99",
@@ -119,7 +119,7 @@ const ProductList = () => {
     {
       id: 17,
       img1: "mainSliderImg1.jpg",
-      img2: "mainSliderImg4.png",
+      img2: "mainSliderImg4.jpg",
       name: "KEYBOARD",
       price: "R 199.99",
     },
@@ -139,7 +139,7 @@ const ProductList = () => {
     },
     {
       id: 20,
-      img1: "mainSliderImg4.png",
+      img1: "mainSliderImg4.jpg",
       img2: "mainSliderImg2.jpg",
       name: "HEADPHONES",
       price: "R 99.99",
@@ -147,7 +147,7 @@ const ProductList = () => {
     {
       id: 21,
       img1: "mainSliderImg1.jpg",
-      img2: "mainSliderImg4.png",
+      img2: "mainSliderImg4.jpg",
       name: "KEYBOARD",
       price: "R 199.99",
     },
@@ -167,7 +167,7 @@ const ProductList = () => {
     },
     {
       id: 24,
-      img1: "mainSliderImg4.png",
+      img1: "mainSliderImg4.jpg",
       img2: "mainSliderImg2.jpg",
       name: "HEADPHONES",
       price: "R 99.99",
@@ -175,7 +175,7 @@ const ProductList = () => {
     {
       id: 25,
       img1: "mainSliderImg1.jpg",
-      img2: "mainSliderImg4.png",
+      img2: "mainSliderImg4.jpg",
       name: "KEYBOARD",
       price: "R 199.99",
     },
@@ -195,7 +195,7 @@ const ProductList = () => {
     },
     {
       id: 28,
-      img1: "mainSliderImg4.png",
+      img1: "mainSliderImg4.jpg",
       img2: "mainSliderImg2.jpg",
       name: "HEADPHONES",
       price: "R 99.99",
@@ -203,7 +203,7 @@ const ProductList = () => {
     {
       id: 29,
       img1: "mainSliderImg1.jpg",
-      img2: "mainSliderImg4.png",
+      img2: "mainSliderImg4.jpg",
       name: "KEYBOARD",
       price: "R 199.99",
     },
@@ -223,7 +223,7 @@ const ProductList = () => {
     },
     {
       id: 32,
-      img1: "mainSliderImg4.png",
+      img1: "mainSliderImg4.jpg",
       img2: "mainSliderImg2.jpg",
       name: "HEADPHONES",
       price: "R 99.99",
@@ -231,7 +231,7 @@ const ProductList = () => {
     {
       id: 33,
       img1: "mainSliderImg1.jpg",
-      img2: "mainSliderImg4.png",
+      img2: "mainSliderImg4.jpg",
       name: "KEYBOARD",
       price: "R 199.99",
     },
@@ -251,7 +251,7 @@ const ProductList = () => {
     },
     {
       id: 36,
-      img1: "mainSliderImg4.png",
+      img1: "mainSliderImg4.jpg",
       img2: "mainSliderImg2.jpg",
       name: "HEADPHONES",
       price: "R 99.99",
@@ -259,7 +259,7 @@ const ProductList = () => {
     {
       id: 37,
       img1: "mainSliderImg1.jpg",
-      img2: "mainSliderImg4.png",
+      img2: "mainSliderImg4.jpg",
       name: "KEYBOARD",
       price: "R 199.99",
     },
