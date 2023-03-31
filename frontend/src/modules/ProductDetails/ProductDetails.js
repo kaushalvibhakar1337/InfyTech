@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 const ProductDetails = () => {
   const images = ["DemoImg1.jpg", "DemoImg2.jpg"];
   const [selectedImg, setSelectedImg] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   return (
     <>
@@ -30,7 +31,7 @@ const ProductDetails = () => {
           </div>
         </div>
         <div className="right">
-          <div className="inside">
+          <div className="wrapper">
             <p className="company">COMPANY</p>
             <p className="name">PRODUCT</p>
             <p className="price">R 249.00</p>
@@ -38,12 +39,24 @@ const ProductDetails = () => {
               Tax included.{" "}
               <NavLink to="/shipping">Shipping calculated</NavLink> at checkout.
             </p>
+            <hr />
             <div className="quantity">
-              <button className="minus"> - </button>
-              <p className="total">0</p>
-              <button className="plus"> + </button>
+              <button
+                className="minus"
+                onClick={() => setQuantity((val) => (val === 1 ? 1 : val - 1))}
+              >
+                -
+              </button>
+              <p className="total">{quantity}</p>
+              <button
+                className="plus"
+                onClick={() => setQuantity((val) => val + 1)}
+              >
+                +
+              </button>
             </div>
             <button className="addToCart">ADD TO CART</button>
+            <button className="buyNow">BUY IT NOW</button>
             <div className="description">Description</div>
           </div>
         </div>
