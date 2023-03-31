@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import "./ProductDetails.scss";
+import { NavLink } from "react-router-dom";
 
 const ProductDetails = () => {
   const images = ["DemoImg1.jpg", "DemoImg2.jpg"];
@@ -32,7 +33,10 @@ const ProductDetails = () => {
           <p className="company">COMPANY</p>
           <p className="name">PRODUCT</p>
           <p className="price">R 249.00</p>
-          <p>Tax included. Shipping calculated at checkout.</p>
+          <p className="shippingPolicy">
+            Tax included. <NavLink to="/shipping">Shipping calculated</NavLink>{" "}
+            at checkout.
+          </p>
         </div>
       </div>
       <Footer />

@@ -10,6 +10,7 @@ import Contact from "./modules/Contact/Contact";
 import About from "./modules/About/About";
 import PrivacyPolicy from "./modules/PrivacyPolicy/PrivacyPolicy";
 import RefundPolicy from "./modules/RefundPolicy/RefundPolicy";
+import ShippingPolicy from "./modules/ShippingPolicy/ShippingPolicy";
 import TermsOfService from "./modules/TermsOfService/TermsOfService";
 import Error from "./modules/Error/Error";
 import "./App.scss";
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/refund" element={<RefundPolicy />} />
+        <Route path="/shipping" element={<ShippingPolicy />} />
         <Route path="/termsofservice" element={<TermsOfService />} />
         <Route path="*" element={<Error />} />
       </Routes>
