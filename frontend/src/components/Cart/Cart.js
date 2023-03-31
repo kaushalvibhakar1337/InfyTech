@@ -10,6 +10,51 @@ const Cart = ({ closeCart }) => {
     };
   }, []);
 
+  const data = [
+    {
+      id: 1,
+      company: "LOGITECH",
+      name: "G PRO X SUPERLIGHT",
+      price: "R 199.99",
+      img1: "mainSliderImg1.jpg",
+    },
+    {
+      id: 2,
+      company: "RAZER",
+      name: "DEATHADDER V3 PRO WIRELESS",
+      price: "R 299.00",
+      img1: "mainSliderImg2.jpg",
+    },
+    {
+      id: 1,
+      company: "LOGITECH",
+      name: "G PRO X SUPERLIGHT",
+      price: "R 199.99",
+      img1: "mainSliderImg1.jpg",
+    },
+    {
+      id: 2,
+      company: "RAZER",
+      name: "DEATHADDER V3 PRO WIRELESS",
+      price: "R 299.00",
+      img1: "mainSliderImg2.jpg",
+    },
+    {
+      id: 1,
+      company: "LOGITECH",
+      name: "G PRO X SUPERLIGHT",
+      price: "R 199.99",
+      img1: "mainSliderImg1.jpg",
+    },
+    {
+      id: 2,
+      company: "RAZER",
+      name: "DEATHADDER V3 PRO WIRELESS",
+      price: "R 299.00",
+      img1: "mainSliderImg2.jpg",
+    },
+  ];
+
   return ReactDOM.createPortal(
     <>
       <div className="blur" onClick={closeCart}></div>
@@ -20,7 +65,20 @@ const Cart = ({ closeCart }) => {
             <button onClick={closeCart}>X</button>
           </div>
           <div className="cartContent">
-            <span>YOUR CART IS EMPTY</span>
+            {data?.map((item) => (
+              <div className="item" key={item.id}>
+                <img
+                  src={require(`../../assets/home/${item.img1}`)}
+                  alt=""
+                ></img>
+                <div className="info">
+                  <p className="company">{item.company}</p>
+                  <p className="name">{item.name}</p>
+                  <p className="price">{item.price}</p>
+                  <p className="del">REMOVE</p>
+                </div>
+              </div>
+            ))}
           </div>
           <div className="checkout">
             <span className="note">
