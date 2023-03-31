@@ -81,8 +81,17 @@
       display: block;
     }
   }
+  .cart {
+    a {
+      font-weight: 400 !important;
 
-  .cartItems {
-    font-size: 12px !important;
+      &:hover {
+        font-weight: 500 !important;
+      }
+    }
+
+    .cartItems {
+      font-size: 12px !important;
+    }
   }
 }
