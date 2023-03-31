@@ -62,39 +62,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-// import React, { useState } from "react";
-// import MyModal from "./ShowModal";
-
-// const Modal = () => {
-//   const [showModal, setShowModal] = useState(false);
-
-//   const closeModal = () => setShowModal(false);
-
-//   const handleCloseButton = (
-//     <button className="model-btn" onClick={closeModal}>
-//       Accept It
-//     </button>
-//   );
-
-//   const mainModal = (
-//     <MyModal closeModal={closeModal} handleCloseButton={handleCloseButton}>
-//       <h2>STAY TUNED</h2>
-//       <p>
-//         Subscribe to our newsletter and never miss our designs ,latest news.etc.
-//         Our newsletter is sent once a week, every Monday
-//       </p>
-//     </MyModal>
-//   );
-
-//   return (
-//     <>
-//       <button className="model-btn" onClick={() => setShowModal(true)}>
-//         Open Modal
-//       </button>
-//       {showModal && mainModal}
-//     </>
-//   );
-// };
-
-// export default Modal;
