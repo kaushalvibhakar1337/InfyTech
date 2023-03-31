@@ -5,7 +5,7 @@ import "./ProductCard.scss";
 const ProductCard = ({ item }) => {
   return (
     <div className="productCard">
-      <NavLink to="/products/1">
+      <NavLink to="/product/1">
         <div className="image">
           <img
             src={require(`../../assets/home/${item.img1}`)}
@@ -19,7 +19,7 @@ const ProductCard = ({ item }) => {
           />
         </div>
       </NavLink>
-      <NavLink to="/products/1">
+      <NavLink to="/product/1">
         <span className="name">{item.name}</span>
       </NavLink>
       <span className="price">{item.price}</span>
