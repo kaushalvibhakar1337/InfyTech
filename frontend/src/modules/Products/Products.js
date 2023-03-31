@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -7,8 +7,10 @@ import ProductList from "../../components/ProductList/ProductList";
 import "./Products.scss";
 
 const Products = () => {
-  const categoryId = parseInt(useParams().id);
-  console.log(categoryId);
+  const catId = parseInt(useParams().id);
+  const [maxPrice, setMaxPrice] = useState(100000);
+  const [sort, setSort] = useState(null);
+
   return (
     <>
       <Navbar />
@@ -36,24 +38,35 @@ const Products = () => {
                 min={0}
                 max={100000}
                 step="5000"
+                onChange={(e) => setMaxPrice(e.target.value)}
               />
-              <span>R 100000</span>
+              <span>R {maxPrice}</span>
             </div>
           </div>
           <div className="filterItem">
             <span className="heading">SORT</span>
             <div className="inputItem">
-              <input type="radio" id="asc" name="sortBy" />
+              <input
+                type="radio"
+                id="asc"
+                name="sortBy"
+                onChange={(e) => setSort("asc")}
+              />
               <label htmlFor="asc">PRICE, LOW TO HIGH</label>
             </div>
             <div className="inputItem">
-              <input type="radio" id="desc" name="sortBy" />
+              <input
+                type="radio"
+                id="desc"
+                name="sortBy"
+                onChange={(e) => setSort("desc")}
+              />
               <label htmlFor="desc">PRICE, HIGH TO LOW</label>
             </div>
           </div>
         </div>
         <div className="right">
-          <ProductList />
+          <ProductList catId={catId} maxPrice={maxPrice} sort={sort} />
         </div>
       </div>
       <Footer />
