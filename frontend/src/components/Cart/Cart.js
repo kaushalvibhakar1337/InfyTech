@@ -14,18 +14,22 @@ const Cart = ({ closeCart }) => {
     <>
       <div className="blur" onClick={closeCart}></div>
       <div className="myCart">
-        <div className="heading">
-          <span>CART</span>
-          <button onClick={closeCart}>X</button>
-        </div>
-        <div className="cartContent">
-          <span>YOUR CART IS EMPTY</span>
-        </div>
-        <div className="checkout">
-          <span className="note">Shipping & taxes calculated at checkout</span>
-          <button type="button" className="sub">
-            CHECKOUT
-          </button>
+        <div className="container">
+          <div className="heading">
+            <span>CART</span>
+            <button onClick={closeCart}>X</button>
+          </div>
+          <div className="cartContent">
+            <span>YOUR CART IS EMPTY</span>
+          </div>
+          <div className="checkout">
+            <span className="note">
+              Shipping & taxes calculated at checkout
+            </span>
+            <button type="button" className="sub">
+              CHECKOUT
+            </button>
+          </div>
         </div>
       </div>
     </>,
