@@ -30,13 +30,22 @@ const ProductDetails = () => {
           </div>
         </div>
         <div className="right">
-          <p className="company">COMPANY</p>
-          <p className="name">PRODUCT</p>
-          <p className="price">R 249.00</p>
-          <p className="shippingPolicy">
-            Tax included. <NavLink to="/shipping">Shipping calculated</NavLink>{" "}
-            at checkout.
-          </p>
+          <div className="inside">
+            <p className="company">COMPANY</p>
+            <p className="name">PRODUCT</p>
+            <p className="price">R 249.00</p>
+            <p className="shippingPolicy">
+              Tax included.{" "}
+              <NavLink to="/shipping">Shipping calculated</NavLink> at checkout.
+            </p>
+            <div className="quantity">
+              <button className="minus"> - </button>
+              <p className="total">0</p>
+              <button className="plus"> + </button>
+            </div>
+            <button className="addToCart">ADD TO CART</button>
+            <div className="description">Description</div>
+          </div>
         </div>
       </div>
       <Footer />
