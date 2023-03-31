@@ -4,8 +4,8 @@ import Navbar from "../../components/Navbar/Navbar";
 import "./ProductDetails.scss";
 
 const ProductDetails = () => {
-  const images = ["DemoImg1.jpg", "DemoImg2.jpg", "DemoImg3.jpg"];
-  const [selectedImg, setSelectedImg] = useState[0];
+  const images = ["DemoImg1.jpg", "DemoImg2.jpg"];
+  const [selectedImg, setSelectedImg] = useState(0);
 
   return (
     <>
@@ -23,17 +23,17 @@ const ProductDetails = () => {
               alt=""
               onClick={(e) => setSelectedImg(1)}
             />
-            <img
-              src={require(`../../assets/${images[2]}`)}
-              alt=""
-              onClick={(e) => setSelectedImg(2)}
-            />
           </div>
           <div className="mainImg">
             <img src={require(`../../assets/${images[selectedImg]}`)} alt="" />
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <p className="company">COMPANY</p>
+          <p className="name">PRODUCT</p>
+          <p className="price">R 249.00</p>
+          <p>Tax included. Shipping calculated at checkout.</p>
+        </div>
       </div>
       <Footer />
     </>
