@@ -85,7 +85,7 @@ const Cart = ({ closeCart }) => {
               Shipping & taxes calculated at checkout
             </span>
             <button type="button" className="sub">
-              CHECKOUT
+              <span>CHECKOUT . R 1999.00</span>
             </button>
           </div>
         </div>
