@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
@@ -11,6 +12,11 @@ const Products = () => {
   const [maxPrice, setMaxPrice] = useState(100000);
   const [sort, setSort] = useState(null);
 
+  const { data, loading, error } = useFetch(
+    `/categories?[filters][products][id][$eq]=${catId}`
+  );
+  console.log(data);
+
   return (
     <>
       <Navbar />
@@ -18,7 +24,7 @@ const Products = () => {
       <div className="products">
         <div className="left">
           <div className="filterItem">
-            <span className="heading">CATEGORIES</span>
+            <span className="heading">TYPE</span>
             <div className="inputItem">
               <input type="checkbox" id="1" value={1} />
               <label htmlFor="1">WIRED</label>
