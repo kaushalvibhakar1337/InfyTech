@@ -10,9 +10,9 @@ import "./Products.scss";
 const Products = () => {
   const catId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(50000);
-  const [sort, setSort] = useState(null);
+  const [sort, setSort] = useState("asc");
 
-  console.log(catId);
+  const { data, loading, error } = useFetch(`/products?populate=*&`);
 
   return (
     <>
@@ -31,6 +31,7 @@ const Products = () => {
               <label htmlFor="2">WIRELESS</label>
             </div>
           </div> */}
+          <p className="mainHeading">FILTERS</p>
           <div className="filterItem">
             <span className="heading">PRICE</span>
             <div className="inputItem">
@@ -40,7 +41,7 @@ const Products = () => {
                 type="range"
                 min={0}
                 max={50000}
-                step="5000"
+                step={1000}
                 onChange={(e) => setMaxPrice(e.target.value)}
               />
               <span>₹ {maxPrice}</span>
@@ -52,7 +53,8 @@ const Products = () => {
               <input
                 type="radio"
                 id="asc"
-                name="sortBy"
+                value="asc"
+                name="price"
                 onChange={(e) => setSort("asc")}
               />
               <label htmlFor="asc">PRICE, LOW TO HIGH</label>
@@ -61,7 +63,8 @@ const Products = () => {
               <input
                 type="radio"
                 id="desc"
-                name="sortBy"
+                value="desc"
+                name="price"
                 onChange={(e) => setSort("desc")}
               />
               <label htmlFor="desc">PRICE, HIGH TO LOW</label>
