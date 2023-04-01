@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import "./ProductDetails.scss";
-import { NavLink } from "react-router-dom";
 
 const ProductDetails = () => {
   const images = ["DemoImg1.jpg", "DemoImg2.jpg"];
@@ -32,12 +31,11 @@ const ProductDetails = () => {
         </div>
         <div className="right">
           <div className="wrapper">
-            <p className="company">COMPANY</p>
-            <p className="name">PRODUCT</p>
-            <p className="price">R 249.00</p>
+            <p className="company">LOGITECH</p>
+            <p className="name">G PRO X SUPERLIGHT</p>
+            <p className="price">R 12499.99</p>
             <p className="shippingPolicy">
-              Tax included.{" "}
-              <NavLink to="/shipping">Shipping calculated</NavLink> at checkout.
+              Tax included. Shipping calculated at checkout.
             </p>
             <hr />
             <div className="quantity">
@@ -57,7 +55,11 @@ const ProductDetails = () => {
             </div>
             <button className="addToCart">ADD TO CART</button>
             <button className="buyNow">BUY IT NOW</button>
-            <div className="description">Description</div>
+            <div className="description">
+              Less than 63 grams. Advanced low-latency LIGHTSPEED wireless.
+              Sub-micron precision with HERO 25K sensor. Remove all obstacles
+              with our lightest and fastest PRO mouse ever.
+            </div>
           </div>
         </div>
       </div>

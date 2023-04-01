@@ -6,10 +6,10 @@ import Products from "./modules/Products/Products";
 import ProductDetails from "./modules/ProductDetails/ProductDetails";
 import Login from "./modules/Login/Login";
 import Register from "./modules/Register/Register";
-import Contact from "./modules/Contact/Contact";
 import About from "./modules/About/About";
-import PrivacyPolicy from "./modules/PrivacyPolicy/PrivacyPolicy";
+import Contact from "./modules/Contact/Contact";
 import TermsNConditions from "./modules/TermsNConditions/TermsNConditions";
+import PrivacyPolicy from "./modules/PrivacyPolicy/PrivacyPolicy";
 import ReturnPolicy from "./modules/ReturnPolicy/ReturnPolicy";
 import Error from "./modules/Error/Error";
 import "./App.scss";
@@ -26,8 +26,8 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsNConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/return-policy" element={<ReturnPolicy />} />
         <Route path="*" element={<Error />} />
       </Routes>
