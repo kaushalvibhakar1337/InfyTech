@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.scss";
 
-const ProductList = ({ catId, maxPrice, sort }) => {
+const ProductList = () => {
   const { data, loading, error } = useFetch(`/products?populate=*`);
   return (
     <div className="productList">
