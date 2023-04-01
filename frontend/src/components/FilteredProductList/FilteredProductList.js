@@ -13,7 +13,6 @@ const FilteredProductList = ({ catId, maxPrice, sort }) => {
         : loading
         ? "Loading..."
         : data.map((item) => <ProductCard item={item} key={item.id} />)}
-      {console.log(data)}
     </div>
   );
 };
