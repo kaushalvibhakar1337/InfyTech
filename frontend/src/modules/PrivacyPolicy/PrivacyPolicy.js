@@ -490,17 +490,6 @@ const PrivacyPolicy = () => {
             We may use Email Marketing Service Providers to manage and send
             emails to You.
           </p>
-          <ul className="points">
-            <li>
-              <strong>Mailchimp</strong> Mailchimp is an email marketing sending
-              service provided by The Rocket Science Group LLC. For more
-              information on the privacy practices of Mailchimp, please visit
-              their Privacy policy:&nbsp;
-              <a href="https://mailchimp.com/legal/privacy/">
-                https://mailchimp.com/legal/privacy/
-              </a>
-            </li>
-          </ul>
         </div>
         <div className="section">
           <p className="heading">BEHAVIORAL REMARKETING</p>
