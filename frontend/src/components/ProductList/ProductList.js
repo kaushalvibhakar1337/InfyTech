@@ -7,7 +7,9 @@ const ProductList = () => {
   const { data, loading, error } = useFetch(`/products?populate=*`);
   return (
     <div className="productList">
-      {loading
+      {error
+        ? "Something went wrong!"
+        : loading
         ? "Loading..."
         : data.map((item) => <ProductCard item={item} key={item.id} />)}
     </div>
