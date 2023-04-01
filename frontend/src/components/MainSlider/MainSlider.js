@@ -24,7 +24,7 @@ function MainSlider({ images, interval = 3000 }) {
             alt=""
           />
         ))}
-        <NavLink to="/products">
+        <NavLink to="/products/all">
           <button type="button" className="btn">
             SHOP NOW
           </button>

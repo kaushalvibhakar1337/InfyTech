@@ -12,16 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Company": {
+    "company": {
       "type": "string"
     },
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Price": {
+    "price": {
       "type": "decimal"
     },
-    "Image1": {
+    "img1": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -32,7 +32,7 @@
         "audios"
       ]
     },
-    "Image2": {
+    "img2": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -43,7 +43,7 @@
         "audios"
       ]
     },
-    "Description": {
+    "desc": {
       "type": "text"
     },
     "isWireless": {

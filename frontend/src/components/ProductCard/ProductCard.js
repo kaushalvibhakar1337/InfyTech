@@ -8,21 +8,29 @@ const ProductCard = ({ item }) => {
       <NavLink to="/product/1">
         <div className="image">
           <img
-            src={require(`../../assets/home/${item.img1}`)}
+            src={
+              process.env.REACT_APP_UPLOAD_URL +
+              item.attributes?.img1?.data?.attributes?.url
+            }
             alt={item.id}
             className="img1"
           />
           <img
-            src={require(`../../assets/home/${item.img2}`)}
+            src={
+              process.env.REACT_APP_UPLOAD_URL +
+              item.attributes?.img2?.data?.attributes?.url
+            }
             alt={item.id}
             className="img2"
           />
         </div>
       </NavLink>
       <NavLink to="/product/1">
-        <span className="name">{item.name}</span>
+        <span className="name">
+          {item?.attributes.company} - {item?.attributes.name}
+        </span>
       </NavLink>
-      <span className="price">{item.price}</span>
+      <span className="price">{item?.attributes.price}</span>
     </div>
   );
 };
