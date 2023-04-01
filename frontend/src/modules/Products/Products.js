@@ -11,9 +11,8 @@ const Products = () => {
   const catId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(50000);
   const [sort, setSort] = useState(null);
-  const { data, loading, error } = useFetch(
-    `/products?populate=*&[filters][categories][id]=${catId}`
-  );
+
+  console.log(catId);
 
   return (
     <>
