@@ -42,6 +42,19 @@
         "videos",
         "audios"
       ]
+    },
+    "Description": {
+      "type": "text"
+    },
+    "isWireless": {
+      "type": "boolean",
+      "default": false
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "products"
     }
   }
 }
