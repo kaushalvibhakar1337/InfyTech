@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "company": {
-      "type": "string"
-    },
     "name": {
       "type": "string"
     },
@@ -51,6 +48,9 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "products"
+    },
+    "company": {
+      "type": "string"
     }
   }
 }
