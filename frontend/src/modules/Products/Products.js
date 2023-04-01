@@ -12,6 +12,8 @@ const Products = () => {
   const [maxPrice, setMaxPrice] = useState(50000);
   const [sort, setSort] = useState("asc");
 
+  const { data, loading, error } = useFetch(`/products?populate=*&`);
+
   return (
     <>
       <Navbar />
