@@ -4,15 +4,13 @@ import useFetch from "../../hooks/useFetch";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
-import ProductList from "../../components/ProductList/ProductList";
+import FilteredProductList from "../../components/FilteredProductList/FilteredProductList";
 import "./Products.scss";
 
 const Products = () => {
   const catId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(50000);
   const [sort, setSort] = useState("asc");
-
-  const { data, loading, error } = useFetch(`/products?populate=*&`);
 
   return (
     <>
@@ -72,7 +70,7 @@ const Products = () => {
           </div>
         </div>
         <div className="right">
-          <ProductList catId={catId} maxPrice={maxPrice} sort={sort} />
+          <FilteredProductList catId={catId} maxPrice={maxPrice} sort={sort} />
         </div>
       </div>
       <Footer />
