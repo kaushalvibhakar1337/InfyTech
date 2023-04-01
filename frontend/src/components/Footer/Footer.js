@@ -18,17 +18,20 @@ const Footer = () => {
         </div>
         <div className="item">
           <h1>MENU</h1>
-          <NavLink to="/contact">
+          <NavLink to="/contact-us">
             <span>CONTACT US</span>
           </NavLink>
-          <NavLink to="/about">
+          <NavLink to="/about-us">
             <span>ABOUT US</span>
           </NavLink>
-          <NavLink to="/privacy">
+          <NavLink to="/terms-and-conditions">
+            <span>TERMS & CONDITIONS</span>
+          </NavLink>
+          <NavLink to="/privacy-policy">
             <span>PRIVACY POLICY</span>
           </NavLink>
-          <NavLink to="/termsofservice">
-            <span>TERMS OF SERVICE</span>
+          <NavLink to="/return-policy">
+            <span>RETURN POLICY</span>
           </NavLink>
         </div>
         <div className="item">
