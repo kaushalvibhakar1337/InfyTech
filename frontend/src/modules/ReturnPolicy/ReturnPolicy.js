@@ -2,13 +2,13 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 
-const ShippingPolicy = () => {
+const ReturnPolicy = () => {
   return (
     <>
       <Navbar />
-      <Header title="SHIPPING POLICY" />
+      <Header title="CANCELLATIONS, REFUNDS & REPLACEMENT" />
     </>
   );
 };
 
-export default ShippingPolicy;
+export default ReturnPolicy;

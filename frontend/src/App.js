@@ -9,9 +9,8 @@ import Register from "./modules/Register/Register";
 import Contact from "./modules/Contact/Contact";
 import About from "./modules/About/About";
 import PrivacyPolicy from "./modules/PrivacyPolicy/PrivacyPolicy";
-import RefundPolicy from "./modules/RefundPolicy/RefundPolicy";
-import ShippingPolicy from "./modules/ShippingPolicy/ShippingPolicy";
-import TermsOfService from "./modules/TermsOfService/TermsOfService";
+import TermsNConditions from "./modules/TermsNConditions/TermsNConditions";
+import ReturnPolicy from "./modules/ReturnPolicy/ReturnPolicy";
 import Error from "./modules/Error/Error";
 import "./App.scss";
 
@@ -25,12 +24,11 @@ const App = () => {
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/refund" element={<RefundPolicy />} />
-        <Route path="/shipping" element={<ShippingPolicy />} />
-        <Route path="/termsofservice" element={<TermsOfService />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsNConditions />} />
+        <Route path="/return-policy" element={<ReturnPolicy />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
