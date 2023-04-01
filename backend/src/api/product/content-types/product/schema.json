@@ -46,13 +46,9 @@
     "desc": {
       "type": "text"
     },
-    "isWireless": {
-      "type": "boolean",
-      "default": false
-    },
-    "categories": {
+    "category": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "products"
     }
