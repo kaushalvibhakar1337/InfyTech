@@ -32,9 +32,8 @@ const PrivacyPolicy = () => {
             </li>
             <li>
               <strong>Company</strong>&nbsp;(referred to as either "the
-              Company", "We", "Us" or "Our" in this Agreement) refers to JD
-              Elite, G-2, Matharu Arcade, 32 Subhash Road, Vile Parle East,
-              Mumbai : 400 057.
+              Company", "We", "Us" or "Our" in this Agreement) refers to
+              InfyTech, Surat, Gujarat, India 39007.
             </li>
             <li>
               <strong>Affiliate</strong> means an entity that controls, is
@@ -48,8 +47,8 @@ const PrivacyPolicy = () => {
               You to access our Service or parts of our Service.
             </li>
             <li>
-              <strong>Website</strong>&nbsp;refers to EliteHubs, accessible from
-              www.elitehubs.com
+              <strong>Website</strong>&nbsp;refers to InfyTech, accessible from
+              www.infytech.com
             </li>
             <li>
               <strong>Service</strong>&nbsp;refers to the Website.
