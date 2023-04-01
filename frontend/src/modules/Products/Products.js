@@ -13,7 +13,7 @@ const Products = () => {
   const [sort, setSort] = useState(null);
 
   const { data, loading, error } = useFetch(
-    `/categories?[filters][products][id][$eq]=${catId}`
+    `/products?populate=*&[filters][categories][id]=${catId}`
   );
   console.log(data);
 
