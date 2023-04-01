@@ -5,8 +5,9 @@ import "./FilteredProductList.scss";
 
 const FilteredProductList = ({ catId, maxPrice, sort }) => {
   const { data, loading, error } = useFetch(
-    `/categories[filters][id][$eq]=${catId}/products?populate=*&`
+    `categories?filters[id][$eq]=${catId}/products?populate=*`
   );
+
   return (
     <div className="filteredProductList">
       {error
@@ -20,4 +21,5 @@ const FilteredProductList = ({ catId, maxPrice, sort }) => {
 
 export default FilteredProductList;
 
-//[filters][price][$lte]=${maxPrice}&sort=price:${sort}
+//&[filters][price][$lte]=${maxPrice}&sort=price:${sort}
+//categories?filters[id][$eq]=${catId}/products?populate=*

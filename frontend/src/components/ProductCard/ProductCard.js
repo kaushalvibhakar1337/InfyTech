@@ -12,7 +12,7 @@ const ProductCard = ({ item }) => {
               process.env.REACT_APP_UPLOAD_URL +
               item.attributes?.img1?.data?.attributes?.url
             }
-            alt={item.id}
+            alt=""
             className="img1"
           />
           <img
@@ -20,7 +20,7 @@ const ProductCard = ({ item }) => {
               process.env.REACT_APP_UPLOAD_URL +
               item.attributes?.img2?.data?.attributes?.url
             }
-            alt={item.id}
+            alt=""
             className="img2"
           />
         </div>
