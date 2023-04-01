@@ -4,7 +4,9 @@ import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.scss";
 
 const ProductList = ({ catId, maxPrice, sort }) => {
-  const { data, loading, error } = useFetch(`/products?populate=*`);
+  const { data, loading, error } = useFetch(
+    `/products?populate=*&[filters][categories][id]=${catId}`
+  );
   return (
     <div className="productList">
       {error

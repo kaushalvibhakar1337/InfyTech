@@ -20,19 +20,19 @@ function Navbar() {
             </NavLink>
             <div className="dropdown_content">
               <span>PC Components</span>
-              <NavLink to="/products/processors">Processor</NavLink>
-              <NavLink to="/products/motherboards">Motherboard</NavLink>
-              <NavLink to="/products/gpus">Graphics Card</NavLink>
-              <NavLink to="/products/psus">Power Supply Units</NavLink>
-              <NavLink to="/products/cabinets">PC Cabinets</NavLink>
-              <NavLink to="/products/rams">RAM</NavLink>
-              <NavLink to="/products/ssds">SSD</NavLink>
+              <NavLink to="/products/1">Processor</NavLink>
+              <NavLink to="/products/2">Motherboard</NavLink>
+              <NavLink to="/products/3">Graphics Card</NavLink>
+              <NavLink to="/products/4">Power Supply Units</NavLink>
+              <NavLink to="/products/5">PC Cabinets</NavLink>
+              <NavLink to="/products/6">RAM</NavLink>
+              <NavLink to="/products/7">SSD</NavLink>
               <span>Peripherals</span>
-              <NavLink to="/products/mice">Mouse</NavLink>
-              <NavLink to="/products/keyboards">Keyboard</NavLink>
-              <NavLink to="/products/headphones">Headphones</NavLink>
-              <NavLink to="/products/mousepads">Mousepad</NavLink>
-              <NavLink to="/products/monitors">Monitors</NavLink>
+              <NavLink to="/products/8">Mouse</NavLink>
+              <NavLink to="/products/9">Keyboard</NavLink>
+              <NavLink to="/products/10">Headphones</NavLink>
+              <NavLink to="/products/11">Mousepad</NavLink>
+              <NavLink to="/products/12">Monitors</NavLink>
             </div>
           </li>
           <li className="item">
