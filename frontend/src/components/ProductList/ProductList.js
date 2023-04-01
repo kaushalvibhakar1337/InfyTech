@@ -1,33 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.scss";
+import axios from "axios";
 
 const ProductList = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await axios.get(
+          process.env.REACT_APP_API_URL + "/products",
+          {
+            headers: {
+              Authorization: "bearer " + process.env.REACT_APP_API_TOKEN,
+            },
+          }
+        );
+        console.log(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
+
   const data = [
-    {
-      id: 1,
-      company: "LOGITECH",
-      name: "KEYBOARD",
-      price: "R 199.99",
-      img1: "mainSliderImg1.jpg",
-      img2: "mainSliderImg4.jpg",
-    },
-    {
-      id: 2,
-      company: "LOGITECH",
-      name: "MOUSE",
-      price: "FROM R 399.00",
-      img1: "mainSliderImg2.jpg",
-      img2: "mainSliderImg3.jpg",
-    },
-    {
-      id: 3,
-      company: "LOGITECH",
-      name: "CPU",
-      price: "FROM R 799.99",
-      img1: "mainSliderImg3.jpg",
-      img2: "mainSliderImg1.jpg",
-    },
     {
       id: 4,
       company: "LOGITECH",
