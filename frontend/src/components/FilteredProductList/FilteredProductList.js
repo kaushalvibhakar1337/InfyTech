@@ -4,9 +4,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import "./FilteredProductList.scss";
 
 const FilteredProductList = ({ catId, maxPrice, sort }) => {
-  const { data, loading, error } = useFetch(
-    `categories?filters[id][$eq]=${catId}/products?populate=*`
-  );
+  const { data, loading, error } = useFetch(`products?populate=*`);
 
   return (
     <div className="filteredProductList">
@@ -15,6 +13,7 @@ const FilteredProductList = ({ catId, maxPrice, sort }) => {
         : loading
         ? "Loading..."
         : data.map((item) => <ProductCard item={item} key={item.id} />)}
+      {console.log(data)}
     </div>
   );
 };
