@@ -15,42 +15,42 @@ const Cart = ({ closeCart }) => {
       id: 1,
       company: "LOGITECH",
       name: "G PRO X SUPERLIGHT",
-      price: "R 199.99",
+      price: "₹ 199.99",
       img1: "mainSliderImg1.jpg",
     },
     {
       id: 2,
       company: "RAZER",
       name: "DEATHADDER V3 PRO WIRELESS",
-      price: "R 299.00",
+      price: "₹ 299.00",
       img1: "mainSliderImg2.jpg",
     },
     {
       id: 1,
       company: "LOGITECH",
       name: "G PRO X SUPERLIGHT",
-      price: "R 199.99",
+      price: "₹ 199.99",
       img1: "mainSliderImg1.jpg",
     },
     {
       id: 2,
       company: "RAZER",
       name: "DEATHADDER V3 PRO WIRELESS",
-      price: "R 299.00",
+      price: "₹ 299.00",
       img1: "mainSliderImg2.jpg",
     },
     {
       id: 1,
       company: "LOGITECH",
       name: "G PRO X SUPERLIGHT",
-      price: "R 199.99",
+      price: "₹ 199.99",
       img1: "mainSliderImg1.jpg",
     },
     {
       id: 2,
       company: "RAZER",
       name: "DEATHADDER V3 PRO WIRELESS",
-      price: "R 299.00",
+      price: "₹ 299.00",
       img1: "mainSliderImg2.jpg",
     },
   ];
@@ -85,7 +85,7 @@ const Cart = ({ closeCart }) => {
               Shipping & taxes calculated at checkout
             </span>
             <button type="button" className="sub">
-              <span>CHECKOUT . R 1999.00</span>
+              <span>CHECKOUT . ₹ 1999.00</span>
             </button>
           </div>
         </div>

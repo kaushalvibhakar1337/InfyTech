@@ -9,7 +9,7 @@ import "./Products.scss";
 
 const Products = () => {
   const catId = parseInt(useParams().id);
-  const [maxPrice, setMaxPrice] = useState(100000);
+  const [maxPrice, setMaxPrice] = useState(50000);
   const [sort, setSort] = useState(null);
 
   const { data, loading, error } = useFetch(
@@ -37,16 +37,16 @@ const Products = () => {
           <div className="filterItem">
             <span className="heading">PRICE</span>
             <div className="inputItem">
-              <span>R 0</span>
+              <span>₹ 0</span>
               <input
                 className="range"
                 type="range"
                 min={0}
-                max={100000}
+                max={50000}
                 step="5000"
                 onChange={(e) => setMaxPrice(e.target.value)}
               />
-              <span>R {maxPrice}</span>
+              <span>₹ {maxPrice}</span>
             </div>
           </div>
           <div className="filterItem">

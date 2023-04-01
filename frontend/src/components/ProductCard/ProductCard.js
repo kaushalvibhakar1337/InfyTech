@@ -30,7 +30,7 @@ const ProductCard = ({ item }) => {
           {item?.attributes.company} - {item?.attributes.name}
         </span>
       </NavLink>
-      <span className="price">{item?.attributes.price}</span>
+      <span className="price">₹ - {item?.attributes.price}</span>
     </div>
   );
 };
