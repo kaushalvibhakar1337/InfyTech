@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="item">
           <h1>INFYTECH | YOUR GO-TO-DESTINATION FOR ALL YOUR COMPUTER NEEDS</h1>
           <span>
-            <span className="innerSpan">Our Address : </span>Ganpat Vidyanagar
-            Mehsana-Gozaria, Highway, Kherva, Gujarat 384012
+            <span className="innerSpan">Our Address : </span>Surat, Gujarat
+            395007
           </span>
           <span>
             <span className="innerSpan">Contact No : </span>+91 7567261003
