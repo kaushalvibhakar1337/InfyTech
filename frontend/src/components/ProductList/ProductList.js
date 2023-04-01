@@ -4,7 +4,9 @@ import "./ProductList.scss";
 import axios from "axios";
 
 const ProductList = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,8 +25,6 @@ const ProductList = () => {
     };
     fetchData();
   }, []);
-
-  console.log(data);
 
   return (
     <div className="productList">
