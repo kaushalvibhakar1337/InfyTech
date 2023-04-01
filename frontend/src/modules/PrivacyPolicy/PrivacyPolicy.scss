@@ -11,27 +11,31 @@
     margin-top: 70px;
     padding: 40px 50px;
     border: 1px solid #dddddd;
-  }
 
-  .heading {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 35px;
-  }
+    a {
+      color: #1c1b1b;
+    }
 
-  .subHeading {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 25px;
-  }
+    .heading {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 35px;
+    }
 
-  .points {
-    font-size: 14px;
-    margin-bottom: 30px;
+    .subHeading {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
 
-    li {
-      margin-top: 10px;
-      margin-bottom: 10px;
+    .points {
+      font-size: 14px;
+      margin-bottom: 30px;
+
+      li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
     }
   }
 }
