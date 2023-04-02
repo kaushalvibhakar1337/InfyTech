@@ -2,12 +2,12 @@
   letter-spacing: 1px;
   margin-top: 200px;
   width: 100%;
-  padding: 75px 50px 120px 100px;
+  padding: 75px 50px 120px 50px;
   border-top: 1px solid #dddddd;
 
   .top {
     display: flex;
-    gap: 400px;
+    gap: 250px;
 
     .item {
       flex: 1;
@@ -43,7 +43,7 @@
       }
 
       .inputField {
-        margin-top: 10px;
+        margin-top: 5px;
         padding: 13px 14px;
         border: 1px solid #dddddd;
         transition: border-color 0.1s ease-in-out;
@@ -56,8 +56,8 @@
       .sub {
         color: #241414;
         font-size: 12px;
-        width: 100%;
-        margin-top: 10px;
+        width: 50%;
+        margin-top: 5px;
         padding: 14px 28px;
         border: 1px solid transparent;
         border-color: #e5b14a;
