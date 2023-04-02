@@ -46,7 +46,7 @@ const ProductDetails = () => {
                 <img
                   src={
                     process.env.REACT_APP_UPLOAD_URL +
-                    data?.attributes[selectedImg]?.data?.attributes?.url
+                    data?.attributes?.[selectedImg]?.data?.attributes?.url
                   }
                   alt=""
                 />
