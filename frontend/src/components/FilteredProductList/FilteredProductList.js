@@ -20,4 +20,3 @@ const FilteredProductList = ({ catId, maxPrice, sort }) => {
 export default FilteredProductList;
 
 //&[filters][price][$lte]=${maxPrice}&sort=price:${sort}
-//categories?filters[id][$eq]=${catId}/products?populate=*
