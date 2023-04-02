@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import { NavLink, useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import "./ProductDetails.scss";
-import { NavLink, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
   const productId = useParams().id;

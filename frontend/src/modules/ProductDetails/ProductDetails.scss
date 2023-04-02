@@ -9,10 +9,8 @@
     gap: 20px;
 
     .images {
-      flex: 2;
-
       img {
-        width: 100%;
+        width: 166px;
         height: 150px;
         object-fit: cover;
         margin-bottom: 10px;
@@ -21,11 +19,9 @@
     }
 
     .mainImg {
-      flex: 7;
-
       img {
-        width: 100%;
-        max-height: 700px;
+        width: 575px;
+        max-height: 575px;
         object-fit: cover;
       }
     }
