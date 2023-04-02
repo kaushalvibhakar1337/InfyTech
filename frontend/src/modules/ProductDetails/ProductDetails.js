@@ -54,9 +54,9 @@ const ProductDetails = () => {
             </div>
             <div className="right">
               <div className="wrapper">
-                <p className="company">COMPANY</p>
-                <p className="name">PRODUCT</p>
-                <p className="price">R 249.00</p>
+                <p className="company">{data?.attributes?.company}</p>
+                <p className="name">{data?.attributes?.name}</p>
+                <p className="price">R {data?.attributes?.price}</p>
                 <p className="shippingPolicy">
                   Tax included.{" "}
                   <NavLink to="/return-policy">Shipping calculated</NavLink> at
@@ -82,7 +82,7 @@ const ProductDetails = () => {
                 </div>
                 <button className="addToCart">ADD TO CART</button>
                 <button className="buyNow">BUY IT NOW</button>
-                <div className="description">Description</div>
+                <div className="description">{data?.attributes?.desc}</div>
               </div>
             </div>
           </>
