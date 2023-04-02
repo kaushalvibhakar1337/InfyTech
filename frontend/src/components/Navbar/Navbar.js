@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Cart from "../Cart/Cart";
 import "./Navbar.scss";
 
 function Navbar() {
   const [openCart, setOpenCart] = useState(false);
   const closeCart = () => setOpenCart(false);
+  const products = useSelector((state) => state.cart.products);
 
   return (
     <>
@@ -51,7 +53,7 @@ function Navbar() {
           </li>
           <li className="item cart">
             <NavLink onClick={() => setOpenCart(true)}>
-              CART (<span className="cartItems">0</span>)
+              CART (<span className="cartItems">{products.length}</span>)
             </NavLink>
           </li>
         </ul>

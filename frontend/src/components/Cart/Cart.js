@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromCart } from "../../redux/cartReducer";
 import "./Cart.scss";
 
 const Cart = ({ closeCart }) => {
@@ -16,6 +17,8 @@ const Cart = ({ closeCart }) => {
     products.forEach((item) => (total += item.quantity * item.price));
     return total.toFixed(2);
   };
+
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -39,7 +42,12 @@ const Cart = ({ closeCart }) => {
                   <p className="price">
                     {item.quantity} X ₹ - {item.price}
                   </p>
-                  <p className="del">REMOVE</p>
+                  <p
+                    className="del"
+                    onClick={() => dispatch(removeFromCart(item.id))}
+                  >
+                    REMOVE
+                  </p>
                 </div>
               </div>
             ))}
