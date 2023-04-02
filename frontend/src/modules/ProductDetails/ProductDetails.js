@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
+
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import "./ProductDetails.scss";
@@ -12,6 +15,7 @@ const ProductDetails = () => {
   const { data, loading, error } = useFetch(
     `/products/${productId}?populate=*`
   );
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -80,7 +84,23 @@ const ProductDetails = () => {
                     +
                   </button>
                 </div>
-                <button className="addToCart">ADD TO CART</button>
+                <button
+                  className="addToCart"
+                  onClick={() =>
+                    dispatch(
+                      addToCart({
+                        id: data.id,
+                        company: data.attributes.company,
+                        name: data.attributes.name,
+                        price: data.attributes.price,
+                        img: data.attributes.img1.data.attributes.url,
+                        quantity,
+                      })
+                    )
+                  }
+                >
+                  ADD TO CART
+                </button>
                 <button className="buyNow">BUY IT NOW</button>
                 <div className="description">{data?.attributes?.desc}</div>
               </div>
