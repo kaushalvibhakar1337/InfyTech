@@ -14,7 +14,7 @@ const Cart = ({ closeCart }) => {
 
   return (
     <>
-      <div className="blur" onClick={closeCart}></div>
+      <div className="blurWrapper" onClick={closeCart}></div>
       <div className="myCart">
         <div className="container">
           <div className="heading">

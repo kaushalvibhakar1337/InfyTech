@@ -92,27 +92,6 @@
       }
 
       .addToCart {
-        color: #6a6a6a;
-        font-size: 12px;
-        width: 100%;
-        padding: 14px 28px;
-        border: 1px solid transparent;
-        border-color: #dddddd;
-        background: linear-gradient(to right, white 50%, #e5b14a 50%);
-        background-size: 200%;
-        background-position: 0 50%;
-        letter-spacing: 0.2em;
-        font-weight: 600;
-        transition: background-position 0.6s ease;
-
-        &:hover {
-          background-position: -100% 50%;
-          color: #241414;
-          cursor: pointer;
-        }
-      }
-
-      .buyNow {
         color: #241414;
         font-size: 12px;
         width: 100%;
@@ -133,9 +112,14 @@
         }
       }
 
+      .heading {
+        margin-top: 30px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+      }
+
       .description {
         font-size: 14px;
-        margin-top: 30px;
       }
     }
   }

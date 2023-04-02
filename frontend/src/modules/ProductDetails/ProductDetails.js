@@ -101,7 +101,8 @@ const ProductDetails = () => {
                 >
                   ADD TO CART
                 </button>
-                <button className="buyNow">BUY IT NOW</button>
+                {/* <button className="buyNow">BUY IT NOW</button> */}
+                <span className="heading">DESCRIPTION :</span>
                 <div className="description">{data?.attributes?.desc}</div>
               </div>
             </div>
