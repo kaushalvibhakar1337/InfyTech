@@ -7,11 +7,11 @@ import { NavLink, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
   const productId = useParams().id;
+  const [selectedImg, setSelectedImg] = useState("img1");
+  const [quantity, setQuantity] = useState(1);
   const { data, loading, error } = useFetch(
     `/products/${productId}?populate=*`
   );
-  const [selectedImg, setSelectedImg] = useState("img1");
-  const [quantity, setQuantity] = useState(1);
 
   return (
     <>
