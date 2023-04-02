@@ -20,23 +20,25 @@ const Contact = () => {
         ></iframe>
         <div className="contactForm">
           <form action="https://formspree.io/f/xrgvyykn" method="POST">
-            <p className="heading">SHARE YOUR FEEDBACK</p>
+            <p className="heading">
+              GOT ANY ISSUES? FEEL FREE TO DROP US A MAIL.
+            </p>
             <input
               type="text"
-              placeholder="Username"
+              placeholder="Your Name"
               name="Username"
               autoComplete="off"
               required
             />
             <input
               type="email"
-              placeholder="Email"
+              placeholder="Your Email Address"
               name="Email"
               autoComplete="off"
               required
             />
             <textarea
-              placeholder="Message"
+              placeholder="How Can We Help?"
               name="Message"
               cols="30"
               rows="10"
