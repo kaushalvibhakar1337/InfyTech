@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import ReactDOM from "react-dom";
 import "./Cart.scss";
 
@@ -10,50 +11,7 @@ const Cart = ({ closeCart }) => {
     };
   }, []);
 
-  const data = [
-    {
-      id: 1,
-      company: "LOGITECH",
-      name: "G PRO X SUPERLIGHT",
-      price: "₹ 199.99",
-      img1: "mainSliderImg1.jpg",
-    },
-    {
-      id: 2,
-      company: "RAZER",
-      name: "DEATHADDER V3 PRO WIRELESS",
-      price: "₹ 299.00",
-      img1: "mainSliderImg2.jpg",
-    },
-    {
-      id: 3,
-      company: "LOGITECH",
-      name: "G PRO X SUPERLIGHT",
-      price: "₹ 199.99",
-      img1: "mainSliderImg1.jpg",
-    },
-    {
-      id: 4,
-      company: "RAZER",
-      name: "DEATHADDER V3 PRO WIRELESS",
-      price: "₹ 299.00",
-      img1: "mainSliderImg2.jpg",
-    },
-    {
-      id: 5,
-      company: "LOGITECH",
-      name: "G PRO X SUPERLIGHT",
-      price: "₹ 199.99",
-      img1: "mainSliderImg1.jpg",
-    },
-    {
-      id: 6,
-      company: "RAZER",
-      name: "DEATHADDER V3 PRO WIRELESS",
-      price: "₹ 299.00",
-      img1: "mainSliderImg2.jpg",
-    },
-  ];
+  const products = useSelector((state) => state.cart.products);
 
   return ReactDOM.createPortal(
     <>
@@ -65,7 +23,7 @@ const Cart = ({ closeCart }) => {
             <button onClick={closeCart}>X</button>
           </div>
           <div className="cartContent">
-            {data?.map((item) => (
+            {products?.map((item) => (
               <div className="item" key={item.id}>
                 <img
                   src={require(`../../assets/home/${item.img1}`)}
