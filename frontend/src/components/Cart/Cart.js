@@ -30,7 +30,7 @@ const Cart = ({ closeCart }) => {
             {products?.map((item) => (
               <div className="item" key={item.id}>
                 <img
-                  src={process.env.REACT_APP_UPLOAD_URL + item.img1}
+                  src={process.env.REACT_APP_UPLOAD_URL + item.img}
                   alt=""
                 ></img>
                 <div className="info">

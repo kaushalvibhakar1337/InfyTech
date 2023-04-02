@@ -93,7 +93,7 @@ const ProductDetails = () => {
                         company: data.attributes.company,
                         name: data.attributes.name,
                         price: data.attributes.price,
-                        img1: data.attributes.img1.data.attributes.url,
+                        img: data.attributes.img1.data.attributes.url,
                         quantity,
                       })
                     )
