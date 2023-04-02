@@ -32,7 +32,6 @@ const Products = () => {
           <div className="filterItem">
             <span className="heading">PRICE</span>
             <div className="inputItem">
-              <span>₹ 0</span>
               <input
                 className="range"
                 type="range"
@@ -41,8 +40,9 @@ const Products = () => {
                 step={1000}
                 onChange={(e) => setMaxPrice(e.target.value)}
               />
-              <span>₹ {maxPrice}</span>
             </div>
+            <span>PRICE LIMIT -</span>
+            <label>₹ {maxPrice}</label>
           </div>
           <div className="filterItem">
             <span className="heading">SORT</span>
