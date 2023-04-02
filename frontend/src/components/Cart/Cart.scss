@@ -66,19 +66,19 @@
 
           .company {
             font-size: 12px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-weight: 500;
           }
           .name {
             font-size: 11px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-weight: 600;
-            color: #6a6a6a;
           }
 
           .price {
             font-size: 11px;
             margin-bottom: 5px;
-            color: #6a6a6a;
+            font-weight: 500;
           }
 
           .del {
@@ -87,6 +87,7 @@
             right: 0;
             display: inline;
             font-size: 9px;
+            padding-bottom: 1px;
             border-bottom: 1px solid #6a6a6a;
           }
         }
@@ -100,6 +101,7 @@
 
       .note {
         color: #6a6a6a;
+        font-weight: 500;
       }
 
       .sub {

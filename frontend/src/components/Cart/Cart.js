@@ -24,11 +24,14 @@ const Cart = ({ closeCart }) => {
           <div className="cartContent">
             {products?.map((item) => (
               <div className="item" key={item.id}>
-                <img src={item.img1} alt=""></img>
+                <img
+                  src={process.env.REACT_APP_UPLOAD_URL + item.img1}
+                  alt=""
+                ></img>
                 <div className="info">
                   <p className="company">{item.company}</p>
                   <p className="name">{item.name}</p>
-                  <p className="price">{item.price}</p>
+                  <p className="price">₹ - {item.price}</p>
                   <p className="del">REMOVE</p>
                 </div>
               </div>
