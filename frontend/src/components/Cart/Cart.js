@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import ReactDOM from "react-dom";
 import "./Cart.scss";
 
 const Cart = ({ closeCart }) => {
@@ -13,7 +12,7 @@ const Cart = ({ closeCart }) => {
 
   const products = useSelector((state) => state.cart.products);
 
-  return ReactDOM.createPortal(
+  return (
     <>
       <div className="blur" onClick={closeCart}></div>
       <div className="myCart">
@@ -25,10 +24,7 @@ const Cart = ({ closeCart }) => {
           <div className="cartContent">
             {products?.map((item) => (
               <div className="item" key={item.id}>
-                <img
-                  src={require(`../../assets/home/${item.img1}`)}
-                  alt=""
-                ></img>
+                <img src={item.img1} alt=""></img>
                 <div className="info">
                   <p className="company">{item.company}</p>
                   <p className="name">{item.name}</p>
@@ -48,8 +44,7 @@ const Cart = ({ closeCart }) => {
           </div>
         </div>
       </div>
-    </>,
-    document.querySelector(".cartPortal")
+    </>
   );
 };
 
