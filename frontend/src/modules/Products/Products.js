@@ -7,7 +7,7 @@ import FilteredProductList from "../../components/FilteredProductList/FilteredPr
 import "./Products.scss";
 
 const Products = () => {
-  const catId = parseInt(useParams().id);
+  const categoryId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(50000);
   const [sort, setSort] = useState("asc");
 
@@ -69,7 +69,11 @@ const Products = () => {
           </div>
         </div>
         <div className="right">
-          <FilteredProductList catId={catId} maxPrice={maxPrice} sort={sort} />
+          <FilteredProductList
+            categoryId={categoryId}
+            maxPrice={maxPrice}
+            sort={sort}
+          />
         </div>
       </div>
       <Footer />

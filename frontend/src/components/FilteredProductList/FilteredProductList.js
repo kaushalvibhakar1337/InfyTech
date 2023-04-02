@@ -3,9 +3,9 @@ import useFetch from "../../hooks/useFetch";
 import ProductCard from "../ProductCard/ProductCard";
 import "./FilteredProductList.scss";
 
-const FilteredProductList = ({ catId, maxPrice, sort }) => {
+const FilteredProductList = ({ categoryId, maxPrice, sort }) => {
   const { data, loading, error } = useFetch(
-    `/products?populate=*&[filters][categories][id]=${catId}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
+    `/products?populate=*&[filters][categories][id]=${categoryId}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
   );
 
   return (

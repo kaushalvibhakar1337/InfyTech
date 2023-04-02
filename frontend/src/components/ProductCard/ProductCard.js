@@ -5,7 +5,7 @@ import "./ProductCard.scss";
 const ProductCard = ({ item }) => {
   return (
     <div className="productCard">
-      <NavLink to="/product/1">
+      <NavLink to={`/product/${item.id}`}>
         <div className="image">
           <img
             src={
@@ -25,7 +25,7 @@ const ProductCard = ({ item }) => {
           />
         </div>
       </NavLink>
-      <NavLink to="/product/1">
+      <NavLink to={`/product/${item.id}`}>
         <span className="name">
           {item?.attributes.company} - {item?.attributes.name}
         </span>
