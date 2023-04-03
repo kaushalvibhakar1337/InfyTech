@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../../redux/cartReducer";
 import { loadStripe } from "@stripe/stripe-js";
+import { makeRequest } from "../../makeRequest";
 import "./Cart.scss";
 
 const Cart = ({ closeCart }) => {
