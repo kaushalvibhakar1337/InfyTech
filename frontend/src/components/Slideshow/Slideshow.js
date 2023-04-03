@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import "./MainSlider.scss";
+import "./Slideshow.scss";
 
-function MainSlider({ images, interval = 3000 }) {
+function Slideshow({ images, interval = 3000 }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -14,13 +14,13 @@ function MainSlider({ images, interval = 3000 }) {
   }, [images.length, interval]);
 
   return (
-    <div className="mainSlider">
-      <div className="imgSlider">
+    <div className="slideshow">
+      <div className="slides">
         {images.map((image, i) => (
           <img
             key={i}
             className={`slide ${i === index ? "active" : ""}`}
-            src={require(`../../assets/home/${image}`)}
+            src={require(`../../assets/${image}`)}
             alt=""
           />
         ))}
@@ -34,4 +34,4 @@ function MainSlider({ images, interval = 3000 }) {
   );
 }
 
-export default MainSlider;
+export default Slideshow;
