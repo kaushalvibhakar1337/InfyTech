@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../../redux/cartReducer";
+import { loadStripe } from "@stripe/stripe-js";
 import "./Cart.scss";
 
 const Cart = ({ closeCart }) => {
@@ -19,6 +20,21 @@ const Cart = ({ closeCart }) => {
   };
 
   const dispatch = useDispatch();
+
+  const stripePromise = loadStripe(
+    "pk_test_51MoLLYSFvhYDcU3mBTG1lC4WewLICocYpuD0sk68BDMmkZEwbuq4zUYSog2mW2rqVu37dAOrnWW0NtvMUCNt6tDx00ySYApFd7"
+  );
+
+  const handlePayment = async () => {
+    try {
+      const stripe = await stripePromise;
+      const res = await makeRequest.post("/orders", {
+        products,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <>
@@ -56,7 +72,7 @@ const Cart = ({ closeCart }) => {
             <span className="note">
               Shipping & taxes calculated at checkout
             </span>
-            <button type="button" className="sub">
+            <button type="button" className="sub" onClick={handlePayment}>
               <span>CHECKOUT • ₹ ${totalPrice()}</span>
             </button>
           </div>
