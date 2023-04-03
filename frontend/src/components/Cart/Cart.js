@@ -14,13 +14,15 @@ const Cart = ({ closeCart }) => {
   }, []);
 
   const products = useSelector((state) => state.cart.products);
+  const dispatch = useDispatch();
+
   const totalPrice = () => {
     let total = 0;
-    products.forEach((item) => (total += item.quantity * item.price));
+    products.forEach((item) => {
+      total += item.quantity * item.price;
+    });
     return total.toFixed(2);
   };
-
-  const dispatch = useDispatch();
 
   const stripePromise = loadStripe(
     "pk_test_51MoLLYSFvhYDcU3mBTG1lC4WewLICocYpuD0sk68BDMmkZEwbuq4zUYSog2mW2rqVu37dAOrnWW0NtvMUCNt6tDx00ySYApFd7"
