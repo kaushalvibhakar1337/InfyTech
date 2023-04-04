@@ -60,7 +60,9 @@ const ProductDetails = () => {
               <div className="wrapper">
                 <p className="company">{data?.attributes?.company}</p>
                 <p className="name">{data?.attributes?.name}</p>
-                <p className="price">₹ - {data?.attributes?.price}</p>
+                <p className="price">
+                  ₹ - {data?.attributes?.price.toFixed(2)}
+                </p>
                 <p className="shippingPolicy">
                   Tax included.{" "}
                   <NavLink to="/return-policy">Shipping calculated</NavLink> at
