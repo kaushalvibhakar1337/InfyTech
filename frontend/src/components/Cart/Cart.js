@@ -62,7 +62,7 @@ const Cart = ({ closeCart }) => {
                   <p className="company">{item.company}</p>
                   <p className="name">{item.name}</p>
                   <p className="price">
-                    {item.quantity} X ₹ - {item.price}
+                    {item.quantity} X ₹ - {item.price.toFixed(2)}
                   </p>
                   <p
                     className="del"
@@ -79,7 +79,7 @@ const Cart = ({ closeCart }) => {
               Shipping & taxes calculated at checkout
             </span>
             <button type="button" className="sub" onClick={handlePayment}>
-              <span>CHECKOUT • ₹ ${totalPrice()}</span>
+              <span>CHECKOUT • ₹ {totalPrice()}</span>
             </button>
           </div>
         </div>
