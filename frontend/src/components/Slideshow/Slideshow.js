@@ -20,7 +20,7 @@ function Slideshow({ images, interval = 3000 }) {
           <img
             key={i}
             className={`slide ${i === index ? "active" : ""}`}
-            src={require(`../../assets/${image}`)}
+            src={require(`../../assets/slideshow/${image}`)}
             alt=""
           />
         ))}
