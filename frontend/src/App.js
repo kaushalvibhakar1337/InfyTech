@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./modules/Home/Home";
-import AllProducts from "./modules/AllProducts/AllProducts";
+import AllProducts from "./modules/Products/AllProducts";
 import Products from "./modules/Products/Products";
 import ProductDetails from "./modules/ProductDetails/ProductDetails";
 import Login from "./modules/Account/Login";

@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
 import ProductList from "../../components/ProductList/ProductList";
 import Footer from "../../components/Footer/Footer";
-import "./AllProducts.scss";
+import "./Products.scss";
 
 const AllProducts = () => {
   return (
