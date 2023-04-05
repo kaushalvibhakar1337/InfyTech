@@ -1,15 +1,15 @@
 import React from "react";
-import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
+import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import "./ReturnPolicy.scss";
+import "./Policies.scss";
 
 const ReturnPolicy = () => {
   return (
     <>
       <Navbar />
       <Header title="CANCELLATIONS, REFUNDS & REPLACEMENT" />
-      <div className="returnPolicy">
+      <div className="policies">
         <div className="section">
           <p className="heading">CANCELLATION POLICY</p>
           <p className="subHeading">Updated on 1st April, 2023</p>

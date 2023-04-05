@@ -9,9 +9,9 @@ import Login from "./modules/Login/Login";
 import Register from "./modules/Register/Register";
 import About from "./modules/About/About";
 import Contact from "./modules/Contact/Contact";
-import TermsNConditions from "./modules/TermsNConditions/TermsNConditions";
-import PrivacyPolicy from "./modules/PrivacyPolicy/PrivacyPolicy";
-import ReturnPolicy from "./modules/ReturnPolicy/ReturnPolicy";
+import TermsNConditions from "./modules/Policies/TermsNConditions";
+import PrivacyPolicy from "./modules/Policies/PrivacyPolicy";
+import ReturnPolicy from "./modules/Policies/ReturnPolicy";
 import Error from "./modules/Error/Error";
 import "./App.scss";
 

@@ -1,16 +1,16 @@
 import React from "react";
-import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header/Header";
-import Navbar from "../../components/Navbar/Navbar";
-import "./TermsNConditions.scss";
 import { NavLink } from "react-router-dom";
+import Navbar from "../../components/Navbar/Navbar";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
+import "./Policies.scss";
 
 const TermsNConditions = () => {
   return (
     <>
       <Navbar />
       <Header title="TERM & CONDITIONS" />
-      <div className="termsNConditions">
+      <div className="policies">
         <div className="section">
           <p className="heading">BASIC TERMS & CONDITIONS</p>
           <p className="subHeading">
