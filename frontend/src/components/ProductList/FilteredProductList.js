@@ -1,7 +1,7 @@
 import React from "react";
 import useFetch from "../../hooks/useFetch";
 import ProductCard from "../ProductCard/ProductCard";
-import "./FilteredProductList.scss";
+import "./ProductList.scss";
 
 const FilteredProductList = ({ categoryId, maxPrice, sort }) => {
   const { data, loading, error } = useFetch(
@@ -9,7 +9,7 @@ const FilteredProductList = ({ categoryId, maxPrice, sort }) => {
   );
 
   return (
-    <div className="filteredProductList">
+    <div className="productList">
       {error
         ? "Something went wrong!"
         : loading

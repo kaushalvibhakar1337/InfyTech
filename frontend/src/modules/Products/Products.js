@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
-import FilteredProductList from "../../components/FilteredProductList/FilteredProductList";
+import FilteredProductList from "../../components/ProductList/FilteredProductList";
 import "./Products.scss";
 
 const Products = () => {
