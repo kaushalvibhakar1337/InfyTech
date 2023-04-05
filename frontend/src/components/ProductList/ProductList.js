@@ -5,6 +5,7 @@ import "./ProductList.scss";
 
 const ProductList = () => {
   const { data, loading, error } = useFetch(`/products?populate=*`);
+
   return (
     <div className="productList">
       {error
