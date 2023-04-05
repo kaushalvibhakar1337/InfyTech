@@ -2,13 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
-import "./Register.scss";
+import "./Account.scss";
 
 const Register = () => {
   return (
     <div className="register">
       <Navbar />
-      <div className="registerForm" style={{ marginTop: "15px" }}>
+      <div className="form" style={{ marginTop: "15px" }}>
         <p className="heading">REGISTER</p>
         <p className="legend"> Please fill the information below:</p>
         <input className="inputField" type={"text"} placeholder="First Name" />

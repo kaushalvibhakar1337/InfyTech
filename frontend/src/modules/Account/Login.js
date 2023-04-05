@@ -2,14 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-
-import "./Login.scss";
+import "./Account.scss";
 
 const Login = () => {
   return (
     <div className="login">
       <Navbar />
-      <div className="loginForm" style={{ marginTop: "15px" }}>
+      <div className="form" style={{ marginTop: "15px" }}>
         <h1 className="heading">LOGIN</h1>
         <p className="legend"> Please enter your e-mail and password:</p>
         <input className="inputField" type={"text"} placeholder="Email" />
