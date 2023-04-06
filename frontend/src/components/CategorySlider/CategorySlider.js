@@ -6,7 +6,7 @@ const CategorySlider = () => {
     <div className="categorySlider">
       <fieldset>
         <legend>SHOP NOW</legend>
-        <div className="slider">Hello World!</div>
+        <div className="slider"></div>
       </fieldset>
     </div>
   );
