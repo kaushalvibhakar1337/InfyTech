@@ -62,7 +62,7 @@ const Cart = ({ closeCart }) => {
                   <p className="company">{item.company}</p>
                   <p className="name">{item.name}</p>
                   <p className="price">
-                    {item.quantity} X ₹ - {item.price.toFixed(2)}
+                    {item.quantity} X ₹ {item.price.toFixed(2)}
                   </p>
                   <p
                     className="del"
