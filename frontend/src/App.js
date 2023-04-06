@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import { AuthContextProvider } from "./context/AuthContext";
 import Home from "./modules/Home/Home";
 import AllProducts from "./modules/Products/AllProducts";
 import Products from "./modules/Products/Products";
@@ -20,21 +21,23 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products/all" element={<AllProducts />} />
-        <Route path="/products/:id" element={<Products />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/contact-us" element={<Contact />} />
-        <Route path="/terms-and-conditions" element={<TermsNConditions />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/return-policy" element={<ReturnPolicy />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <AuthContextProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products/all" element={<AllProducts />} />
+          <Route path="/products/:id" element={<Products />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/terms-and-conditions" element={<TermsNConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/return-policy" element={<ReturnPolicy />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </AuthContextProvider>
     </Router>
   );
 };

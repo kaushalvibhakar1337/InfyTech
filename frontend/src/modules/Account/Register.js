@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { UserAuth } from "../../context/AuthContext";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Account.scss";
@@ -9,16 +10,30 @@ const Register = () => {
   const [Lname, setLname] = useState("");
   const [newEmail, setNewEmail] = useState("");
   const [newPass, setNewPass] = useState("");
-  const handleSubmit = () => {
-    console.log("Your Fullname is : " + Fname + " " + Lname);
-    console.log("Your Email is : " + newEmail);
-    console.log("Your Password is : " + newPass);
+  const [error, setError] = useState("");
+  const { createUser } = UserAuth();
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await createUser(newEmail, newPass);
+      navigate("/profile");
+    } catch (e) {
+      setError(e.message);
+      console.log(e.message);
+    }
   };
 
   return (
     <div className="register">
       <Navbar />
-      <div className="form" style={{ marginTop: "15px" }}>
+      <form
+        className="form"
+        style={{ marginTop: "15px" }}
+        onSubmit={handleSubmit}
+      >
         <p className="heading">REGISTER</p>
         <p className="legend"> Please fill the information below:</p>
         <input
@@ -51,7 +66,7 @@ const Register = () => {
         <p className="hint">
           Already have an account? <NavLink to="/login">LOG IN</NavLink>
         </p>
-      </div>
+      </form>
       <Footer />
     </div>
   );
