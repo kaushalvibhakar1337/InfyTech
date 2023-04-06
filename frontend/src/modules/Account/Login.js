@@ -6,10 +6,10 @@ import "./Account.scss";
 
 const Login = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [pass, setPass] = useState("");
   const handleSubmit = () => {
     console.log("Your Email is : " + email);
-    console.log("Your Password is : " + password);
+    console.log("Your Password is : " + pass);
   };
 
   return (
@@ -28,7 +28,7 @@ const Login = () => {
           className="inputField"
           type="text"
           placeholder="Password"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => setPass(e.target.value)}
         />
         <p className="forgotPass">
           <NavLink to="/search">Forgot password?</NavLink>
