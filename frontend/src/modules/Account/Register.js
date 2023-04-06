@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../firebase";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Account.scss";
@@ -26,10 +28,22 @@ const Register = () => {
     }
   };
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log(user);
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
+
   return (
     <div className="register">
       <Navbar />
-      <div className="form" style={{ marginTop: "15px" }}>
+      <form
+        className="form"
+        style={{ marginTop: "15px" }}
+        onSubmit={handleSubmit}
+      >
         <p className="heading">REGISTER</p>
         <p className="legend"> Please fill the information below:</p>
         <input
@@ -56,13 +70,13 @@ const Register = () => {
           placeholder="Password"
           onChange={(e) => setNewPass(e.target.value)}
         />
-        <button type="button" className="submit" onClick={handleSubmit}>
+        <button type="submit" className="submit" onClick={handleSubmit}>
           CREATE MY ACCOUNT
         </button>
         <p className="hint">
           Already have an account? <NavLink to="/login">LOG IN</NavLink>
         </p>
-      </div>
+      </form>
       <Footer />
     </div>
   );

@@ -7,7 +7,8 @@ import "./Account.scss";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const handleSubmit = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     console.log("Your Email is : " + email);
     console.log("Your Password is : " + pass);
   };
@@ -15,7 +16,11 @@ const Login = () => {
   return (
     <div className="login">
       <Navbar />
-      <div className="form" style={{ marginTop: "15px" }}>
+      <form
+        className="form"
+        style={{ marginTop: "15px" }}
+        onSubmit={handleSubmit}
+      >
         <h1 className="heading">LOGIN</h1>
         <p className="legend"> Please enter your e-mail and password:</p>
         <input
@@ -33,13 +38,13 @@ const Login = () => {
         <p className="forgotPass">
           <NavLink to="/search">Forgot password?</NavLink>
         </p>
-        <button type="button" className="submit" onClick={handleSubmit}>
+        <button type="submit" className="submit">
           LOGIN
         </button>
         <p className="hint">
           Don't have an account? <NavLink to="/register">CREATE ONE</NavLink>
         </p>
-      </div>
+      </form>
       <Footer />
     </div>
   );

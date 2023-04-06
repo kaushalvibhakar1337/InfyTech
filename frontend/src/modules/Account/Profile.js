@@ -9,7 +9,7 @@ const Profile = () => {
     <div className="profile">
       <Navbar />
       <Header title="MY ACCOUNT" />
-      <div className="myProfile">Welcome back!</div>
+      <div className="myProfile">Welcome back </div>
       <Footer />
     </div>
   );

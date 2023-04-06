@@ -8,7 +8,7 @@ import Products from "./modules/Products/Products";
 import ProductDetails from "./modules/ProductDetails/ProductDetails";
 import Login from "./modules/Account/Login";
 import Register from "./modules/Account/Register";
-import Profile from "./modules/Profile/Profile";
+import Profile from "./modules/Account/Profile";
 import About from "./modules/About/About";
 import Contact from "./modules/Contact/Contact";
 import TermsNConditions from "./modules/Policies/TermsNConditions";
