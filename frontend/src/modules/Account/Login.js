@@ -6,14 +6,21 @@ import Footer from "../../components/Footer/Footer";
 import "./Account.scss";
 
 const Login = () => {
-  const { signIn } = UserAuth();
-
   const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const { signIn } = UserAuth();
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Your Email is : " + email);
-    console.log("Your Password is : " + pass);
+    setError("");
+    try {
+      await signIn(email, password);
+      navigate("/profile");
+    } catch (err) {
+      setError(err.message);
+    }
   };
 
   return (
@@ -36,7 +43,7 @@ const Login = () => {
           className="inputField"
           type="text"
           placeholder="Password"
-          onChange={(e) => setPass(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <p className="forgotPass">
           <NavLink to="/search">Forgot password?</NavLink>
