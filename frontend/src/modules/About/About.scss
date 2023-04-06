@@ -1,0 +1,29 @@
+.about {
+  display: flex;
+
+  .left {
+    width: 40%;
+    padding: 50px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .right {
+    width: 60%;
+    padding: 50px;
+
+    .top {
+      margin-bottom: 20px;
+    }
+
+    span {
+      font-size: 13px;
+      letter-spacing: 1px;
+      display: inline-block;
+      text-align: justify;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import Products from "./modules/Products/Products";
 import ProductDetails from "./modules/ProductDetails/ProductDetails";
 import Login from "./modules/Account/Login";
 import Register from "./modules/Account/Register";
+import Profile from "./modules/Profile/Profile";
 import About from "./modules/About/About";
 import Contact from "./modules/Contact/Contact";
 import TermsNConditions from "./modules/Policies/TermsNConditions";
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/terms-and-conditions" element={<TermsNConditions />} />
