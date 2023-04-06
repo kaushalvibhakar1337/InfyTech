@@ -18,11 +18,11 @@ const Footer = () => {
         </div>
         <div className="item">
           <h1>MENU</h1>
-          <NavLink to="/contact-us">
-            <span>CONTACT US</span>
-          </NavLink>
           <NavLink to="/about-us">
             <span>ABOUT US</span>
+          </NavLink>
+          <NavLink to="/contact-us">
+            <span>CONTACT US</span>
           </NavLink>
           <NavLink to="/terms-and-conditions">
             <span>TERMS & CONDITIONS</span>
