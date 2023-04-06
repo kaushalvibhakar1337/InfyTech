@@ -29,11 +29,7 @@ const Register = () => {
   return (
     <div className="register">
       <Navbar />
-      <form
-        className="form"
-        style={{ marginTop: "15px" }}
-        onSubmit={handleSubmit}
-      >
+      <div className="form" style={{ marginTop: "15px" }}>
         <p className="heading">REGISTER</p>
         <p className="legend"> Please fill the information below:</p>
         <input
@@ -66,7 +62,7 @@ const Register = () => {
         <p className="hint">
           Already have an account? <NavLink to="/login">LOG IN</NavLink>
         </p>
-      </form>
+      </div>
       <Footer />
     </div>
   );
