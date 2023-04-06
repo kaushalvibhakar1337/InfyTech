@@ -6,8 +6,8 @@ import Navbar from "../../components/Navbar/Navbar";
 import "./Account.scss";
 
 const Register = () => {
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
+  // const [fname, setFname] = useState("");
+  // const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -22,7 +22,7 @@ const Register = () => {
       navigate("/profile");
     } catch (err) {
       setError(err.message);
-      console.log(err.message);
+      console.log(error);
     }
   };
 
@@ -40,13 +40,13 @@ const Register = () => {
           className="inputField"
           type="text"
           placeholder="First Name"
-          onChange={(e) => setFname(e.target.value)}
+          // onChange={(e) => setFname(e.target.value)}
         />
         <input
           className="inputField"
           type="text"
           placeholder="Last Name"
-          onChange={(e) => setLname(e.target.value)}
+          // onChange={(e) => setLname(e.target.value)}
         />
         <input
           className="inputField"
