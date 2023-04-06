@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { UserAuth } from "../../context/AuthContext";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import "./Account.scss";
 
 const Login = () => {
+  const { signIn } = UserAuth();
+
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const handleSubmit = async (e) => {

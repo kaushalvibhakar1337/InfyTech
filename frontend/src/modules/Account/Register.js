@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../../firebase";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Account.scss";
 
 const Register = () => {
-  const [Fname, setFname] = useState("");
-  const [Lname, setLname] = useState("");
-  const [newEmail, setNewEmail] = useState("");
-  const [newPass, setNewPass] = useState("");
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { createUser } = UserAuth();
   const navigate = useNavigate();
@@ -20,21 +18,13 @@ const Register = () => {
     e.preventDefault();
     setError("");
     try {
-      await createUser(newEmail, newPass);
+      await createUser(email, password);
       navigate("/profile");
-    } catch (e) {
-      setError(e.message);
-      console.log(e.message);
+    } catch (err) {
+      setError(err.message);
+      console.log(err.message);
     }
   };
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log(user);
-      setUser(currentUser);
-    });
-    return () => unsubscribe();
-  }, []);
 
   return (
     <div className="register">
@@ -62,13 +52,13 @@ const Register = () => {
           className="inputField"
           type="text"
           placeholder="Email"
-          onChange={(e) => setNewEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <input
           className="inputField"
           type="password"
           placeholder="Password"
-          onChange={(e) => setNewPass(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit" className="submit" onClick={handleSubmit}>
           CREATE MY ACCOUNT
