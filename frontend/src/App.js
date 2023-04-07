@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AnotherProtectedRoute from "./components/AnotherProtectedRoute";
 import Home from "./modules/Home/Home";
 import AllProducts from "./modules/Products/AllProducts";
 import Products from "./modules/Products/Products";
@@ -17,7 +18,6 @@ import PrivacyPolicy from "./modules/Policies/PrivacyPolicy";
 import ReturnPolicy from "./modules/Policies/ReturnPolicy";
 import Error from "./modules/Error/Error";
 import "./App.scss";
-import AnotherProtectedRoute from "./components/AnotherProtectedRoute";
 
 const App = () => {
   return (
