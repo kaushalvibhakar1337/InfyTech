@@ -17,6 +17,7 @@ import PrivacyPolicy from "./modules/Policies/PrivacyPolicy";
 import ReturnPolicy from "./modules/Policies/ReturnPolicy";
 import Error from "./modules/Error/Error";
 import "./App.scss";
+import AnotherProtectedRoute from "./components/AnotherProtectedRoute";
 
 const App = () => {
   return (
@@ -28,8 +29,22 @@ const App = () => {
           <Route path="/products/all" element={<AllProducts />} />
           <Route path="/products/:id" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetails />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route
+            path="/login"
+            element={
+              <AnotherProtectedRoute>
+                <Login />
+              </AnotherProtectedRoute>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <AnotherProtectedRoute>
+                <Register />
+              </AnotherProtectedRoute>
+            }
+          />
           <Route
             path="/profile"
             element={
