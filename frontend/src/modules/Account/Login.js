@@ -33,7 +33,7 @@ const Login = () => {
       >
         <h1 className="heading">LOGIN</h1>
         <p className="legend"> Please enter your e-mail and password:</p>
-        {error && <p class="alertBox">{error}</p>}
+        {error && <p className="alertBox">{error}</p>}
         <input
           className="inputField"
           type="email"

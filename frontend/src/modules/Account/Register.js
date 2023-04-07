@@ -35,7 +35,7 @@ const Register = () => {
       >
         <p className="heading">REGISTER</p>
         <p className="legend"> Please fill the information below:</p>
-        {error && <p class="alertBox">{error}</p>}
+        {error && <p className="alertBox">{error}</p>}
         <input
           className="inputField"
           type="text"
