@@ -9,7 +9,7 @@ const TermsNConditions = () => {
   return (
     <>
       <Navbar />
-      <Header title="TERM & CONDITIONS" />
+      <Header title="TERMS & CONDITIONS" />
       <div className="policies">
         <div className="section">
           <p className="heading">BASIC TERMS & CONDITIONS</p>
