@@ -43,7 +43,7 @@ const Login = () => {
         />
         <input
           className="inputField"
-          type="text"
+          type="password"
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
           required

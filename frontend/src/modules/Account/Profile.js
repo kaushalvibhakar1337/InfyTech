@@ -24,8 +24,10 @@ const Profile = () => {
       <Navbar />
       <Header title="MY ACCOUNT" />
       <div className="myProfile">
-        <p>Welcome back {user && user.email}</p>
-        <button onClick={handleLogout}>Logout</button>
+        <p>Welcome back! {user && user.email}</p>
+        <button className="logoutBtn" onClick={handleLogout}>
+          LOGOUT
+        </button>
       </div>
       <Footer />
     </div>
