@@ -2,9 +2,12 @@ import React from "react";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
+import { UserAuth } from "../../context/AuthContext";
 import "./Contact.scss";
 
 const Contact = () => {
+  const { user } = UserAuth();
+
   return (
     <>
       <Navbar />
@@ -30,13 +33,18 @@ const Contact = () => {
               autoComplete="off"
               required
             />
-            <input
-              type="email"
-              placeholder="Your Email Address"
-              name="Email"
-              autoComplete="off"
-              required
-            />
+            {user ? (
+              <input name="Email" value={user.email} readOnly />
+            ) : (
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                name="Email"
+                autoComplete="off"
+                required
+              />
+            )}
+
             <textarea
               placeholder="How Can We Help?"
               name="Message"
