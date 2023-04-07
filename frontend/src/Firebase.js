@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB6FGJDbLzwPGPQU390RPk6mwhPi3Euedg",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "infytech-b1831.firebaseapp.com",
   projectId: "infytech-b1831",
   storageBucket: "infytech-b1831.appspot.com",
