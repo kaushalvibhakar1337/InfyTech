@@ -66,7 +66,10 @@ const ProductDetails = () => {
                   <NavLink to="/return-policy">Shipping calculated</NavLink> at
                   checkout.
                 </p>
-                <hr />
+                <div>
+                  <hr />
+                  <span className="heading">QUANTITY :</span>
+                </div>
                 <div className="quantity">
                   <button
                     className="minus"
