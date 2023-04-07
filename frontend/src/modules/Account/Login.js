@@ -20,7 +20,6 @@ const Login = () => {
       navigate("/profile");
     } catch (err) {
       setError(err.message);
-      console.log(error);
     }
   };
 
@@ -34,21 +33,23 @@ const Login = () => {
       >
         <h1 className="heading">LOGIN</h1>
         <p className="legend"> Please enter your e-mail and password:</p>
-        {error && <p>{error}</p>}
+        {error && <p class="alertBox">{error}</p>}
         <input
           className="inputField"
-          type="text"
+          type="email"
           placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <input
           className="inputField"
           type="text"
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
         <p className="forgotPass">
-          <NavLink to="/search">Forgot password?</NavLink>
+          <NavLink to="">Forgot password?</NavLink>
         </p>
         <button type="submit" className="submit">
           LOGIN

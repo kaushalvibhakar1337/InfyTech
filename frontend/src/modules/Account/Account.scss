@@ -9,6 +9,15 @@
     transform: translate(-50%, -50%);
     text-align: center;
 
+    .alertBox {
+      text-align: left;
+      padding: 10px 20px;
+      margin: 20px 0;
+      border: 1px solid transparent;
+      width: 100%;
+      color: #cb2b2b;
+      background-color: #e4c4c4;
+    }
     .heading {
       font-size: 20px;
       letter-spacing: 0.2em;
