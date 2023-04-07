@@ -27,6 +27,7 @@ const Login = () => {
   return (
     <div className="login">
       <Navbar />
+      {error && <p>{error}</p>}
       <form
         className="form"
         style={{ marginTop: "15px" }}
