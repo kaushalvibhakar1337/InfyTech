@@ -22,7 +22,6 @@ const Register = () => {
       navigate("/profile");
     } catch (err) {
       setError(err.message);
-      console.log(error);
     }
   };
 
@@ -36,29 +35,34 @@ const Register = () => {
       >
         <p className="heading">REGISTER</p>
         <p className="legend"> Please fill the information below:</p>
+        {error && <p class="alertBox">{error}</p>}
         <input
           className="inputField"
           type="text"
           placeholder="First Name"
           // onChange={(e) => setFname(e.target.value)}
+          required
         />
         <input
           className="inputField"
           type="text"
           placeholder="Last Name"
           // onChange={(e) => setLname(e.target.value)}
+          required
         />
         <input
           className="inputField"
-          type="text"
+          type="email"
           placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <input
           className="inputField"
           type="password"
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
         <button type="submit" className="submit" onClick={handleSubmit}>
           CREATE MY ACCOUNT
