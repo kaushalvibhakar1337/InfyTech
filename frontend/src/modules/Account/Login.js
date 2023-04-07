@@ -27,7 +27,6 @@ const Login = () => {
   return (
     <div className="login">
       <Navbar />
-      {error && <p>{error}</p>}
       <form
         className="form"
         style={{ marginTop: "15px" }}
@@ -35,6 +34,7 @@ const Login = () => {
       >
         <h1 className="heading">LOGIN</h1>
         <p className="legend"> Please enter your e-mail and password:</p>
+        {error && <p>{error}</p>}
         <input
           className="inputField"
           type="text"
