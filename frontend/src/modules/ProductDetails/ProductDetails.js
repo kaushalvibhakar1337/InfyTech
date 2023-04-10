@@ -16,8 +16,7 @@ const ProductDetails = () => {
     `/products/${productId}?populate=*`
   );
   const dispatch = useDispatch();
-
-  console.log(data?.attributes?.categories?.data[0]?.id);
+  const rel = data?.attributes?.categories?.data[0]?.id;
 
   return (
     <>
@@ -117,7 +116,7 @@ const ProductDetails = () => {
           )}
         </div>
         <p className="legend">MORE PRODUCTS LIKE THIS</p>
-        <RelatedProductList />
+        <RelatedProductList rel={rel} />
       </div>
       <Footer />
     </>
