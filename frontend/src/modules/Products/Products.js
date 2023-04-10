@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header/Header";
+import useFetch from "../../hooks/useFetch";
 import Navbar from "../../components/Navbar/Navbar";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import FilteredProductList from "../../components/ProductList/FilteredProductList";
 import "./Products.scss";
 
@@ -10,6 +11,12 @@ const Products = () => {
   const categoryId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(100000);
   const [sort, setSort] = useState("asc");
+
+  const { data } = useFetch(
+    `/sub-categories?[filters][categories][id]=${categoryId}`
+  );
+
+  const { filterData } = useFetch(`/categories?[filters][id]=${categoryId}`);
 
   return (
     <>
@@ -19,15 +26,17 @@ const Products = () => {
         <div className="left">
           <p className="mainHeading">FILTERS</p>
           <div className="filterItem">
-            <span className="heading">TYPE</span>
-            <div className="inputItem">
-              <input type="checkbox" id="1" value={1} />
-              <label htmlFor="1">WIRED</label>
-            </div>
-            <div className="inputItem">
-              <input type="checkbox" id="2" value={2} />
-              <label htmlFor="2">WIRELESS</label>
-            </div>
+            {filterData.map((item) => (
+              <span className="heading" key={item.id}>
+                {item.attributes.filterType}
+              </span>
+            ))}
+            {data.map((item) => (
+              <div className="inputItem" key={item.id}>
+                <input type="checkbox" id="1" value={1} />
+                <label htmlFor="1">{item.attributes.title}</label>
+              </div>
+            ))}
           </div>
           <div className="filterItem">
             <span className="heading">PRICE</span>

@@ -3,6 +3,7 @@ import { makeRequest } from "../makeRequest";
 
 const useFetch = (url) => {
   const [data, setData] = useState([]);
+  const [filterData, setFilterData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -12,6 +13,7 @@ const useFetch = (url) => {
         setLoading(true);
         const res = await makeRequest.get(url);
         setData(res.data.data);
+        setFilterData(res.data.data);
       } catch (err) {
         setError(true);
       }
@@ -20,7 +22,7 @@ const useFetch = (url) => {
     fetchData();
   }, [url]);
 
-  return { data, loading, error };
+  return { data, filterData, loading, error };
 };
 
 export default useFetch;
