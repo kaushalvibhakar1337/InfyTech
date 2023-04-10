@@ -26,6 +26,9 @@
       "relation": "manyToMany",
       "target": "api::sub-category.sub-category",
       "mappedBy": "categories"
+    },
+    "filterType": {
+      "type": "string"
     }
   }
 }
