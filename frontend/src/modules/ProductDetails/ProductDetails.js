@@ -17,6 +17,8 @@ const ProductDetails = () => {
   );
   const dispatch = useDispatch();
 
+  console.log(data);
+
   return (
     <>
       <Navbar />
