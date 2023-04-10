@@ -6,7 +6,7 @@ import "./ProductList.scss";
 const FilteredProductList = ({ categoryId, filters, maxPrice, sort }) => {
   const { data, loading, error } = useFetch(
     `/products?populate=*&[filters][categories][id]=${categoryId}${filters.map(
-      (item) => `&[filters][sub_categories][id]=${item}`
+      (item) => `&[filters][sub_categories][id]=${item}&`
     )}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
   );
 
