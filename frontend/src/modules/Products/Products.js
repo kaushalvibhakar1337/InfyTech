@@ -11,12 +11,26 @@ const Products = () => {
   const categoryId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(100000);
   const [sort, setSort] = useState("asc");
+  const [selectedFilters, setSelectedFilters] = useState([]);
 
   const { data } = useFetch(
     `/sub-categories?[filters][categories][id]=${categoryId}`
   );
 
   const { filterData } = useFetch(`/categories?[filters][id]=${categoryId}`);
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    const isChecked = e.target.checked;
+
+    setSelectedFilters(
+      isChecked
+        ? [...selectedFilters, value]
+        : selectedFilters.filter((item) => item !== value)
+    );
+  };
+
+  console.log(selectedFilters);
 
   return (
     <>
@@ -33,8 +47,13 @@ const Products = () => {
             ))}
             {data.map((item) => (
               <div className="inputItem" key={item.id}>
-                <input type="checkbox" id="1" value={1} />
-                <label htmlFor="1">{item.attributes.title}</label>
+                <input
+                  type="checkbox"
+                  id={item.id}
+                  value={item.id}
+                  onChange={handleChange}
+                />
+                <label htmlFor={item.id}>{item.attributes.title}</label>
               </div>
             ))}
           </div>
@@ -82,6 +101,7 @@ const Products = () => {
             categoryId={categoryId}
             maxPrice={maxPrice}
             sort={sort}
+            filters={selectedFilters}
           />
         </div>
       </div>
