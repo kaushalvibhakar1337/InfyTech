@@ -17,7 +17,8 @@ const Products = () => {
       <Header title="PRODUCTS" />
       <div className="products">
         <div className="left">
-          {/* <div className="filterItem">
+          <p className="mainHeading">FILTERS</p>
+          <div className="filterItem">
             <span className="heading">TYPE</span>
             <div className="inputItem">
               <input type="checkbox" id="1" value={1} />
@@ -27,8 +28,7 @@ const Products = () => {
               <input type="checkbox" id="2" value={2} />
               <label htmlFor="2">WIRELESS</label>
             </div>
-          </div> */}
-          <p className="mainHeading">FILTERS</p>
+          </div>
           <div className="filterItem">
             <span className="heading">PRICE</span>
             <div className="inputItem">
