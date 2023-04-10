@@ -17,7 +17,7 @@ const ProductDetails = () => {
   );
   const dispatch = useDispatch();
 
-  console.log(data);
+  console.log(data?.attributes?.categories?.data[0]?.id);
 
   return (
     <>
