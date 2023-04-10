@@ -7,7 +7,7 @@ const RelatedProductList = () => {
   const { data, loading, error } = useFetch(`/products?populate=*`);
 
   return (
-    <div className="productList">
+    <div className="relatedProductList">
       {error
         ? "Something went wrong!"
         : loading

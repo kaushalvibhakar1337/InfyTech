@@ -116,7 +116,7 @@ const ProductDetails = () => {
             </>
           )}
         </div>
-        <p className="legend">RELATED PRODUCTS :</p>
+        <p className="legend">MORE PRODUCTS LIKE THIS</p>
         <RelatedProductList />
       </div>
       <Footer />
