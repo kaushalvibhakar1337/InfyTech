@@ -91,7 +91,7 @@ const TermsNConditions = () => {
               By clicking on the I accept to the terms & conditions button you
               also accept the following{" "}
               <NavLink to="/return-policy">
-                Cancellation,Returns & Refund Policy
+                Cancellation, Returns & Refund Policy
               </NavLink>
             </li>
           </ol>

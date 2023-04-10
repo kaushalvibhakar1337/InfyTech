@@ -35,7 +35,7 @@ const About = () => {
               InfyTech. InfyTech is an upcoming computer accessories store and
               esports tournament organizer in India. We have been selling PC
               parts since 2023. Based in Surat, this company was founded by a
-              group of tech enthusiasts.
+              tech enthusiast.
             </span>
           </div>
           <div className="bottom">
