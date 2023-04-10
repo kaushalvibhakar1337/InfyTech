@@ -3,9 +3,9 @@ import useFetch from "../../hooks/useFetch";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.scss";
 
-const RelatedProductList = ({ rel }) => {
+const RelatedProductList = ({ rel, productId }) => {
   const { data, loading, error } = useFetch(
-    `/products?populate=*&[filters][categories][id]=${rel}`
+    `/products?populate=*&[filters][categories][id]=${rel}&[filters][id][$notIn]=${productId}`
   );
 
   return (
