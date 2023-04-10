@@ -30,8 +30,6 @@ const Products = () => {
     );
   };
 
-  console.log(selectedFilters);
-
   return (
     <>
       <Navbar />
