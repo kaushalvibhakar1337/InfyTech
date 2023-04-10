@@ -3,9 +3,8 @@ import { NavLink, useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartReducer";
-
-import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 import "./ProductDetails.scss";
 import RelatedProductList from "../../components/ProductList/RelatedProductList";
 
