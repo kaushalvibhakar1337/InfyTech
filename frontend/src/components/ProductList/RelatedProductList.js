@@ -8,6 +8,10 @@ const RelatedProductList = ({ rel, productId }) => {
     `/products?populate=*&[filters][categories][id]=${rel}&[filters][id][$notIn]=${productId}`
   );
 
+  if (data) {
+    data.sort(() => Math.random() - 0.5);
+  }
+
   return (
     <div className="relatedProductList">
       {error
