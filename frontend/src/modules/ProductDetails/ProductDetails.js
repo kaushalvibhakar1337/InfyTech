@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
 import { useDispatch } from "react-redux";
+import useFetch from "../../hooks/useFetch";
 import { addToCart } from "../../redux/cartReducer";
 import Navbar from "../../components/Navbar/Navbar";
+import RelatedProductList from "../../components/ProductList/RelatedProductList";
 import Footer from "../../components/Footer/Footer";
 import "./ProductDetails.scss";
-import RelatedProductList from "../../components/ProductList/RelatedProductList";
 
 const ProductDetails = () => {
   const productId = useParams().id;

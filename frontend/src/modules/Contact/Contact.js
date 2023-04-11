@@ -1,7 +1,7 @@
 import React from "react";
-import Footer from "../../components/Footer/Footer";
-import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import { UserAuth } from "../../context/AuthContext";
 import "./Contact.scss";
 

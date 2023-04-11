@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import FilteredProductList from "../../components/ProductList/FilteredProductList";
+import Footer from "../../components/Footer/Footer";
 import "./Products.scss";
 
 const Products = () => {
