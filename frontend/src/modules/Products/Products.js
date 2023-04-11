@@ -9,7 +9,7 @@ import "./Products.scss";
 
 const Products = () => {
   const categoryId = parseInt(useParams().id);
-  const [maxPrice, setMaxPrice] = useState(100000);
+  const [maxPrice, setMaxPrice] = useState(150000);
   const [sort, setSort] = useState("asc");
   const [selectedFilters, setSelectedFilters] = useState([]);
 
@@ -62,8 +62,8 @@ const Products = () => {
                 className="range"
                 type="range"
                 min={0}
-                max={100000}
-                step={1000}
+                max={150000}
+                step={2500}
                 onChange={(e) => setMaxPrice(e.target.value)}
               />
             </div>
