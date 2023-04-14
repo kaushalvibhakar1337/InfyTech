@@ -96,7 +96,7 @@ const CategorySlider = () => {
   return (
     <div className="categorySlider">
       <Slider {...settings}>
-        {data.map((item, index) => (
+        {data.map((item) => (
           <div className="card" item={item} key={item.id}>
             <img
               src={require(`../../assets/categorySlider/${item.img}`)}
