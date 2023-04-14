@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "./CategorySlider2.scss";
+import "./CategorySlider1.scss";
 
 const PrevArrow = (props) => {
   const { onClick } = props;
@@ -91,8 +91,8 @@ const CategorySlider = () => {
               className="img"
             />
             <div className="info">
-              <span className="name">{item.name}</span>
-              <button className="viewBtn">VIEW PRODUCTS</button>
+              {/* <span className="name">{item.name}</span> */}
+              <button className="viewBtn">VIEW {item.name}</button>
             </div>
           </div>
         ))}
