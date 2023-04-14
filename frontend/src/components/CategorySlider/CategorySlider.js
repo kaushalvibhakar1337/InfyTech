@@ -104,7 +104,6 @@ const CategorySlider = () => {
               className="img"
             />
             <div className="info">
-              {/* <span className="name">{item.name}</span> */}
               <NavLink to={`/products/${item.id}`}>
                 <button className="viewBtn">VIEW {item.name}</button>
               </NavLink>
