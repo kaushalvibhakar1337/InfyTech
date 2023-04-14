@@ -68,7 +68,6 @@ const CategorySlider = () => {
     },
     {
       id: "8",
-
       img: "mouse.jpg",
       name: "MICE",
     },
