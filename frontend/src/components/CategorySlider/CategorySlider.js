@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "./CategorySlider.scss";
+import "./CategorySlider1.scss";
 
 const PrevArrow = (props) => {
   const { onClick } = props;
@@ -38,7 +38,10 @@ const CategorySlider = () => {
               alt=""
               className="img"
             />
-            <span className="name">NAME 1</span>
+            <div className="info">
+              <span className="name">KEYBOARDS</span>
+              {/* <button className="viewBtn">VIEW PRODUCTS</button> */}
+            </div>
           </div>
         </div>
         <div>
@@ -48,7 +51,10 @@ const CategorySlider = () => {
               alt=""
               className="img"
             />
-            <span className="name">NAME 2</span>
+            <div className="info">
+              <span className="name">MICE</span>
+              {/* <button className="viewBtn">VIEW PRODUCTS</button> */}
+            </div>
           </div>
         </div>
         <div>
@@ -58,7 +64,10 @@ const CategorySlider = () => {
               alt=""
               className="img"
             />
-            <span className="name">NAME 3</span>
+            <div className="info">
+              <span className="name">HEADPHONES</span>
+              {/* <button className="viewBtn">VIEW PRODUCTS</button> */}
+            </div>
           </div>
         </div>
         <div>
@@ -68,7 +77,10 @@ const CategorySlider = () => {
               alt=""
               className="img"
             />
-            <span className="name">NAME 4</span>
+            <div className="info">
+              <span className="name">HEADPHONES</span>
+              {/* <button className="viewBtn">VIEW PRODUCTS</button> */}
+            </div>
           </div>
         </div>
         <div>
@@ -78,7 +90,10 @@ const CategorySlider = () => {
               alt=""
               className="img"
             />
-            <span className="name">NAME 5</span>
+            <div className="info">
+              <span className="name">HEADPHONES</span>
+              {/* <button className="viewBtn">VIEW PRODUCTS</button> */}
+            </div>
           </div>
         </div>
         <div>
@@ -88,7 +103,10 @@ const CategorySlider = () => {
               alt=""
               className="img"
             />
-            <span className="name">NAME 6</span>
+            <div className="info">
+              <span className="name">HEADPHONES</span>
+              {/* <button className="viewBtn">VIEW PRODUCTS</button> */}
+            </div>
           </div>
         </div>
       </Slider>
