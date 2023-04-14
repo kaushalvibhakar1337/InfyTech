@@ -3,47 +3,30 @@
 
 .categorySlider {
   margin: 120px 200px 0 200px;
-  padding: 60px 25px;
+  padding: 60px 0;
   border: 1px solid #dddddd;
+  text-align: center;
 
-  .slider {
-    width: 100%;
-    text-align: center;
+  .nextBtn,
+  .prevBtn {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    color: #e5b14a;
+    background-color: #241414;
+    cursor: pointer;
+  }
 
-    .categoryCard {
-      display: inline-block;
-      padding-left: 30px;
-      padding-right: 30px;
-      margin-bottom: 60px;
-      font-size: 12px;
-      letter-spacing: 0.2em;
-      font-weight: 600;
+  .prevBtn {
+    left: -20px;
+  }
 
-      .image {
-        width: 250px;
-        height: 250px;
-        display: flex;
-        position: relative;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          position: absolute;
-          overflow: hidden;
-        }
-
-        .img1 {
-          z-index: 1;
-        }
-      }
-
-      .name {
-        display: block;
-        margin-top: 20px;
-        margin-bottom: 4px;
-        color: rgba($color: black, $alpha: 0.9);
-      }
-    }
+  .nextBtn {
+    right: -20px;
   }
 }
