@@ -28,87 +28,50 @@ const CategorySlider = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
+
+  const data = [
+    {
+      img: "keyboard.jpg",
+      name: "KEYBOARDS",
+    },
+    {
+      img: "mouse.jpg",
+      name: "MOUSE",
+    },
+    {
+      img: "headphone.jpg",
+      name: "HEADPHONES",
+    },
+    {
+      img: "keyboard.jpg",
+      name: "NAME 4",
+    },
+    {
+      img: "keyboard.jpg",
+      name: "NAME 5",
+    },
+    {
+      img: "keyboard.jpg",
+      name: "NAME 6",
+    },
+  ];
+
   return (
     <div className="categorySlider">
       <Slider {...settings}>
-        <div>
-          <div className="card">
+        {data.map((item, index) => (
+          <div className="card" item={item} key={index}>
             <img
-              src={require("../../assets/productSlider/keyboard.jpg")}
+              src={require(`../../assets/productSlider/${item.img}`)}
               alt=""
               className="img"
             />
             <div className="info">
-              <span className="name">KEYBOARDS</span>
+              <span className="name">{item.name}</span>
               {/* <button className="viewBtn">VIEW PRODUCTS</button> */}
             </div>
           </div>
-        </div>
-        <div>
-          <div className="card">
-            <img
-              src={require("../../assets/productSlider/mouse.jpg")}
-              alt=""
-              className="img"
-            />
-            <div className="info">
-              <span className="name">MICE</span>
-              {/* <button className="viewBtn">VIEW PRODUCTS</button> */}
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="card">
-            <img
-              src={require("../../assets/productSlider/headphone.jpg")}
-              alt=""
-              className="img"
-            />
-            <div className="info">
-              <span className="name">HEADPHONES</span>
-              {/* <button className="viewBtn">VIEW PRODUCTS</button> */}
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="card">
-            <img
-              src={require("../../assets/productSlider/keyboard.jpg")}
-              alt=""
-              className="img"
-            />
-            <div className="info">
-              <span className="name">HEADPHONES</span>
-              {/* <button className="viewBtn">VIEW PRODUCTS</button> */}
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="card">
-            <img
-              src={require("../../assets/productSlider/keyboard.jpg")}
-              alt=""
-              className="img"
-            />
-            <div className="info">
-              <span className="name">HEADPHONES</span>
-              {/* <button className="viewBtn">VIEW PRODUCTS</button> */}
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="card">
-            <img
-              src={require("../../assets/productSlider/keyboard.jpg")}
-              alt=""
-              className="img"
-            />
-            <div className="info">
-              <span className="name">HEADPHONES</span>
-              {/* <button className="viewBtn">VIEW PRODUCTS</button> */}
-            </div>
-          </div>
-        </div>
+        ))}
       </Slider>
     </div>
   );
