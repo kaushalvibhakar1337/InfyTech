@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Slideshow.scss";
 
-function Slideshow({ images, interval = 3000 }) {
+function Slideshow({ images, interval = 5000 }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
