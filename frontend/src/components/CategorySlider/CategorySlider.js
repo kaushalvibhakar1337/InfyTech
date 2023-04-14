@@ -32,22 +32,64 @@ const CategorySlider = () => {
     <div className="categorySlider">
       <Slider {...settings}>
         <div>
-          <h3>1</h3>
+          <div className="card">
+            <img
+              src={require("../../assets/productSlider/keyboard.jpg")}
+              alt=""
+              className="img"
+            />
+            <span className="name">NAME 1</span>
+          </div>
         </div>
         <div>
-          <h3>2</h3>
+          <div className="card">
+            <img
+              src={require("../../assets/productSlider/mouse.jpg")}
+              alt=""
+              className="img"
+            />
+            <span className="name">NAME 2</span>
+          </div>
         </div>
         <div>
-          <h3>3</h3>
+          <div className="card">
+            <img
+              src={require("../../assets/productSlider/headphone.jpg")}
+              alt=""
+              className="img"
+            />
+            <span className="name">NAME 3</span>
+          </div>
         </div>
         <div>
-          <h3>4</h3>
+          <div className="card">
+            <img
+              src={require("../../assets/productSlider/keyboard.jpg")}
+              alt=""
+              className="img"
+            />
+            <span className="name">NAME 4</span>
+          </div>
         </div>
         <div>
-          <h3>5</h3>
+          <div className="card">
+            <img
+              src={require("../../assets/productSlider/keyboard.jpg")}
+              alt=""
+              className="img"
+            />
+            <span className="name">NAME 5</span>
+          </div>
         </div>
         <div>
-          <h3>6</h3>
+          <div className="card">
+            <img
+              src={require("../../assets/productSlider/keyboard.jpg")}
+              alt=""
+              className="img"
+            />
+            <span className="name">NAME 6</span>
+          </div>
         </div>
       </Slider>
     </div>
