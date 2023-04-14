@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Slider from "react-slick";
 import "./CategorySlider.scss";
 
@@ -31,50 +32,63 @@ const CategorySlider = () => {
 
   const data = [
     {
+      id: "1",
       img: "processor.jpg",
       name: "PROCESSORS",
     },
     {
+      id: "2",
       img: "motherboard.jpg",
       name: "MOTHERBOARDS",
     },
     {
+      id: "3",
       img: "gpu.jpg",
       name: "GPUs",
     },
     {
+      id: "4",
       img: "psu.jpg",
       name: "PSUs",
     },
     {
+      id: "5",
       img: "cabinet.jpg",
       name: "CABINETS",
     },
     {
+      id: "6",
       img: "ram.jpg",
       name: "RAMs",
     },
     {
+      id: "7",
       img: "ssd.jpg",
       name: "SSDs",
     },
     {
+      id: "8",
+
       img: "mouse.jpg",
       name: "MICE",
     },
     {
+      id: "9",
       img: "keyboard.jpg",
       name: "KEYBOARDS",
     },
     {
+      id: "10",
       img: "headphone.jpg",
       name: "HEADPHONES",
     },
     {
+      id: "11",
       img: "mousepad.jpg",
       name: "MOUSEPADS",
     },
     {
+      id: "12",
       img: "monitor.jpg",
       name: "MONITORS",
     },
@@ -84,7 +98,7 @@ const CategorySlider = () => {
     <div className="categorySlider">
       <Slider {...settings}>
         {data.map((item, index) => (
-          <div className="card" item={item} key={index}>
+          <div className="card" item={item} key={item.id}>
             <img
               src={require(`../../assets/categorySlider/${item.img}`)}
               alt=""
@@ -92,7 +106,9 @@ const CategorySlider = () => {
             />
             <div className="info">
               {/* <span className="name">{item.name}</span> */}
-              <button className="viewBtn">VIEW {item.name}</button>
+              <NavLink to={`/products/${item.id}`}>
+                <button className="viewBtn">VIEW {item.name}</button>
+              </NavLink>
             </div>
           </div>
         ))}
