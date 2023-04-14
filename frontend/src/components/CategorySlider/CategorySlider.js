@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "./CategorySlider2.scss";
+import "./CategorySlider1.scss";
 
 const PrevArrow = (props) => {
   const { onClick } = props;
@@ -31,28 +31,52 @@ const CategorySlider = () => {
 
   const data = [
     {
-      img: "keyboard.jpg",
-      name: "KEYBOARDS",
+      img: "processor.jpg",
+      name: "PROCESSORS",
+    },
+    {
+      img: "motherboard.jpg",
+      name: "MOTHERBOARDS",
+    },
+    {
+      img: "gpu.jpg",
+      name: "GPUs",
+    },
+    {
+      img: "psu.jpg",
+      name: "PSUs",
+    },
+    {
+      img: "cabinet.jpg",
+      name: "CABINETS",
+    },
+    {
+      img: "ram.jpg",
+      name: "RAMs",
+    },
+    {
+      img: "ssd.jpg",
+      name: "SSDs",
     },
     {
       img: "mouse.jpg",
-      name: "MOUSE",
+      name: "MICE",
+    },
+    {
+      img: "keyboard.jpg",
+      name: "KEYBOARDS",
     },
     {
       img: "headphone.jpg",
       name: "HEADPHONES",
     },
     {
-      img: "keyboard.jpg",
-      name: "NAME 4",
+      img: "mousepad.jpg",
+      name: "MOUSEPADS",
     },
     {
-      img: "keyboard.jpg",
-      name: "NAME 5",
-    },
-    {
-      img: "keyboard.jpg",
-      name: "NAME 6",
+      img: "monitor.jpg",
+      name: "MONITORS",
     },
   ];
 
@@ -62,7 +86,7 @@ const CategorySlider = () => {
         {data.map((item, index) => (
           <div className="card" item={item} key={index}>
             <img
-              src={require(`../../assets/productSlider/${item.img}`)}
+              src={require(`../../assets/categorySlider/${item.img}`)}
               alt=""
               className="img"
             />
