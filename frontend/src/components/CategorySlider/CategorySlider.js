@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "./CategorySlider1.scss";
+import "./CategorySlider2.scss";
 
 const PrevArrow = (props) => {
   const { onClick } = props;

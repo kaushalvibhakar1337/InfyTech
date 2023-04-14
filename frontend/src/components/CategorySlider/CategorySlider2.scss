@@ -15,9 +15,14 @@
     border: 1px solid #e5b14a;
     font-size: 20px;
     color: #e5b14a;
-    background-color: transparent;
+    background-color: #241414;
+
     cursor: pointer;
     z-index: 1;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 
   .prevBtn {
