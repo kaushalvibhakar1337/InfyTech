@@ -30,6 +30,15 @@
     }
   }
 
+  @keyframes slide-out {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
   .container {
     height: 100%;
     display: flex;
