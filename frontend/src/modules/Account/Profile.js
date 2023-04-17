@@ -26,13 +26,15 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const docRef = doc(db, "users", user.uid);
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-          setFirstName(docSnap.data().FirstName);
-          setLastName(docSnap.data().LastName);
-        } else {
-          console.log("No such document!");
+        if (user?.uid) {
+          const docRef = doc(db, "users", user.uid);
+          const docSnap = await getDoc(docRef);
+          if (docSnap.exists()) {
+            setFirstName(docSnap.data().FirstName);
+            setLastName(docSnap.data().LastName);
+          } else {
+            console.log("No such document!");
+          }
         }
       } catch (error) {
         console.log("Error getting document:", error);
