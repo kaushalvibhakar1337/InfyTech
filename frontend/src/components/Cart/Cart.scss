@@ -17,6 +17,18 @@
   z-index: 99;
   background-color: #1e1f23;
   box-shadow: 2px 0 10px #36363633, -2px 0 10px #36363633;
+  animation-name: slide-in;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
 
   .container {
     height: 100%;
