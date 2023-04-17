@@ -12,11 +12,11 @@
       font-size: 13px;
       letter-spacing: 0.2em;
       margin-bottom: 10px;
-      color: #1c1b1b;
+      color: white;
     }
 
     .middle {
-      color: #6a6a6a;
+      color: white;
     }
 
     .bottom {
@@ -27,11 +27,11 @@
       padding: 14px 28px;
       border: 1px solid transparent;
       border-color: #e5b14a;
-      background: linear-gradient(to right, #e5b14a 50%, white 50%);
+      background: linear-gradient(to right, #e5b14a 50%, #1e1f23 50%);
       background-size: 200%;
       background-position: 0 50%;
       letter-spacing: 0.2em;
-      font-weight: 500;
+      font-weight: 600;
       transition: background-position 0.6s ease;
 
       &:hover {

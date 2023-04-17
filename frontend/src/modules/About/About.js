@@ -17,13 +17,13 @@ const About = () => {
         <div className="right">
           <div className="top">
             <span className="heading">ABOUT INFYTECH</span>
-            <span>
+            <span className="content">
               If you are someone who enjoys playing video games, then there are
               a lot of options these days. Not only do you have various
               consoles, PC, but even mobile phones too. However, among these the
               most popular and arguably the best one is the PC. If you are after
               the best gaming experience, it is a gaming PC that you should opt
-              for. When you are planning on purchasing a gaming PC, or any Pc in
+              for. When you are planning on purchasing a gaming PC, or any PC in
               general, you have lots of options these days. You can either get
               one offline, i.e. from local stores, or online. There are various
               pros and cons for both of these options. However, as the world
@@ -40,7 +40,7 @@ const About = () => {
           </div>
           <div className="bottom">
             <span className="heading">WHAT WE DO</span>
-            <span>
+            <span className="content">
               InfyTech deals in almost any computer component, or peripheral
               that you would need. Regardless of the brand, or the product, it
               is all here. Components such as processor, RAM, graphics card,
