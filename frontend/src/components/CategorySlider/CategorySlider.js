@@ -83,6 +83,7 @@ const CategorySlider = () => {
 
   return (
     <div className="categorySlider">
+      <span className="legend">SHOP BY CATEGORIES</span>
       <Slider {...settings}>
         {data.map((item, index) => (
           <div className="card" item={item} key={index}>

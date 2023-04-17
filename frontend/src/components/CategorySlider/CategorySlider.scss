@@ -6,6 +6,20 @@
   padding: 70px 30px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   text-align: center;
+  position: relative;
+
+  .legend {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 15px;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    background-color: #1e1f23;
+    padding: 0 20px;
+  }
 
   .nextBtn,
   .prevBtn {
