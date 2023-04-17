@@ -46,23 +46,24 @@
       color: white;
 
       &::placeholder {
+        font-size: 12px;
         letter-spacing: 1px;
-        color: white;
+        color: rgba($color: white, $alpha: 0.7);
       }
     }
 
     .forgotPass {
       margin-top: 10px;
       text-align: right;
-      font-weight: 500;
       font-size: 12px;
+      letter-spacing: 1px;
 
       a {
         text-decoration: none;
-        color: rgba($color: white, $alpha: 0.6);
+        color: white;
 
         &:hover {
-          color: white;
+          color: rgba($color: white, $alpha: 0.6);
         }
       }
     }
