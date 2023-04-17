@@ -51,10 +51,10 @@ function Navbar() {
           <li className="item">
             <NavLink to="/search">SEARCH</NavLink>
           </li>
-          <li className="item cart">
-            <NavLink onClick={() => setOpenCart(true)}>
+          <li className="item cartMenu">
+            <span className="cart" onClick={() => setOpenCart(true)}>
               CART (<span className="cartItems">{products.length}</span>)
-            </NavLink>
+            </span>
           </li>
         </ul>
       </div>

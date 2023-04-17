@@ -79,12 +79,17 @@
     }
   }
 
-  .cart {
-    a {
-      font-weight: 400 !important;
+  .cartMenu {
+    .cart {
+      color: #999;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+      font-size: 12px !important;
 
       &:hover {
-        font-weight: 500 !important;
+        cursor: pointer;
+        color: white;
       }
     }
 
