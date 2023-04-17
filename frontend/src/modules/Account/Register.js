@@ -72,7 +72,7 @@ const Register = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit" className="submit" onClick={handleSubmit}>
+        <button type="submit" className="submit">
           CREATE MY ACCOUNT
         </button>
         <p className="hint">
