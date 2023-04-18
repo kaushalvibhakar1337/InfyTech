@@ -37,7 +37,7 @@ const Profile = () => {
       <div className="myProfile">
         <div className="container">
           <div className="left">
-            <p className="heading">PROFILE INFORMATION</p>
+            <p className="heading">PERSONAL INFO</p>
             <p className="content">
               <input
                 className="inputField"
@@ -63,36 +63,48 @@ const Profile = () => {
                 disabled
                 style={{ cursor: "not-allowed" }}
               />
+              <input
+                className="inputField"
+                type="text"
+                placeholder="Phone Number"
+                required
+              />
             </p>
-            <button className="updateBtn">UPDATE PROFILE INFO</button>
+            <button className="updateBtn">SAVE UPDATES</button>
           </div>
           <div className="right">
             <p className="heading">PRIMARY ADDRESS</p>
             <input
               className="inputField"
               type="text"
-              placeholder="First Name"
-              value={fname}
-              onChange={(e) => setFname(e.target.value)}
+              placeholder="Address Line 1"
               required
             />
             <input
               className="inputField"
               type="text"
-              placeholder="Last Name"
-              value={lname}
-              onChange={(e) => setLname(e.target.value)}
+              placeholder="Address Line 2"
               required
             />
             <input
               className="inputField"
-              type="email"
-              placeholder="Email"
-              value={user.email}
-              disabled
-              style={{ cursor: "not-allowed" }}
+              type="text"
+              placeholder="City"
+              required
             />
-            <button className="updateBtn">UPDATE ADDRESS</button>
+            <input
+              className="inputField"
+              type="text"
+              placeholder="Pincode"
+              required
+            />
+            <input
+              className="inputField"
+              type="text"
+              placeholder="State"
+              required
+            />
+            <button className="updateBtn">SAVE UPDATES</button>
           </div>
         </div>
         <button className="logoutBtn" onClick={handleLogout}>
