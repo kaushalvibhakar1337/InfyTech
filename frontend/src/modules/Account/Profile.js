@@ -108,6 +108,11 @@ const Profile = () => {
                   type="number"
                   placeholder="Phone Number"
                   value={phone}
+                  onInput={(e) => {
+                    e.target.value = Math.max(0, parseInt(e.target.value))
+                      .toString()
+                      .slice(0, 10);
+                  }}
                   onChange={(e) => setPhone(e.target.value)}
                   required
                 />
