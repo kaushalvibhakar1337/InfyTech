@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { UserAuth } from "../../context/AuthContext";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../firebase";
+import useUser from "../../hooks/useUser";
 import "./Profile.scss";
 
 const Profile = () => {
   const { user, logout } = UserAuth();
   const navigate = useNavigate();
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const userData = useUser(user?.uid);
+  const firstName = userData?.FirstName;
+  const lastName = userData?.LastName;
 
   const handleLogout = async () => {
     try {
@@ -22,22 +22,6 @@ const Profile = () => {
       console.log(err.message);
     }
   };
-
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        if (user?.uid) {
-          const docRef = doc(db, "users", user.uid);
-          const docSnap = await getDoc(docRef);
-          setFirstName(docSnap.data().FirstName);
-          setLastName(docSnap.data().LastName);
-        }
-      } catch (error) {
-        console.log("Error getting document:", error);
-      }
-    };
-    fetchUserData();
-  }, [user]);
 
   return (
     <div className="profile">

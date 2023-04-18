@@ -3,10 +3,13 @@ import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { UserAuth } from "../../context/AuthContext";
+import useUser from "../../hooks/useUser";
 import "./Contact.scss";
 
 const Contact = () => {
   const { user } = UserAuth();
+  const userData = useUser(user?.uid);
+  const fullName = userData?.FirstName + " " + userData?.LastName;
 
   return (
     <>
@@ -26,13 +29,18 @@ const Contact = () => {
             <p className="heading">
               GOT ANY ISSUES? FEEL FREE TO DROP US A MAIL.
             </p>
-            <input
-              type="text"
-              placeholder="Your Name"
-              name="Username"
-              autoComplete="off"
-              required
-            />
+
+            {user ? (
+              <input name="Username" value={fullName} readOnly />
+            ) : (
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="Username"
+                autoComplete="off"
+                required
+              />
+            )}
             {user ? (
               <input name="Email" value={user.email} readOnly />
             ) : (
