@@ -30,7 +30,7 @@ const Contact = () => {
               GOT ANY ISSUES? FEEL FREE TO DROP US A MAIL.
             </p>
 
-            {user ? (
+            {user?.uid ? (
               <input name="Username" value={fullName} readOnly />
             ) : (
               <input
@@ -41,7 +41,7 @@ const Contact = () => {
                 required
               />
             )}
-            {user ? (
+            {user?.uid ? (
               <input name="Email" value={user.email} readOnly />
             ) : (
               <input
