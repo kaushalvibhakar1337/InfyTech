@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useFetchUser from "../../hooks/useFetchUser";
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { UserAuth } from "../../context/AuthContext";
-import useFetchUser from "../../hooks/useFetchUser";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "../../firebase";
 import "./Profile.scss";
 
 const Profile = () => {
@@ -13,11 +15,23 @@ const Profile = () => {
   const userData = useFetchUser(user?.uid);
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address1, setAddress1] = useState("");
+  const [address2, setAddress2] = useState("");
+  const [city, setCity] = useState("");
+  const [pincode, setPincode] = useState("");
+  const [state, setState] = useState("");
 
   useEffect(() => {
     if (userData) {
       setFname(userData.FirstName);
       setLname(userData.LastName);
+      setPhone(userData.PhoneNumber);
+      setAddress1(userData.AddressLine1);
+      setAddress2(userData.AddressLine2);
+      setCity(userData.City);
+      setPincode(userData.Pincode);
+      setState(userData.State);
     }
   }, [userData]);
 
@@ -30,6 +44,31 @@ const Profile = () => {
     }
   };
 
+  const handleInfoUpdate = async (e) => {
+    e.preventDefault();
+    try {
+      await updateDoc(doc(db, "users", user.uid), {
+        FirstName: fname,
+        LastName: lname,
+        PhoneNumber: phone,
+        Email: user.email,
+      });
+    } catch (err) {}
+  };
+
+  const handleAddressUpdate = async (e) => {
+    e.preventDefault();
+    try {
+      await updateDoc(doc(db, "users", user.uid), {
+        AddressLine1: address1,
+        AddressLine2: address2,
+        City: city,
+        Pincode: pincode,
+        State: state,
+      });
+    } catch (err) {}
+  };
+
   return (
     <div className="profile">
       <Navbar />
@@ -39,38 +78,44 @@ const Profile = () => {
           <div className="left">
             <p className="heading">PERSONAL INFO</p>
             <p className="content">
-              <input
-                className="inputField"
-                type="text"
-                placeholder="First Name"
-                value={fname}
-                onChange={(e) => setFname(e.target.value)}
-                required
-              />
-              <input
-                className="inputField"
-                type="text"
-                placeholder="Last Name"
-                value={lname}
-                onChange={(e) => setLname(e.target.value)}
-                required
-              />
-              <input
-                className="inputField"
-                type="email"
-                placeholder="Email"
-                value={user.email}
-                disabled
-                style={{ cursor: "not-allowed" }}
-              />
-              <input
-                className="inputField"
-                type="text"
-                placeholder="Phone Number"
-                required
-              />
+              <form onSubmit={handleInfoUpdate}>
+                <input
+                  className="inputField"
+                  type="text"
+                  placeholder="First Name"
+                  value={fname}
+                  onChange={(e) => setFname(e.target.value)}
+                  required
+                />
+                <input
+                  className="inputField"
+                  type="text"
+                  placeholder="Last Name"
+                  value={lname}
+                  onChange={(e) => setLname(e.target.value)}
+                  required
+                />
+                <input
+                  className="inputField"
+                  type="email"
+                  placeholder="Email"
+                  value={user.email}
+                  disabled
+                  style={{ cursor: "not-allowed" }}
+                />
+                <input
+                  className="inputField"
+                  type="number"
+                  placeholder="Phone Number"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                />
+                <button type="submit" className="updateBtn">
+                  SAVE UPDATES
+                </button>
+              </form>
             </p>
-            <button className="updateBtn">SAVE UPDATES</button>
             <br />
             <button className="logoutBtn" onClick={handleLogout}>
               LOGOUT
@@ -78,39 +123,60 @@ const Profile = () => {
           </div>
           <div className="right">
             <p className="heading">PRIMARY ADDRESS</p>
-            <input
-              className="inputField"
-              type="text"
-              placeholder="Address Line 1"
-              required
-            />
-            <input
-              className="inputField"
-              type="text"
-              placeholder="Address Line 2"
-              required
-            />
-            <input
-              className="inputField"
-              type="text"
-              placeholder="City"
-              required
-            />
-            <input
-              className="inputField"
-              type="text"
-              placeholder="Pincode"
-              required
-            />
-            <input
-              className="inputField"
-              type="text"
-              placeholder="State"
-              required
-            />
-            <button className="updateBtn" style={{ marginTop: "50px" }}>
-              SAVE UPDATES
-            </button>
+            <form onSubmit={handleAddressUpdate}>
+              <input
+                className="inputField"
+                type="text"
+                placeholder="Address Line 1"
+                value={address1}
+                onChange={(e) => setAddress1(e.target.value)}
+                required
+              />
+              <input
+                className="inputField"
+                type="text"
+                placeholder="Address Line 2"
+                value={address2}
+                onChange={(e) => setAddress2(e.target.value)}
+                required
+              />
+              <input
+                className="inputField"
+                type="text"
+                placeholder="City"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                required
+              />
+              <input
+                className="inputField"
+                type="number"
+                placeholder="Pincode"
+                value={pincode}
+                onInput={(e) => {
+                  e.target.value = Math.max(0, parseInt(e.target.value))
+                    .toString()
+                    .slice(0, 6);
+                }}
+                onChange={(e) => setPincode(e.target.value)}
+                required
+              />
+              <input
+                className="inputField"
+                type="text"
+                placeholder="State"
+                value={state}
+                onChange={(e) => setState(e.target.value)}
+                required
+              />
+              <button
+                type="submit"
+                className="updateBtn"
+                style={{ marginTop: "50px" }}
+              >
+                SAVE UPDATES
+              </button>
+            </form>
           </div>
         </div>
       </div>

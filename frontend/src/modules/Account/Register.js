@@ -25,7 +25,6 @@ const Register = () => {
         FirstName: fname,
         LastName: lname,
         Email: email,
-        Password: password,
       });
       navigate("/profile");
     } catch (err) {
