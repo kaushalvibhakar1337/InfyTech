@@ -12,7 +12,6 @@ const Profile = () => {
   const navigate = useNavigate();
   const userData = useFetchUser(user?.uid);
   const firstName = userData?.FirstName;
-  const lastName = userData?.LastName;
 
   const handleLogout = async () => {
     try {
@@ -28,9 +27,16 @@ const Profile = () => {
       <Navbar />
       <Header title="MY ACCOUNT" />
       <div className="myProfile">
-        <p>
-          Welcome back, {firstName} {lastName}!
-        </p>
+        <div className="container">
+          <div className="left">
+            <p className="heading">PROFILE INFORMATION</p>
+            <p className="content">Welcome back, {firstName}!</p>
+          </div>
+          <div className="right">
+            <p className="heading">PRIMARY ADDRESS</p>
+            <p className="content">Surat, Gujarat, India 395007</p>
+          </div>
+        </div>
         <button className="logoutBtn" onClick={handleLogout}>
           LOGOUT
         </button>
