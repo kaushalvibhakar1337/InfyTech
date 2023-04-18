@@ -45,6 +45,7 @@ const Profile = () => {
                 placeholder="First Name"
                 value={fname}
                 onChange={(e) => setFname(e.target.value)}
+                required
               />
               <input
                 className="inputField"
@@ -52,17 +53,46 @@ const Profile = () => {
                 placeholder="Last Name"
                 value={lname}
                 onChange={(e) => setLname(e.target.value)}
+                required
               />
-              <input className="inputField" type="email" placeholder="Email" />
               <input
                 className="inputField"
-                type="password"
-                placeholder="Password"
+                type="email"
+                placeholder="Email"
+                value={user.email}
+                disabled
+                style={{ cursor: "not-allowed" }}
               />
             </p>
+            <button className="updateBtn">UPDATE PROFILE INFO</button>
           </div>
           <div className="right">
             <p className="heading">PRIMARY ADDRESS</p>
+            <input
+              className="inputField"
+              type="text"
+              placeholder="First Name"
+              value={fname}
+              onChange={(e) => setFname(e.target.value)}
+              required
+            />
+            <input
+              className="inputField"
+              type="text"
+              placeholder="Last Name"
+              value={lname}
+              onChange={(e) => setLname(e.target.value)}
+              required
+            />
+            <input
+              className="inputField"
+              type="email"
+              placeholder="Email"
+              value={user.email}
+              disabled
+              style={{ cursor: "not-allowed" }}
+            />
+            <button className="updateBtn">UPDATE ADDRESS</button>
           </div>
         </div>
         <button className="logoutBtn" onClick={handleLogout}>
