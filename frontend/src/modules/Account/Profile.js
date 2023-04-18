@@ -71,6 +71,10 @@ const Profile = () => {
               />
             </p>
             <button className="updateBtn">SAVE UPDATES</button>
+            <br />
+            <button className="logoutBtn" onClick={handleLogout}>
+              LOGOUT
+            </button>
           </div>
           <div className="right">
             <p className="heading">PRIMARY ADDRESS</p>
@@ -104,12 +108,11 @@ const Profile = () => {
               placeholder="State"
               required
             />
-            <button className="updateBtn">SAVE UPDATES</button>
+            <button className="updateBtn" style={{ marginTop: "50px" }}>
+              SAVE UPDATES
+            </button>
           </div>
         </div>
-        <button className="logoutBtn" onClick={handleLogout}>
-          LOGOUT
-        </button>
       </div>
       <Footer />
     </div>

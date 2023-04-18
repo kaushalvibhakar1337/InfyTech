@@ -1,7 +1,7 @@
 .profile {
   .myProfile {
     margin-top: 50px;
-    // margin-left: 330px;
+    padding: 0 50px;
     letter-spacing: 0.2em;
     text-align: center;
 
@@ -9,7 +9,7 @@
       display: flex;
 
       .heading {
-        font-size: 15px;
+        font-size: 14px;
         margin-bottom: 30px;
       }
 
@@ -73,7 +73,7 @@
       width: 40%;
       color: white;
       font-size: 11px;
-      margin-top: 50px;
+      margin-top: 40px;
       padding: 13px 26px;
       border: 1px solid transparent;
       border-color: white;
@@ -96,10 +96,10 @@
     }
 
     .logoutBtn {
-      width: 30%;
+      width: 40%;
       color: #241414;
       font-size: 12px;
-      margin-top: 100px;
+      margin-top: 30px;
       padding: 13px 26px;
       border: 1px solid transparent;
       border-color: #e5b14a;
