@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 /**
  * sub-category controller
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const { createCoreController } = require("@strapi/strapi").factories;
 
-module.exports = createCoreController('api::sub-category.sub-category');
+module.exports = createCoreController("api::sub-category.sub-category");
