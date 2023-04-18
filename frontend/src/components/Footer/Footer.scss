@@ -54,12 +54,13 @@
         color: white;
 
         &::placeholder {
-          color: white;
+          color: rgba($color: white, $alpha: 0.7);
           font-family: "Montserrat";
           letter-spacing: 1px;
           font-size: 11px;
         }
       }
+
       .sub {
         color: #241414;
         font-size: 12px;
