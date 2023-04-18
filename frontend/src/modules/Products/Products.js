@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
+import useFetchData from "../../hooks/useFetchData";
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
 import FilteredProductList from "../../components/ProductList/FilteredProductList";
@@ -13,11 +13,13 @@ const Products = () => {
   const [sort, setSort] = useState("asc");
   const [selectedFilters, setSelectedFilters] = useState([]);
 
-  const { data } = useFetch(
+  const { data } = useFetchData(
     `/sub-categories?[filters][categories][id]=${categoryId}`
   );
 
-  const { filterData } = useFetch(`/categories?[filters][id]=${categoryId}`);
+  const { filterData } = useFetchData(
+    `/categories?[filters][id]=${categoryId}`
+  );
 
   const handleChange = (e) => {
     const value = e.target.value;

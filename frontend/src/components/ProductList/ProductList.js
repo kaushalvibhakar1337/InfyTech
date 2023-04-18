@@ -1,10 +1,10 @@
 import React from "react";
-import useFetch from "../../hooks/useFetch";
+import useFetchData from "../../hooks/useFetchData";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.scss";
 
 const ProductList = () => {
-  const { data, loading, error } = useFetch(`/products?populate=*`);
+  const { data, loading, error } = useFetchData(`/products?populate=*`);
 
   if (data) {
     data.sort(() => Math.random() - 0.5);

@@ -3,12 +3,12 @@ import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { UserAuth } from "../../context/AuthContext";
-import useUser from "../../hooks/useUser";
+import useFetchUser from "../../hooks/useFetchUser";
 import "./Contact.scss";
 
 const Contact = () => {
   const { user } = UserAuth();
-  const userData = useUser(user?.uid);
+  const userData = useFetchUser(user?.uid);
   const fullName = userData?.FirstName + " " + userData?.LastName;
 
   return (

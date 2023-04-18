@@ -1,10 +1,10 @@
 import React from "react";
-import useFetch from "../../hooks/useFetch";
+import useFetchData from "../../hooks/useFetchData";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.scss";
 
 const FilteredProductList = ({ categoryId, filters, maxPrice, sort }) => {
-  const { data, loading, error } = useFetch(
+  const { data, loading, error } = useFetchData(
     `/products?populate=*&[filters][categories][id]=${categoryId}${filters.map(
       (item) => `&[filters][sub_categories][id]=${item}&`
     )}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`

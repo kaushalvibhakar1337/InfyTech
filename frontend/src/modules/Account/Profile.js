@@ -4,13 +4,13 @@ import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { UserAuth } from "../../context/AuthContext";
-import useUser from "../../hooks/useUser";
+import useFetchUser from "../../hooks/useFetchUser";
 import "./Profile.scss";
 
 const Profile = () => {
   const { user, logout } = UserAuth();
   const navigate = useNavigate();
-  const userData = useUser(user?.uid);
+  const userData = useFetchUser(user?.uid);
   const firstName = userData?.FirstName;
   const lastName = userData?.LastName;
 

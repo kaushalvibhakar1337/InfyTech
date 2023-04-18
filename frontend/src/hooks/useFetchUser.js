@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
-const useUser = (uid) => {
+const useFetchUser = (uid) => {
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
@@ -24,4 +24,4 @@ const useUser = (uid) => {
   return userData;
 };
 
-export default useUser;
+export default useFetchUser;

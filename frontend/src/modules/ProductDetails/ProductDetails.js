@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import useFetch from "../../hooks/useFetch";
+import useFetchData from "../../hooks/useFetchData";
 import { addToCart } from "../../redux/cartReducer";
 import Navbar from "../../components/Navbar/Navbar";
 import RelatedProductList from "../../components/ProductList/RelatedProductList";
@@ -12,7 +12,7 @@ const ProductDetails = () => {
   const productId = useParams().id;
   const [selectedImg, setSelectedImg] = useState("img1");
   const [quantity, setQuantity] = useState(1);
-  const { data, loading, error } = useFetch(
+  const { data, loading, error } = useFetchData(
     `/products/${productId}?populate=*`
   );
   const dispatch = useDispatch();

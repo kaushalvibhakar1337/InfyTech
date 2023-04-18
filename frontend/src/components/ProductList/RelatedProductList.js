@@ -1,10 +1,10 @@
 import React from "react";
-import useFetch from "../../hooks/useFetch";
+import useFetchData from "../../hooks/useFetchData";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.scss";
 
 const RelatedProductList = ({ rel, productId }) => {
-  const { data, loading, error } = useFetch(
+  const { data, loading, error } = useFetchData(
     `/products?populate=*&[filters][categories][id]=${rel}&[filters][id][$notIn]=${productId}`
   );
 
