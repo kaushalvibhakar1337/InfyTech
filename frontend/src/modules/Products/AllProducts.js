@@ -10,9 +10,7 @@ const AllProducts = () => {
     <>
       <Navbar />
       <Header title="ALL PRODUCTS" />
-      <div className="allProducts">
-        <ProductList />
-      </div>
+      <div className="allProducts">{/* <ProductList /> */}</div>
       <Footer />
     </>
   );

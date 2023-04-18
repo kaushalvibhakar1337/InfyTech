@@ -8,8 +8,29 @@
       display: flex;
 
       .heading {
-        font-size: 12px;
+        font-size: 15px;
         margin-bottom: 30px;
+      }
+
+      .inputField {
+        display: block;
+        padding: 12px 5px;
+        width: min-content;
+        border: none;
+        border-bottom: 1px solid #dddddd;
+        margin-top: 20px;
+        transition: border-color 0.1s ease-in-out;
+        border-radius: 0px;
+        font-family: "Montserrat";
+        letter-spacing: 1px;
+        background-color: #1e1f23;
+        color: white;
+
+        &::placeholder {
+          font-size: 12px;
+          letter-spacing: 1px;
+          color: rgba($color: white, $alpha: 0.7);
+        }
       }
 
       .left {
@@ -22,7 +43,7 @@
         .addressField {
           display: block;
           padding: 12px 14px;
-          width: 100%;
+          width: 50%;
           border: 1px solid #dddddd;
           transition: border-color 0.1s ease-in-out;
           border-radius: 0px;

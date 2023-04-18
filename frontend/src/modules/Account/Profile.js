@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
@@ -11,7 +11,15 @@ const Profile = () => {
   const { user, logout } = UserAuth();
   const navigate = useNavigate();
   const userData = useFetchUser(user?.uid);
-  const firstName = userData?.FirstName;
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+
+  useEffect(() => {
+    if (userData) {
+      setFname(userData.FirstName);
+      setLname(userData.LastName);
+    }
+  }, [userData]);
 
   const handleLogout = async () => {
     try {
@@ -30,13 +38,31 @@ const Profile = () => {
         <div className="container">
           <div className="left">
             <p className="heading">PROFILE INFORMATION</p>
-            <p className="content">Welcome back, {firstName}!</p>
+            <p className="content">
+              <input
+                className="inputField"
+                type="text"
+                placeholder="First Name"
+                value={fname}
+                onChange={(e) => setFname(e.target.value)}
+              />
+              <input
+                className="inputField"
+                type="text"
+                placeholder="Last Name"
+                value={lname}
+                onChange={(e) => setLname(e.target.value)}
+              />
+              <input className="inputField" type="email" placeholder="Email" />
+              <input
+                className="inputField"
+                type="password"
+                placeholder="Password"
+              />
+            </p>
           </div>
           <div className="right">
             <p className="heading">PRIMARY ADDRESS</p>
-            <textarea className="addressField">
-              Surat, Gujarat, India 395007
-            </textarea>
           </div>
         </div>
         <button className="logoutBtn" onClick={handleLogout}>
