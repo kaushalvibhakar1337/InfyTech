@@ -174,11 +174,7 @@ const Profile = () => {
                 onChange={(e) => setState(e.target.value)}
                 required
               />
-              <button
-                type="submit"
-                className="updateBtn"
-                style={{ marginTop: "50px" }}
-              >
+              <button type="submit" className="updateBtn">
                 SAVE UPDATES
               </button>
             </form>
