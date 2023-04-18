@@ -18,6 +18,26 @@
 
       .right {
         width: 50%;
+
+        .addressField {
+          display: block;
+          padding: 12px 14px;
+          width: 100%;
+          border: 1px solid #dddddd;
+          transition: border-color 0.1s ease-in-out;
+          border-radius: 0px;
+          font-family: "Montserrat";
+          letter-spacing: 1px;
+          background-color: #1e1f23;
+          color: white;
+          resize: none;
+
+          &::placeholder {
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: rgba($color: white, $alpha: 0.7);
+          }
+        }
       }
     }
 

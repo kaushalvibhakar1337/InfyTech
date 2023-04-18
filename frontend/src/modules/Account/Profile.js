@@ -34,7 +34,9 @@ const Profile = () => {
           </div>
           <div className="right">
             <p className="heading">PRIMARY ADDRESS</p>
-            <p className="content">Surat, Gujarat, India 395007</p>
+            <textarea className="addressField">
+              Surat, Gujarat, India 395007
+            </textarea>
           </div>
         </div>
         <button className="logoutBtn" onClick={handleLogout}>
