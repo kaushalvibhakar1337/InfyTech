@@ -14,7 +14,7 @@ const Contact = () => {
   const fullName = userData?.FirstName + " " + userData?.LastName;
 
   const notify = () =>
-    toast.success("THANK YOU FOR YOUR FEEDBACK!", {
+    toast.success("YOUR FEEDBACK IS HIGHLY APPRECIATED!", {
       className: "toastify",
       position: "bottom-right",
       autoClose: 3000,
@@ -45,7 +45,7 @@ const Contact = () => {
           <form
             action="https://formspree.io/f/xrgvyykn"
             method="POST"
-            onSubmit={notify}
+            onClick={notify}
           >
             <p className="heading">
               GOT ANY ISSUES?

@@ -8,7 +8,7 @@ const Footer = () => {
   const [email, setEmail] = useState("");
 
   const notify = () =>
-    toast.success("YOU'VE BEEN SUBSCRIBED!", {
+    toast.success("THANK YOU FOR SUBSCRIBING!", {
       className: "toastify",
       position: "bottom-right",
       autoClose: 3000,
