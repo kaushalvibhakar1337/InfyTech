@@ -21,7 +21,7 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
   const rel = data?.attributes?.categories?.data[0]?.id;
 
-  const notify1 = () =>
+  const notifyA = () =>
     toast.success("ADDED TO THE CART!", {
       className: "toastify",
       position: "bottom-right",
@@ -34,7 +34,7 @@ const ProductDetails = () => {
       theme: "dark",
     });
 
-  const notify2 = () =>
+  const notifyB = () =>
     toast.warning("LOGIN TO USE CART!", {
       className: "toastify",
       position: "bottom-right",
@@ -136,9 +136,9 @@ const ProductDetails = () => {
                             quantity,
                           })
                         );
-                        notify1();
+                        notifyA();
                       } else {
-                        notify2();
+                        notifyB();
                       }
                     }}
                   >
