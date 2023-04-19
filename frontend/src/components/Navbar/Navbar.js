@@ -15,7 +15,7 @@ function Navbar() {
   const navigate = useNavigate();
 
   const notify = () =>
-    toast.warning("LOGIN TO USE CART!", {
+    toast.warning("PLEASE LOGIN TO USE CART!", {
       className: "toastify",
       position: "bottom-right",
       autoClose: 3000,
