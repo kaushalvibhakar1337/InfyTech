@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Cart from "../Cart/Cart";
 import { UserAuth } from "../../context/AuthContext";
@@ -12,6 +12,7 @@ function Navbar() {
   const closeCart = () => setOpenCart(false);
   const { user } = UserAuth();
   const products = useSelector((state) => state.cart.products);
+  const navigate = useNavigate();
 
   const notify = () =>
     toast.warning("LOGIN TO USE CART!", {
@@ -24,6 +25,9 @@ function Navbar() {
       draggable: true,
       progress: undefined,
       theme: "dark",
+      onClick: () => {
+        navigate("/login");
+      },
     });
 
   return (
@@ -84,7 +88,7 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      {openCart && <Cart closeCart={closeCart} />}
+      {openCart && <Cart closeCart={closeCart} openCart={openCart} />}
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import useFetchData from "../../hooks/useFetchData";
 import { addToCart } from "../../redux/cartReducer";
@@ -20,6 +20,7 @@ const ProductDetails = () => {
   );
   const dispatch = useDispatch();
   const rel = data?.attributes?.categories?.data[0]?.id;
+  const navigate = useNavigate();
 
   const notifyA = () =>
     toast.success("ADDED TO THE CART!", {
@@ -45,6 +46,9 @@ const ProductDetails = () => {
       draggable: true,
       progress: undefined,
       theme: "dark",
+      onClick: () => {
+        navigate("/login");
+      },
     });
 
   const { user } = UserAuth();
