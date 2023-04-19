@@ -43,35 +43,6 @@ const Profile = () => {
     });
   };
 
-  const handleInfoUpdate = async (e) => {
-    e.preventDefault();
-    try {
-      await updateDoc(doc(db, "users", user.uid), {
-        FirstName: fname,
-        LastName: lname,
-        PhoneNumber: phone,
-        Email: user.email,
-      });
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
-
-  const handleAddressUpdate = async (e) => {
-    e.preventDefault();
-    try {
-      await updateDoc(doc(db, "users", user.uid), {
-        AddressLine1: address1,
-        AddressLine2: address2,
-        City: city,
-        Pincode: pincode,
-        State: state,
-      });
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
-
   const notify = () =>
     toast.success("PROFILE UPDATED!", {
       className: "toastify",
@@ -84,6 +55,29 @@ const Profile = () => {
       progress: undefined,
       theme: "dark",
     });
+
+  const handleInfoUpdate = async (e) => {
+    e.preventDefault();
+    await updateDoc(doc(db, "users", user.uid), {
+      FirstName: fname,
+      LastName: lname,
+      PhoneNumber: phone,
+      Email: user.email,
+    });
+    notify();
+  };
+
+  const handleAddressUpdate = async (e) => {
+    e.preventDefault();
+    await updateDoc(doc(db, "users", user.uid), {
+      AddressLine1: address1,
+      AddressLine2: address2,
+      City: city,
+      Pincode: pincode,
+      State: state,
+    });
+    notify();
+  };
 
   return (
     <div className="profile">
@@ -132,7 +126,7 @@ const Profile = () => {
                   onChange={(e) => setPhone(e.target.value)}
                   required
                 />
-                <button type="submit" className="updateBtn" onClick={notify}>
+                <button type="submit" className="updateBtn">
                   SAVE UPDATES
                 </button>
               </form>
@@ -190,7 +184,7 @@ const Profile = () => {
                 onChange={(e) => setState(e.target.value)}
                 required
               />
-              <button type="submit" className="updateBtn" onClick={notify}>
+              <button type="submit" className="updateBtn">
                 SAVE UPDATES
               </button>
             </form>
