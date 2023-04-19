@@ -45,7 +45,7 @@ const Contact = () => {
           <form
             action="https://formspree.io/f/xrgvyykn"
             method="POST"
-            onClick={notify}
+            onSubmit={notify}
           >
             <p className="heading">
               GOT ANY ISSUES?
