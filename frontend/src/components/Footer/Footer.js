@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Footer.scss";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
   const notify = () =>
     toast.success("YOU'VE BEEN SUBSCRIBED!", {
       className: "toastify",
@@ -17,6 +19,13 @@ const Footer = () => {
       progress: undefined,
       theme: "dark",
     });
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (email) {
+      notify();
+    }
+  };
 
   return (
     <div className="footer">
@@ -49,7 +58,7 @@ const Footer = () => {
             <span>RETURN POLICY</span>
           </NavLink>
         </div>
-        <div className="item">
+        <form className="item" onSubmit={handleSubscribe}>
           <h1>NEWSLETTER</h1>
           <span>
             Subscribe to receive updates, access to exclusive deals, and more.
@@ -57,12 +66,14 @@ const Footer = () => {
           <span>
             <input
               className="inputField"
-              type="text"
+              type="email"
               placeholder="Enter your email address"
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </span>
           <span>
-            <button type="button" className="sub" onClick={notify}>
+            <button type="submit" className="sub">
               SUBSCRIBE
             </button>
             <ToastContainer
@@ -78,7 +89,7 @@ const Footer = () => {
               theme="dark"
             />
           </span>
-        </div>
+        </form>
       </div>
     </div>
   );
