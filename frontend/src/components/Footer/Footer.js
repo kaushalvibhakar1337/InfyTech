@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Footer.scss";
 
@@ -76,6 +76,7 @@ const Footer = () => {
             <button type="submit" className="sub">
               SUBSCRIBE
             </button>
+            <ToastContainer />
           </span>
         </form>
       </div>

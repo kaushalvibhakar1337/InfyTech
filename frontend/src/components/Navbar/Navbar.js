@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Cart from "../Cart/Cart";
 import { UserAuth } from "../../context/AuthContext";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Navbar.scss";
 
@@ -81,6 +81,7 @@ function Navbar() {
             >
               CART (<span className="cartItems">{products.length}</span>)
             </span>
+            <ToastContainer />
           </li>
         </ul>
       </div>

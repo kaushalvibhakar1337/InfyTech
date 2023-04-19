@@ -7,7 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import { UserAuth } from "../../context/AuthContext";
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Profile.scss";
 
@@ -37,13 +37,10 @@ const Profile = () => {
     }
   }, [userData]);
 
-  const handleLogout = async () => {
-    try {
-      await logout();
+  const handleLogout = () => {
+    logout().then(() => {
       navigate("/login");
-    } catch (err) {
-      console.log(err.message);
-    }
+    });
   };
 
   const handleInfoUpdate = async (e) => {
@@ -96,7 +93,7 @@ const Profile = () => {
         <div className="container">
           <div className="left">
             <p className="heading">PERSONAL INFO</p>
-            <p className="content">
+            <div className="content">
               <form onSubmit={handleInfoUpdate}>
                 <input
                   className="inputField"
@@ -139,7 +136,7 @@ const Profile = () => {
                   SAVE UPDATES
                 </button>
               </form>
-            </p>
+            </div>
             <br />
             <button className="logoutBtn" onClick={handleLogout}>
               LOGOUT
@@ -199,6 +196,7 @@ const Profile = () => {
             </form>
           </div>
         </div>
+        <ToastContainer />
       </div>
       <Footer />
     </div>

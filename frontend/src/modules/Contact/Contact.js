@@ -86,18 +86,7 @@ const Contact = () => {
             >
               SEND
             </button>
-            <ToastContainer
-              position="bottom-right"
-              autoClose={3000}
-              hideProgressBar={false}
-              newestOnTop
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="dark"
-            />
+            <ToastContainer />
           </form>
         </div>
       </div>
