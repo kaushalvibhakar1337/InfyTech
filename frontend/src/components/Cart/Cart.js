@@ -45,7 +45,7 @@ const Cart = ({ closeCart }) => {
   return (
     <>
       <div className="blurWrapper" onClick={closeCart}></div>
-      <div className="myCart">
+      <div className="sideCart">
         <div className="container">
           <div className="heading">
             <span>CART</span>
