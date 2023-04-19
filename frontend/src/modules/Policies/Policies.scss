@@ -2,10 +2,7 @@
   padding: 0 350px;
   text-align: justify;
   letter-spacing: 1px;
-
-  strong {
-    color: #777777;
-  }
+  color: white;
 
   .section {
     margin: 40px 0 70px 0;
@@ -13,7 +10,11 @@
     border: 1px solid rgba($color: white, $alpha: 0.3);
 
     a {
-      color: #1c1b1b;
+      color: rgba($color: white, $alpha: 0.8);
+
+      &:hover {
+        color: white;
+      }
     }
 
     .heading {
