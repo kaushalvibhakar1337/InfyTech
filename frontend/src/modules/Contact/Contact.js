@@ -4,12 +4,26 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { UserAuth } from "../../context/AuthContext";
 import useFetchUser from "../../hooks/useFetchUser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Contact.scss";
 
 const Contact = () => {
   const { user } = UserAuth();
   const userData = useFetchUser(user?.uid);
   const fullName = userData?.FirstName + " " + userData?.LastName;
+  const notify = () =>
+    toast.success("THANK YOU FOR YOUR FEEDBACK!", {
+      className: "toastify",
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
 
   return (
     <>
@@ -34,7 +48,6 @@ const Contact = () => {
               <br />
               FEEL FREE TO DROP US A MAIL.
             </p>
-
             {user?.uid ? (
               <input name="Username" value={fullName} readOnly />
             ) : (
@@ -57,7 +70,6 @@ const Contact = () => {
                 required
               />
             )}
-
             <textarea
               placeholder="How Can We Help?"
               name="Message"
@@ -66,9 +78,26 @@ const Contact = () => {
               autoComplete="off"
               required
             ></textarea>
-            <button className="submit" type="submit" value="send">
+            <button
+              className="submit"
+              type="submit"
+              value="send"
+              onClick={notify}
+            >
               SEND
             </button>
+            <ToastContainer
+              position="bottom-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
           </form>
         </div>
       </div>

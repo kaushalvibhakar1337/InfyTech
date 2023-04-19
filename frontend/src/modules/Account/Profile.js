@@ -7,6 +7,8 @@ import Footer from "../../components/Footer/Footer";
 import { UserAuth } from "../../context/AuthContext";
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Profile.scss";
 
 const Profile = () => {
@@ -73,6 +75,19 @@ const Profile = () => {
     }
   };
 
+  const notify = () =>
+    toast.success("PROFILE UPDATED!", {
+      className: "toastify",
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
   return (
     <div className="profile">
       <Navbar />
@@ -120,7 +135,7 @@ const Profile = () => {
                   onChange={(e) => setPhone(e.target.value)}
                   required
                 />
-                <button type="submit" className="updateBtn">
+                <button type="submit" className="updateBtn" onClick={notify}>
                   SAVE UPDATES
                 </button>
               </form>
@@ -178,12 +193,24 @@ const Profile = () => {
                 onChange={(e) => setState(e.target.value)}
                 required
               />
-              <button type="submit" className="updateBtn">
+              <button type="submit" className="updateBtn" onClick={notify}>
                 SAVE UPDATES
               </button>
             </form>
           </div>
         </div>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </div>
       <Footer />
     </div>
