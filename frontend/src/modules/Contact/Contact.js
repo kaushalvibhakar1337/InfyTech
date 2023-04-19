@@ -12,6 +12,7 @@ const Contact = () => {
   const { user } = UserAuth();
   const userData = useFetchUser(user?.uid);
   const fullName = userData?.FirstName + " " + userData?.LastName;
+
   const notify = () =>
     toast.success("THANK YOU FOR YOUR FEEDBACK!", {
       className: "toastify",
@@ -41,7 +42,11 @@ const Contact = () => {
           ></iframe>
         </div>
         <div className="right">
-          <form action="https://formspree.io/f/xrgvyykn" method="POST">
+          <form
+            action="https://formspree.io/f/xrgvyykn"
+            method="POST"
+            onSubmit={notify}
+          >
             <p className="heading">
               GOT ANY ISSUES?
               <br />
@@ -78,12 +83,7 @@ const Contact = () => {
               autoComplete="off"
               required
             ></textarea>
-            <button
-              className="submit"
-              type="submit"
-              value="send"
-              onClick={notify}
-            >
+            <button className="submit" type="submit" value="send">
               SEND
             </button>
             <ToastContainer />
