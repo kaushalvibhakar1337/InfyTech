@@ -88,7 +88,7 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      {openCart && <Cart closeCart={closeCart} openCart={openCart} />}
+      {openCart && <Cart closeCart={closeCart} />}
     </>
   );
 }

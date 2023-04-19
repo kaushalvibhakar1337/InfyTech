@@ -10,6 +10,7 @@ import { UserAuth } from "../../context/AuthContext";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./ProductDetails.scss";
+import Cart from "../../components/Cart/Cart";
 
 const ProductDetails = () => {
   const productId = useParams().id;
@@ -21,6 +22,8 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
   const rel = data?.attributes?.categories?.data[0]?.id;
   const navigate = useNavigate();
+  const [openCart, setOpenCart] = useState(false);
+  const closeCart = () => setOpenCart(false);
 
   const notifyA = () =>
     toast.success("ADDED TO THE CART!", {
@@ -33,6 +36,9 @@ const ProductDetails = () => {
       draggable: true,
       progress: undefined,
       theme: "dark",
+      onClick: () => {
+        setOpenCart(true);
+      },
     });
 
   const notifyB = () =>
@@ -159,6 +165,7 @@ const ProductDetails = () => {
         <RelatedProductList rel={rel} productId={productId} />
       </div>
       <Footer />
+      {openCart && <Cart closeCart={closeCart} />}
     </>
   );
 };
