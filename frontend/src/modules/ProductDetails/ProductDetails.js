@@ -6,6 +6,8 @@ import { addToCart } from "../../redux/cartReducer";
 import Navbar from "../../components/Navbar/Navbar";
 import RelatedProductList from "../../components/ProductList/RelatedProductList";
 import Footer from "../../components/Footer/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./ProductDetails.scss";
 
 const ProductDetails = () => {
@@ -17,6 +19,19 @@ const ProductDetails = () => {
   );
   const dispatch = useDispatch();
   const rel = data?.attributes?.categories?.data[0]?.id;
+
+  const notify = () =>
+    toast.success("ADDED TO THE CART!", {
+      className: "toastify",
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
 
   return (
     <>
@@ -93,7 +108,7 @@ const ProductDetails = () => {
                   </div>
                   <button
                     className="addToCart"
-                    onClick={() =>
+                    onClick={() => {
                       dispatch(
                         addToCart({
                           id: data.id,
@@ -103,11 +118,24 @@ const ProductDetails = () => {
                           img: data.attributes.img1.data.attributes.url,
                           quantity,
                         })
-                      )
-                    }
+                      );
+                      notify();
+                    }}
                   >
                     ADD TO CART
                   </button>
+                  <ToastContainer
+                    position="bottom-right"
+                    autoClose={3000}
+                    hideProgressBar={false}
+                    newestOnTop
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="dark"
+                  />
                   <span className="heading">DESCRIPTION :</span>
                   <div className="description">{data?.attributes?.desc}</div>
                 </div>
