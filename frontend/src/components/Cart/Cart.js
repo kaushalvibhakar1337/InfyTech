@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../../redux/cartReducer";
 import { loadStripe } from "@stripe/stripe-js";
@@ -48,7 +49,9 @@ const Cart = ({ closeCart }) => {
       <div className="sideCart">
         <div className="container">
           <div className="heading">
-            <span>CART</span>
+            <NavLink to={"/my-cart"}>
+              <span>CART +</span>
+            </NavLink>
             <button onClick={closeCart}>X</button>
           </div>
           <div className="cartContent">

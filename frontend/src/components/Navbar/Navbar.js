@@ -2,12 +2,29 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Cart from "../Cart/Cart";
+import { UserAuth } from "../../context/AuthContext";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Navbar.scss";
 
 function Navbar() {
   const [openCart, setOpenCart] = useState(false);
   const closeCart = () => setOpenCart(false);
+  const { user } = UserAuth();
   const products = useSelector((state) => state.cart.products);
+
+  const notify = () =>
+    toast.warning("LOGIN TO USE CART!", {
+      className: "toastify",
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
 
   return (
     <>
@@ -52,7 +69,16 @@ function Navbar() {
             <NavLink to="/search">SEARCH</NavLink>
           </li>
           <li className="item cartMenu">
-            <span className="cart" onClick={() => setOpenCart(true)}>
+            <span
+              className="cart"
+              onClick={() => {
+                if (user) {
+                  setOpenCart(true);
+                } else {
+                  notify();
+                }
+              }}
+            >
               CART (<span className="cartItems">{products.length}</span>)
             </span>
           </li>
