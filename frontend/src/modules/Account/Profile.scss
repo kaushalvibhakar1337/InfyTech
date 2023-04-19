@@ -73,54 +73,54 @@
           }
         }
       }
-    }
 
-    .updateBtn {
-      width: 40%;
-      color: white;
-      font-size: 11px;
-      margin-top: 40px;
-      padding: 13px 26px;
-      border: 1px solid transparent;
-      border-color: white;
-      background: linear-gradient(
-        to right,
-        (rgba($color: white, $alpha: 0.2)) 50%,
-        transparent 50%
-      );
-      background-size: 200%;
-      background-position: 0 50%;
-      letter-spacing: 0.2em;
-      font-weight: 600;
-      transition: background-position 0.6s ease;
-      font-family: "Montserrat";
+      .updateBtn {
+        width: 40%;
+        color: white;
+        font-size: 11px;
+        margin-top: 40px;
+        padding: 13px 26px;
+        border: 1px solid transparent;
+        border-color: white;
+        background: linear-gradient(
+          to right,
+          (rgba($color: white, $alpha: 0.2)) 50%,
+          transparent 50%
+        );
+        background-size: 200%;
+        background-position: 0 50%;
+        letter-spacing: 0.2em;
+        font-weight: 600;
+        transition: background-position 0.6s ease;
+        font-family: "Montserrat";
 
-      &:hover {
-        background-position: -100% 50%;
-        cursor: pointer;
+        &:hover {
+          background-position: -100% 50%;
+          cursor: pointer;
+        }
       }
-    }
 
-    .logoutBtn {
-      width: 40%;
-      color: #241414;
-      font-size: 12px;
-      margin-top: 20px;
-      padding: 13px 26px;
-      border: 1px solid transparent;
-      border-color: #e5b14a;
-      background: linear-gradient(to right, #e5b14a 50%, #1e1f23 50%);
-      background-size: 200%;
-      background-position: 0 50%;
-      letter-spacing: 0.2em;
-      font-weight: 600;
-      transition: background-position 0.6s ease;
-      font-family: "Montserrat";
+      .logoutBtn {
+        width: 40%;
+        color: #241414;
+        font-size: 12px;
+        margin-top: 20px;
+        padding: 13px 26px;
+        border: 1px solid transparent;
+        border-color: #e5b14a;
+        background: linear-gradient(to right, #e5b14a 50%, #1e1f23 50%);
+        background-size: 200%;
+        background-position: 0 50%;
+        letter-spacing: 0.2em;
+        font-weight: 600;
+        transition: background-position 0.6s ease;
+        font-family: "Montserrat";
 
-      &:hover {
-        background-position: -100% 50%;
-        color: #e5b14a;
-        cursor: pointer;
+        &:hover {
+          background-position: -100% 50%;
+          color: #e5b14a;
+          cursor: pointer;
+        }
       }
     }
   }

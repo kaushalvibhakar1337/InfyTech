@@ -53,7 +53,9 @@ const Profile = () => {
         PhoneNumber: phone,
         Email: user.email,
       });
-    } catch (err) {}
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 
   const handleAddressUpdate = async (e) => {
@@ -66,7 +68,9 @@ const Profile = () => {
         Pincode: pincode,
         State: state,
       });
-    } catch (err) {}
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 
   return (
