@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { UserAuth } from "../../context/AuthContext";
 import useFetchUser from "../../hooks/useFetchUser";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Contact.scss";
 
@@ -86,7 +86,6 @@ const Contact = () => {
             <button className="submit" type="submit" value="send">
               SEND
             </button>
-            <ToastContainer />
           </form>
         </div>
       </div>

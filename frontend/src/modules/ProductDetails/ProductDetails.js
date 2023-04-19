@@ -6,7 +6,7 @@ import { addToCart } from "../../redux/cartReducer";
 import Navbar from "../../components/Navbar/Navbar";
 import RelatedProductList from "../../components/ProductList/RelatedProductList";
 import Footer from "../../components/Footer/Footer";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { UserAuth } from "../../context/AuthContext";
 import "./ProductDetails.scss";
@@ -144,7 +144,6 @@ const ProductDetails = () => {
                   >
                     ADD TO CART
                   </button>
-                  <ToastContainer />
                   <span className="heading">DESCRIPTION :</span>
                   <div className="description">{data?.attributes?.desc}</div>
                 </div>

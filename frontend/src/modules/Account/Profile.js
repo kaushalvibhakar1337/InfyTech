@@ -7,7 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import { UserAuth } from "../../context/AuthContext";
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Profile.scss";
 
@@ -190,7 +190,6 @@ const Profile = () => {
             </form>
           </div>
         </div>
-        <ToastContainer />
       </div>
       <Footer />
     </div>
