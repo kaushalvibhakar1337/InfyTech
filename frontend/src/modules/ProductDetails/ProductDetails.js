@@ -8,6 +8,7 @@ import RelatedProductList from "../../components/ProductList/RelatedProductList"
 import Footer from "../../components/Footer/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { UserAuth } from "../../context/AuthContext";
 import "./ProductDetails.scss";
 
 const ProductDetails = () => {
@@ -20,7 +21,7 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
   const rel = data?.attributes?.categories?.data[0]?.id;
 
-  const notify = () =>
+  const notify1 = () =>
     toast.success("ADDED TO THE CART!", {
       className: "toastify",
       position: "bottom-right",
@@ -32,6 +33,21 @@ const ProductDetails = () => {
       progress: undefined,
       theme: "dark",
     });
+
+  const notify2 = () =>
+    toast.warning("LOGIN TO USE CART!", {
+      className: "toastify",
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
+  const { user } = UserAuth();
 
   return (
     <>
@@ -109,17 +125,21 @@ const ProductDetails = () => {
                   <button
                     className="addToCart"
                     onClick={() => {
-                      dispatch(
-                        addToCart({
-                          id: data.id,
-                          company: data.attributes.company,
-                          name: data.attributes.name,
-                          price: data.attributes.price,
-                          img: data.attributes.img1.data.attributes.url,
-                          quantity,
-                        })
-                      );
-                      notify();
+                      if (user) {
+                        dispatch(
+                          addToCart({
+                            id: data.id,
+                            company: data.attributes.company,
+                            name: data.attributes.name,
+                            price: data.attributes.price,
+                            img: data.attributes.img1.data.attributes.url,
+                            quantity,
+                          })
+                        );
+                        notify1();
+                      } else {
+                        notify2();
+                      }
                     }}
                   >
                     ADD TO CART
