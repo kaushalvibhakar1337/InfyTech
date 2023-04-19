@@ -1,8 +1,23 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Footer.scss";
 
 const Footer = () => {
+  const notify = () =>
+    toast.success("YOU'VE BEEN SUBSCRIBED!", {
+      className: "toastify",
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
   return (
     <div className="footer">
       <div className="top">
@@ -47,9 +62,21 @@ const Footer = () => {
             />
           </span>
           <span>
-            <button type="button" className="sub">
+            <button type="button" className="sub" onClick={notify}>
               SUBSCRIBE
             </button>
+            <ToastContainer
+              position="bottom-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
           </span>
         </div>
       </div>
