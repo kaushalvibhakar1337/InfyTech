@@ -8,7 +8,6 @@ import Home from "./modules/Home/Home";
 import AllProducts from "./modules/Products/AllProducts";
 import Products from "./modules/Products/Products";
 import ProductDetails from "./modules/ProductDetails/ProductDetails";
-import MyCart from "./modules/MyCart/MyCart";
 import Login from "./modules/Account/Login";
 import Register from "./modules/Account/Register";
 import Profile from "./modules/Account/Profile";
@@ -30,14 +29,6 @@ const App = () => {
           <Route path="/products/all" element={<AllProducts />} />
           <Route path="/products/:id" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetails />} />
-          <Route
-            path="/my-cart"
-            element={
-              <ProtectedRoute>
-                <MyCart />
-              </ProtectedRoute>
-            }
-          />
           <Route
             path="/login"
             element={
