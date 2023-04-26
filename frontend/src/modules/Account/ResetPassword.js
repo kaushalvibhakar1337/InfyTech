@@ -12,7 +12,7 @@ const ResetPassword = () => {
   const [error, setError] = useState("");
   const { resetPassword } = UserAuth();
 
-  const handleForgotPassword = async (e) => {
+  const handlePasswordReset = async (e) => {
     e.preventDefault();
     setError("");
     try {
@@ -42,7 +42,7 @@ const ResetPassword = () => {
       <form
         className="form"
         style={{ marginTop: "15px" }}
-        onSubmit={handleForgotPassword}
+        onSubmit={handlePasswordReset}
       >
         <h1 className="heading">RESET PASSWORD</h1>
         <p className="legend"> Please enter your e-mail:</p>
