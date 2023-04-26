@@ -45,7 +45,7 @@
     flex-direction: column;
 
     .heading {
-      height: 11%;
+      height: 10%;
       display: flex;
       justify-content: space-between;
       padding: 30px;
@@ -54,22 +54,12 @@
       font-weight: 600;
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
-      a {
-        text-decoration: none;
-        color: rgba(255, 255, 255, 0.8);
-
-        &:hover {
-          cursor: pointer;
-          color: white;
-        }
-      }
-
       button {
         background-color: transparent;
         border: none;
         font-weight: 600;
         font-size: 17px;
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(255, 255, 255, 0.7);
 
         &:hover {
           cursor: pointer;
@@ -79,7 +69,7 @@
     }
 
     .cartContent {
-      height: 70%;
+      height: 72%;
       overflow-x: hidden;
       overflow-y: auto;
       padding: 0 25px;
@@ -140,7 +130,7 @@
     }
 
     .checkout {
-      height: 19%;
+      height: 18%;
       border-top: 1px solid rgba(255, 255, 255, 0.3);
       padding: 30px;
 
