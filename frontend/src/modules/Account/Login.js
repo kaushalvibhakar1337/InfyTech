@@ -49,7 +49,7 @@ const Login = () => {
           required
         />
         <p className="forgotPass">
-          <NavLink to="">Forgot password?</NavLink>
+          <NavLink to="/reset-password">Forgot password?</NavLink>
         </p>
         <button type="submit" className="submit">
           LOGIN

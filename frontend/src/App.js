@@ -8,8 +8,9 @@ import Home from "./modules/Home/Home";
 import AllProducts from "./modules/Products/AllProducts";
 import Products from "./modules/Products/Products";
 import ProductDetails from "./modules/ProductDetails/ProductDetails";
-import Login from "./modules/Account/Login";
 import Register from "./modules/Account/Register";
+import Login from "./modules/Account/Login";
+import ResetPassword from "./modules/Account/ResetPassword";
 import Profile from "./modules/Account/Profile";
 import About from "./modules/About/About";
 import Contact from "./modules/Contact/Contact";
@@ -30,6 +31,14 @@ const App = () => {
           <Route path="/products/:id" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route
+            path="/register"
+            element={
+              <AnotherProtectedRoute>
+                <Register />
+              </AnotherProtectedRoute>
+            }
+          />
+          <Route
             path="/login"
             element={
               <AnotherProtectedRoute>
@@ -38,10 +47,10 @@ const App = () => {
             }
           />
           <Route
-            path="/register"
+            path="/reset-password"
             element={
               <AnotherProtectedRoute>
-                <Register />
+                <ResetPassword />
               </AnotherProtectedRoute>
             }
           />
