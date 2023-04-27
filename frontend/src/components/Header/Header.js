@@ -6,7 +6,6 @@ const Header = (props) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log(searchQuery);
   };
 
   let searchBox;

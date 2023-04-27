@@ -4,7 +4,10 @@ import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.scss";
 
 const ProductList = () => {
-  const { data, loading, error } = useFetchData(`/products?populate=*`);
+  let x = "g pro x superlight";
+  const { data, loading, error } = useFetchData(
+    `/products?populate=*&[filters][$or][0][name][$containsi]=${x}&[filters][$or][1][company][$containsi]=${x}`
+  );
   console.log(data);
 
   if (data) {
