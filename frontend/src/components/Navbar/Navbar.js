@@ -59,16 +59,13 @@ function Navbar() {
             </div>
           </li>
           <li className="item">
-            <NavLink to="/about-us">ABOUT US</NavLink>
+            <NavLink to="/contact-us">CONTACT US</NavLink>
           </li>
         </ul>
         <NavLink to="/" className="logo">
           INFYTECH
         </NavLink>
         <ul className="items">
-          <li className="item">
-            <NavLink to="/contact-us">CONTACT US</NavLink>
-          </li>
           <li className="item">
             <NavLink to="/login">ACCOUNT</NavLink>
           </li>
