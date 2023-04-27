@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.scss";
 
 const Header = (props) => {
-  const [searchQuery, setSearchQuery] = useState("");
-
   const handleSearch = (e) => {
     e.preventDefault();
+    props.setSearchQuery(e.target.elements.search.value);
   };
 
   let searchBox;
@@ -13,15 +12,14 @@ const Header = (props) => {
     searchBox = (
       <form className="search" onSubmit={handleSearch}>
         <input
+          id="search"
           className="searchBar"
           type="text"
           placeholder="Search..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          required
+          autoComplete="off"
         />
         <button type="submit" className="searchIcon">
-          <i className="fa-solid fa-magnifying-glass "></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
     );

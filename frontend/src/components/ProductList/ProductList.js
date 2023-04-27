@@ -3,12 +3,10 @@ import useFetchData from "../../hooks/useFetchData";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.scss";
 
-const ProductList = () => {
-  let x = "g pro x superlight";
+const ProductList = ({ searchQuery }) => {
   const { data, loading, error } = useFetchData(
-    `/products?populate=*&[filters][$or][0][name][$containsi]=${x}&[filters][$or][1][company][$containsi]=${x}`
+    `/products?populate=*&[filters][$or][0][name][$containsi]=${searchQuery}&[filters][$or][1][company][$containsi]=${searchQuery}`
   );
-  console.log(data);
 
   if (data) {
     data.sort(() => Math.random() - 0.5);

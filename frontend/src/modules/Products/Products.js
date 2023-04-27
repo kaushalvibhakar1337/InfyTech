@@ -12,6 +12,7 @@ const Products = () => {
   const [maxPrice, setMaxPrice] = useState(150000);
   const [sort, setSort] = useState("asc");
   const [selectedFilters, setSelectedFilters] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const { data } = useFetchData(
     `/sub-categories?[filters][categories][id]=${categoryId}`
@@ -35,7 +36,7 @@ const Products = () => {
   return (
     <>
       <Navbar />
-      <Header title="PRODUCTS" />
+      <Header title="PRODUCTS" setSearchQuery={setSearchQuery} />
       <div className="products">
         <div className="left">
           <p className="mainHeading">FILTERS</p>
@@ -102,6 +103,7 @@ const Products = () => {
             maxPrice={maxPrice}
             sort={sort}
             filters={selectedFilters}
+            searchQuery={searchQuery}
           />
         </div>
       </div>
