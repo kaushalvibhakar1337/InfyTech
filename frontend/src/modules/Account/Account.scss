@@ -51,6 +51,11 @@
         letter-spacing: 1px;
         color: rgba($color: white, $alpha: 0.7);
       }
+
+      &:focus {
+        outline: none;
+        border: 1px solid white;
+      }
     }
 
     .forgotPass {

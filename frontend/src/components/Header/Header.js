@@ -2,18 +2,25 @@ import React from "react";
 import "./Header.scss";
 
 const Header = (props) => {
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log("Hello!");
+  };
+
   let searchBox;
-  if (props.title === "ALL PRODUCTS") {
+  if (props.title === "ALL PRODUCTS" || props.title === "PRODUCTS") {
     searchBox = (
-      <p className="searchIcon">
-        <i className="fa-solid fa-magnifying-glass"></i>
-      </p>
-    );
-  } else if (props.title === "PRODUCTS") {
-    searchBox = (
-      <p className="searchIcon">
-        <i className="fa-solid fa-magnifying-glass"></i>
-      </p>
+      <form className="search" onSubmit={handleSearch}>
+        <input
+          type="text"
+          placeholder="Search..."
+          className="searchBar"
+          required
+        />
+        <button type="submit" className="searchIcon">
+          <i className="fa-solid fa-magnifying-glass "></i>
+        </button>
+      </form>
     );
   } else {
     searchBox = null;

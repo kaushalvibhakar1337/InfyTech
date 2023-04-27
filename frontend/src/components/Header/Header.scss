@@ -13,17 +13,45 @@ header {
     letter-spacing: 0.2em;
   }
 
-  .searchIcon {
+  .search {
     position: absolute;
-    right: 12%;
+    right: 1%;
     transform: translate(-50%, -50%);
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba($color: white, $alpha: 0.7);
 
-    &:hover {
+    .searchBar {
+      padding: 11px 14px;
+      border: 1px solid rgba($color: white, $alpha: 0.1);
+      transition: border-color 0.1s ease-in-out;
+      font-family: "Montserrat";
+      letter-spacing: 1px;
+      font-size: 12px;
+      background-color: #1e1f23;
       color: white;
-      cursor: pointer;
+
+      &::placeholder {
+        color: rgba($color: white, $alpha: 0.7);
+        font-family: "Montserrat";
+        letter-spacing: 1px;
+        font-size: 11px;
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid rgba($color: white, $alpha: 0.7);
+      }
+    }
+
+    .searchIcon {
+      color: rgba($color: white, $alpha: 0.7);
+      margin-left: 15px;
+      font-size: 15px;
+      background-color: transparent;
+      border: none;
+
+      &:hover {
+        color: white;
+        cursor: pointer;
+      }
     }
   }
 }
