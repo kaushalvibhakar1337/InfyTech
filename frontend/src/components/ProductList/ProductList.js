@@ -5,6 +5,7 @@ import "./ProductList.scss";
 
 const ProductList = () => {
   const { data, loading, error } = useFetchData(`/products?populate=*`);
+  console.log(data);
 
   if (data) {
     data.sort(() => Math.random() - 0.5);
