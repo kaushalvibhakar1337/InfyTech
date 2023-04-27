@@ -1,12 +1,29 @@
 header {
   width: 100%;
-  padding: 50px 0;
+  padding: 62px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  text-align: center;
+  position: relative;
 
   span {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.2em;
+  }
+
+  .searchIcon {
+    position: absolute;
+    right: 12%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba($color: white, $alpha: 0.7);
+
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
   }
 }
