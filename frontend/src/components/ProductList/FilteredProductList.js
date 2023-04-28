@@ -1,6 +1,7 @@
 import React from "react";
 import useFetchData from "../../hooks/useFetchData";
 import ProductCard from "../ProductCard/ProductCard";
+import { ClipLoader } from "react-spinners";
 import "./ProductList.scss";
 
 const FilteredProductList = ({
@@ -18,13 +19,15 @@ const FilteredProductList = ({
 
   return (
     <div className="productList">
-      {error
-        ? "Oops, something went wrong! Please try again later."
-        : loading
-        ? "Hang tight, we're getting your products..."
-        : data && data.length
-        ? data.map((item) => <ProductCard item={item} key={item.id} />)
-        : "Sorry, we couldn't find any products matching your search."}
+      {error ? (
+        "Oops, something went wrong! Please try again later."
+      ) : loading ? (
+        <ClipLoader color="white" />
+      ) : data && data.length ? (
+        data.map((item) => <ProductCard item={item} key={item.id} />)
+      ) : (
+        "Sorry, we couldn't find any products matching your search."
+      )}
     </div>
   );
 };
