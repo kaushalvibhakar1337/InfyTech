@@ -15,10 +15,12 @@ const ProductList = ({ searchQuery }) => {
   return (
     <div className="productList">
       {error
-        ? "Something went wrong!"
+        ? "Oops, something went wrong! Please try again later."
         : loading
-        ? "Loading..."
-        : data.map((item) => <ProductCard item={item} key={item.id} />)}
+        ? "Hang tight, we're getting your products..."
+        : data && data.length
+        ? data.map((item) => <ProductCard item={item} key={item.id} />)
+        : "Sorry, we couldn't find any products matching your search."}
     </div>
   );
 };
