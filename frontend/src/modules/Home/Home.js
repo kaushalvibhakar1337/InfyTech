@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import CategorySlider from "../../components/CategorySlider/CategorySlider";
@@ -15,13 +16,40 @@ const Home = () => {
     "slideshowImg4.jpg",
   ];
 
-  const notifySuccess = () =>
+  const navigate = useNavigate();
+
+  const notifySuccess = () => {
+    toast.success("THANK YOU FOR SHOPPING WITH US!", {
+      className: "toastify",
+      position: "bottom-right",
+      autoClose: 7000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
     toast.success(
-      <div>
-        THANK YOU FOR SHOPPING WITH US!
-        <br />
-        PLEASE CHECK YOUR EMAIL FOR FURTHER UPDATES ON YOUR ORDER.
-      </div>,
+      "PLEASE CHECK YOUR EMAIL FOR FURTHER UPDATES ON YOUR ORDER.",
+      {
+        className: "toastify",
+        position: "bottom-right",
+        autoClose: 10000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+    );
+  };
+
+  const notifyFailure = () => {
+    toast.error(
+      "WE'RE SORRY, BUT WE ENCOUNTERED AN ERROR WHILE PROCESSING YOUR PAYMENT.",
       {
         className: "toastify",
         position: "bottom-right",
@@ -35,25 +63,21 @@ const Home = () => {
       }
     );
 
-  const notifyFailure = () =>
-    toast.error(
-      <div>
-        WE'RE SORRY, BUT WE ENCOUNTERED AN ERROR WHILE PROCESSING YOUR PAYMENT.
-        <br />
-        PLEASE TRY AGAIN OR CONTACT US FOR ASSISTANCE.
-      </div>,
-      {
-        className: "toastify",
-        position: "bottom-right",
-        autoClose: 7000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      }
-    );
+    toast.warning("PLEASE TRY AGAIN OR CONTACT US FOR ASSISTANCE.", {
+      className: "toastify",
+      position: "bottom-right",
+      autoClose: 10000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      onClick: () => {
+        navigate("/contact-us");
+      },
+    });
+  };
 
   const urlParams = new URLSearchParams(window.location.search);
   const success = urlParams.get("success") === "true";
