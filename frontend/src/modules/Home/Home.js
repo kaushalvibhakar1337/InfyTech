@@ -15,12 +15,32 @@ const Home = () => {
     "slideshowImg4.jpg",
   ];
 
-  const notify = () =>
+  const notifySuccess = () =>
     toast.success(
       <div>
         THANK YOU FOR SHOPPING WITH US!
         <br />
-        KINDLY CHECK YOUR EMAIL FOR FURTHER UPDATES ON YOUR ORDER.
+        PLEASE CHECK YOUR EMAIL FOR FURTHER UPDATES ON YOUR ORDER.
+      </div>,
+      {
+        className: "toastify",
+        position: "bottom-right",
+        autoClose: 7000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+    );
+
+  const notifyFailure = () =>
+    toast.error(
+      <div>
+        WE'RE SORRY, BUT WE ENCOUNTERED AN ERROR WHILE PROCESSING YOUR PAYMENT.
+        <br />
+        PLEASE TRY AGAIN OR CONTACT US FOR ASSISTANCE.
       </div>,
       {
         className: "toastify",
@@ -37,6 +57,7 @@ const Home = () => {
 
   const urlParams = new URLSearchParams(window.location.search);
   const success = urlParams.get("success") === "true";
+  const failure = urlParams.get("success") === "false";
 
   return (
     <>
@@ -46,7 +67,8 @@ const Home = () => {
         <div className="section">YOUR FAVOURITE PC PARTS IN ONE PLACE</div>
         <CategorySlider />
       </div>
-      {success && notify()}
+      {success && notifySuccess()}
+      {failure && notifyFailure()}
       <Footer />
     </>
   );
