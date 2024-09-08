@@ -1,2 +1,2 @@
 # InfyTech
-A Complete Tech Store!
+A Complete Tech Store
